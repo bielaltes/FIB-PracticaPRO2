@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Practica PRO2. &#39;Circuit de tornejos de tenis&#39;.: Fitxer de Codi Torneig.cc</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Practica PRO2. &#39;Circuit de tornejos de tenis&#39;.
+   &#160;<span id="projectnumber">Biel Altés</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.8.14 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Torneig.cc</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_torneig_8cc.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno"><a class="line" href="class_torneig.html#a9794723939612dccda9f9a3979789b11">    1</a></span>&#160;<a class="code" href="class_torneig.html#a9794723939612dccda9f9a3979789b11">Torneig::Torneig</a>(<span class="keywordtype">int</span> cat) {</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;    <a class="code" href="class_torneig.html#a8a80ab41ebab7d88a2569247c6ec4c81">categoria</a> = cat;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;    vector&lt;int&gt; <a class="code" href="class_torneig.html#a7146b542f678d15c1847f9ec57c866bf">participants</a>(0);</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;    vector&lt;vector&lt;int&gt;&gt; <a class="code" href="class_torneig.html#afb270c579c18c46261a52122fb152942">estadistiques</a>(0,vector&lt;int&gt;(7)):</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;}</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="class_torneig.html#ab5184085575669dd522e11a25f602943">    7</a></span>&#160;<a class="code" href="class_torneig.html#ab5184085575669dd522e11a25f602943">Torneig::~Torneig</a>() {</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    </div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;}</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_torneig.html#a78a82b011e01b5d07ade6378da916c3c">   11</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="class_torneig.html#a78a82b011e01b5d07ade6378da916c3c">Torneig::consultar_categoria</a>() {</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_torneig.html#a8a80ab41ebab7d88a2569247c6ec4c81">categoria</a>;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;}</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> Torneig::inciar_torneig() {</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;}</div><div class="ttc" id="class_torneig_html_a9794723939612dccda9f9a3979789b11"><div class="ttname"><a href="class_torneig.html#a9794723939612dccda9f9a3979789b11">Torneig::Torneig</a></div><div class="ttdeci">Torneig(int cat)</div><div class="ttdoc">Constructora de la classe. </div><div class="ttdef"><b>Definition:</b> <a href="_torneig_8cc_source.html#l00001">Torneig.cc:1</a></div></div>
+<div class="ttc" id="class_torneig_html_ab5184085575669dd522e11a25f602943"><div class="ttname"><a href="class_torneig.html#ab5184085575669dd522e11a25f602943">Torneig::~Torneig</a></div><div class="ttdeci">~Torneig()</div><div class="ttdoc">esborra automaticament els objectes locals en sortir d&amp;#39;un ambit de visibilitat. </div><div class="ttdef"><b>Definition:</b> <a href="_torneig_8cc_source.html#l00007">Torneig.cc:7</a></div></div>
+<div class="ttc" id="class_torneig_html_a78a82b011e01b5d07ade6378da916c3c"><div class="ttname"><a href="class_torneig.html#a78a82b011e01b5d07ade6378da916c3c">Torneig::consultar_categoria</a></div><div class="ttdeci">int consultar_categoria()</div><div class="ttdoc">Retorna la categoria d&amp;#39;un torneig. </div><div class="ttdef"><b>Definition:</b> <a href="_torneig_8cc_source.html#l00011">Torneig.cc:11</a></div></div>
+<div class="ttc" id="class_torneig_html_a7146b542f678d15c1847f9ec57c866bf"><div class="ttname"><a href="class_torneig.html#a7146b542f678d15c1847f9ec57c866bf">Torneig::participants</a></div><div class="ttdeci">vector&lt; int &gt; participants</div><div class="ttdef"><b>Definition:</b> <a href="_torneig_8hh_source.html#l00017">Torneig.hh:17</a></div></div>
+<div class="ttc" id="class_torneig_html_afb270c579c18c46261a52122fb152942"><div class="ttname"><a href="class_torneig.html#afb270c579c18c46261a52122fb152942">Torneig::estadistiques</a></div><div class="ttdeci">vector&lt; vector&lt; int &gt; &gt; estadistiques</div><div class="ttdef"><b>Definition:</b> <a href="_torneig_8hh_source.html#l00019">Torneig.hh:19</a></div></div>
+<div class="ttc" id="class_torneig_html_a8a80ab41ebab7d88a2569247c6ec4c81"><div class="ttname"><a href="class_torneig.html#a8a80ab41ebab7d88a2569247c6ec4c81">Torneig::categoria</a></div><div class="ttdeci">int categoria</div><div class="ttdef"><b>Definition:</b> <a href="_torneig_8hh_source.html#l00016">Torneig.hh:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat per &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.14
+</small></address>
+</body>
+</html>

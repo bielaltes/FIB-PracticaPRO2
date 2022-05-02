@@ -1,0 +1,82 @@
+\hypertarget{program_8cc}{}\section{Referència del Fitxer program.\+cc}
+\label{program_8cc}\index{program.\+cc@{program.\+cc}}
+Inclou el graf de dependències per a program.\+cc\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\subsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Documentació de les Funcions}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.\+cc@{program.\+cc}!main@{main}}
+\index{main@{main}!program.\+cc@{program.\+cc}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definició a la línia 12 del fitxer program.\+cc.
+
+
+\begin{DoxyCode}
+12            \{
+13     
+14     \textcolor{keywordtype}{int} C, K;
+15     \mbox{\hyperlink{class_cjt__categories}{Cjt\_categories}}(C,K) categories;
+16     categories.\mbox{\hyperlink{class_cjt__categories_aec7c99f38b0e4a59e804b5bf9ed1a4c8}{llegir\_categories}}();
+17     
+18     \mbox{\hyperlink{class_cjt__tornejos}{Cjt\_tornejos}} tornejos;
+19     tornejos.\mbox{\hyperlink{class_cjt__tornejos_acc9a50af4b8896eb4e3faebb495a2ac7}{llegir\_tornejos}}();
+20     
+21     \mbox{\hyperlink{class_cjt__jugadors}{Cjt\_jugadors}} jugadors;
+22     jugadors.\mbox{\hyperlink{class_cjt__jugadors_affe03f05c962b8689540de5e1aa97d0a}{llegir\_jugadors}}();
+23       
+24     \textcolor{keywordtype}{string} comanda;
+25     cin >> comanda;
+26     
+27     \textcolor{keywordflow}{while} (comanda!= \textcolor{stringliteral}{"fin"}) \{
+28         \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"nuevo\_jugador"} or comanda == \textcolor{stringliteral}{"nj"}) \{
+29             jugadors.\mbox{\hyperlink{class_cjt__jugadors_abc12f64a28c23ba5bd1e94814476de6e}{nou\_jugador}}();
+30         \}
+31         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"nuevo\_torneo"} or comanda == \textcolor{stringliteral}{"nt"}) \{
+32             tornejos.\mbox{\hyperlink{class_cjt__tornejos_ac4298fab4f5ed1d33c762dd837f50b8a}{nou\_torneig}}(categories.num\_categories());
+33         \}
+34         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"baja\_jugador"} or comanda == \textcolor{stringliteral}{"bj"}) \{
+35             jugadors.\mbox{\hyperlink{class_cjt__jugadors_a902057929aebe8b46ff16395ad22def2}{baixa\_jugador}}();
+36         \}
+37         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"baja\_torneo"} or comanda == \textcolor{stringliteral}{"bt"}) \{
+38             tornejos.\mbox{\hyperlink{class_cjt__tornejos_ae549ea64527b0876bb395ba957faf387}{baixa\_torneig}}();
+39         \}
+40         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"iniciar\_torneo"} or comanda == \textcolor{stringliteral}{"it"}) \{
+41             tornejos.\mbox{\hyperlink{class_cjt__tornejos_a2c25098715760c57d0eb2bd1acc02eae}{iniciar\_torneig}}();
+42         \}
+43         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"finalizar\_torneo"} or comanda == \textcolor{stringliteral}{"ft"}) \{
+44             tornejos.\mbox{\hyperlink{class_cjt__tornejos_ac12030fc4c0f063b54d62515f0b818b7}{finalitzar\_torneig}}();
+45         \}
+46         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"listar\_ranking"} or comanda == \textcolor{stringliteral}{"lr"}) \{
+47             jugadors.\mbox{\hyperlink{class_cjt__jugadors_a63581fdbdfaba9aeb5f0b3b466160902}{imprimir\_ranking}}();
+48         \}
+49         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"listar\_jugadores"} or comanda == \textcolor{stringliteral}{"lj"}) \{
+50             jugadors.\mbox{\hyperlink{class_cjt__jugadors_a9821d65fda187cb5983d98e4e86fc073}{imprimir\_jugadors}}();        
+51         \}
+52         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"consultar\_jugador"} or comanda == \textcolor{stringliteral}{"cj"}) \{
+53             jugadors.\mbox{\hyperlink{class_cjt__jugadors_a2232be18d9336daa80680ee29a5e9f28}{consultar\_jugador}}();
+54         \}
+55         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"listar\_torneos"} or comanda == \textcolor{stringliteral}{"lt"}) \{
+56             tornejos.\mbox{\hyperlink{class_cjt__tornejos_a0950e966b60873b9ff216b2f8ec0c60a}{imprimir\_tornejos}}();        
+57         \}
+58         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"listar\_categorias"} or comanda == \textcolor{stringliteral}{"lc"}) \{
+59             categories.imprimir\_categories();        
+60         \}
+61         cin >> comanda;
+62     \}
+63 \}
+\end{DoxyCode}

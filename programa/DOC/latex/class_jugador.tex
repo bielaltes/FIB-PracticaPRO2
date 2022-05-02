@@ -1,0 +1,298 @@
+\hypertarget{class_jugador}{}\section{Referència de la Classe Jugador}
+\label{class_jugador}\index{Jugador@{Jugador}}
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_jugador_a0bac6ebd78bbdc5ed61be887a163ecc0}{Jugador}} (string n, int ultima\+\_\+pos)
+\begin{DoxyCompactList}\small\item\em Constructora de la classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_jugador_a9db1d422fe3b675f92d9fd687b1f42c4}{$\sim$\+Jugador}} ()
+\begin{DoxyCompactList}\small\item\em esborra automaticament els objectes locals en sortir d\textquotesingle{}un ambit de visibilitat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_a2649293855d738934650cd8e26011df2}{escriure\+\_\+jugador}} (bool ranking, int punts)
+\begin{DoxyCompactList}\small\item\em Escriu un jugador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_jugador_ac23e47ec747a3bfcabcf047ef9b599de}{consultar\+\_\+posicio}} ()
+\begin{DoxyCompactList}\small\item\em Retorna la posicio d\textquotesingle{}un jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_jugador_ab002dbf870a93bbe498d1f76f9e43e43}{modificar\+\_\+estadistiques}} (const vector$<$ int $>$ \&stats)
+\begin{DoxyCompactList}\small\item\em Modifica les estadistiques d\textquotesingle{}un jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}{nom}}
+\item 
+int \mbox{\hyperlink{class_jugador_a25a7eeb0d334b2fe60bb490704c6626d}{pos}}
+\item 
+int \mbox{\hyperlink{class_jugador_a2ef0821abd64385a58561b039c37a469}{tornejos\+\_\+disputat}}
+\item 
+int \mbox{\hyperlink{class_jugador_a6bf9a674be86bfce7945f7c0dfbe531f}{partits\+\_\+guanyat}}
+\item 
+int \mbox{\hyperlink{class_jugador_ad1e6a56bea30a1449dbb37871c288fcf}{partits\+\_\+perdut}}
+\item 
+int \mbox{\hyperlink{class_jugador_a396b226c722425d387f36e239fc9855c}{sets\+\_\+guanyat}}
+\item 
+int \mbox{\hyperlink{class_jugador_a7c9fcb3ec52c2c400e7cf8faaf945426}{sets\+\_\+perdut}}
+\item 
+int \mbox{\hyperlink{class_jugador_a0eb97835e7dd3143f626c1d15edb7392}{jocs\+\_\+guanyat}}
+\item 
+int \mbox{\hyperlink{class_jugador_a04e5cf90e57c490b4c088e29763479f7}{jocs\+\_\+perdut}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+
+
+Definició a la línia 11 del fitxer Jugador.\+hh.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\mbox{\Hypertarget{class_jugador_a0bac6ebd78bbdc5ed61be887a163ecc0}\label{class_jugador_a0bac6ebd78bbdc5ed61be887a163ecc0}} 
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\index{Jugador@{Jugador}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{Jugador()}{Jugador()}}
+{\footnotesize\ttfamily Jugador\+::\+Jugador (\begin{DoxyParamCaption}\item[{string}]{n,  }\item[{int}]{ultima\+\_\+pos }\end{DoxyParamCaption})}
+
+
+
+Constructora de la classe. 
+
+\begin{DoxyPrecond}{Precondició}
+cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+el resultat es un jugador amb nom i zero a les estadístiques. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 5 del fitxer Jugador.\+cc.
+
+
+\begin{DoxyCode}
+5                                          \{
+6     \mbox{\hyperlink{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}{nom}} = n;
+7     \mbox{\hyperlink{class_jugador_a25a7eeb0d334b2fe60bb490704c6626d}{pos}} = ultima\_pos;
+8     \mbox{\hyperlink{class_jugador_a2ef0821abd64385a58561b039c37a469}{tornejos\_disputat}} = 0;
+9     \mbox{\hyperlink{class_jugador_a6bf9a674be86bfce7945f7c0dfbe531f}{partits\_guanyat}} = 0;
+10     \mbox{\hyperlink{class_jugador_ad1e6a56bea30a1449dbb37871c288fcf}{partits\_perdut}} = 0;
+11     \mbox{\hyperlink{class_jugador_a396b226c722425d387f36e239fc9855c}{sets\_guanyat}} = 0;
+12     \mbox{\hyperlink{class_jugador_a7c9fcb3ec52c2c400e7cf8faaf945426}{sets\_perdut}} = 0;
+13     \mbox{\hyperlink{class_jugador_a0eb97835e7dd3143f626c1d15edb7392}{jocs\_guanyat}} = 0;
+14     \mbox{\hyperlink{class_jugador_a04e5cf90e57c490b4c088e29763479f7}{jocs\_perdut}} = 0;
+15     
+16 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_a9db1d422fe3b675f92d9fd687b1f42c4}\label{class_jugador_a9db1d422fe3b675f92d9fd687b1f42c4}} 
+\index{Jugador@{Jugador}!````~Jugador@{$\sim$\+Jugador}}
+\index{````~Jugador@{$\sim$\+Jugador}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{$\sim$\+Jugador()}{~Jugador()}}
+{\footnotesize\ttfamily Jugador\+::$\sim$\+Jugador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+esborra automaticament els objectes locals en sortir d\textquotesingle{}un ambit de visibilitat. 
+
+
+
+Definició a la línia 18 del fitxer Jugador.\+cc.
+
+
+\begin{DoxyCode}
+18                   \{
+19     
+20 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\mbox{\Hypertarget{class_jugador_a2649293855d738934650cd8e26011df2}\label{class_jugador_a2649293855d738934650cd8e26011df2}} 
+\index{Jugador@{Jugador}!escriure\+\_\+jugador@{escriure\+\_\+jugador}}
+\index{escriure\+\_\+jugador@{escriure\+\_\+jugador}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{escriure\+\_\+jugador()}{escriure\_jugador()}}
+{\footnotesize\ttfamily void Jugador\+::escriure\+\_\+jugador (\begin{DoxyParamCaption}\item[{bool}]{ranking,  }\item[{int}]{punts }\end{DoxyParamCaption})}
+
+
+
+Escriu un jugador. 
+
+\begin{DoxyPrecond}{Precondició}
+cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}han escrit els atributs del parametre implicit al canal estandard de sortida. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 23 del fitxer Jugador.\+cc.
+
+
+\begin{DoxyCode}
+23                                                       \{
+24     \textcolor{keywordflow}{if} (ranking) \{
+25         cout << \mbox{\hyperlink{class_jugador_a25a7eeb0d334b2fe60bb490704c6626d}{pos}} << \textcolor{stringliteral}{" "} << \mbox{\hyperlink{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}{nom}} << \textcolor{stringliteral}{" "} << punts << endl;
+26     \} 
+27     \textcolor{keywordflow}{else} \{
+28         cout << \mbox{\hyperlink{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}{nom}} << \textcolor{stringliteral}{" "} << \mbox{\hyperlink{class_jugador_a25a7eeb0d334b2fe60bb490704c6626d}{pos}} << \textcolor{stringliteral}{" "} << punts << \textcolor{stringliteral}{" "} << 
+      \mbox{\hyperlink{class_jugador_a2ef0821abd64385a58561b039c37a469}{tornejos\_disputat}} << \textcolor{stringliteral}{" "};
+29         cout << \mbox{\hyperlink{class_jugador_a6bf9a674be86bfce7945f7c0dfbe531f}{partits\_guanyat}} << \textcolor{stringliteral}{" "} << \mbox{\hyperlink{class_jugador_ad1e6a56bea30a1449dbb37871c288fcf}{partits\_perdut}} << \textcolor{stringliteral}{" "} << 
+      \mbox{\hyperlink{class_jugador_a396b226c722425d387f36e239fc9855c}{sets\_guanyat}} << \textcolor{stringliteral}{" "};
+30         cout << \mbox{\hyperlink{class_jugador_a7c9fcb3ec52c2c400e7cf8faaf945426}{sets\_perdut}} << \textcolor{stringliteral}{" "} << \mbox{\hyperlink{class_jugador_a0eb97835e7dd3143f626c1d15edb7392}{jocs\_guanyat}} << \textcolor{stringliteral}{" "} << 
+      \mbox{\hyperlink{class_jugador_a04e5cf90e57c490b4c088e29763479f7}{jocs\_perdut}} << endl;
+31     \}
+32     
+33 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_ac23e47ec747a3bfcabcf047ef9b599de}\label{class_jugador_ac23e47ec747a3bfcabcf047ef9b599de}} 
+\index{Jugador@{Jugador}!consultar\+\_\+posicio@{consultar\+\_\+posicio}}
+\index{consultar\+\_\+posicio@{consultar\+\_\+posicio}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{consultar\+\_\+posicio()}{consultar\_posicio()}}
+{\footnotesize\ttfamily int Jugador\+::consultar\+\_\+posicio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna la posicio d\textquotesingle{}un jugador. 
+
+\begin{DoxyPrecond}{Precondició}
+J és un jugador amb posició. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+es retorna la posició de J. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 35 del fitxer Jugador.\+cc.
+
+
+\begin{DoxyCode}
+35                               \{
+36     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_jugador_a25a7eeb0d334b2fe60bb490704c6626d}{pos}};
+37 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_jugador_ab002dbf870a93bbe498d1f76f9e43e43}\label{class_jugador_ab002dbf870a93bbe498d1f76f9e43e43}} 
+\index{Jugador@{Jugador}!modificar\+\_\+estadistiques@{modificar\+\_\+estadistiques}}
+\index{modificar\+\_\+estadistiques@{modificar\+\_\+estadistiques}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{modificar\+\_\+estadistiques()}{modificar\_estadistiques()}}
+{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+estadistiques (\begin{DoxyParamCaption}\item[{const vector$<$ int $>$ \&}]{stats }\end{DoxyParamCaption})}
+
+
+
+Modifica les estadistiques d\textquotesingle{}un jugador. 
+
+\begin{DoxyPrecond}{Precondició}
+el vector te 7 enters que indiquen com s\textquotesingle{}han de modificar les estadistiques. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}han modificat correctament les estadístiques del paràmetre implícit. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 39 del fitxer Jugador.\+cc.
+
+
+\begin{DoxyCode}
+39                                                               \{
+40     \mbox{\hyperlink{class_jugador_a2ef0821abd64385a58561b039c37a469}{tornejos\_disputat}} += stats[0];
+41     \mbox{\hyperlink{class_jugador_a6bf9a674be86bfce7945f7c0dfbe531f}{partits\_guanyat}} += stats[1];
+42     \mbox{\hyperlink{class_jugador_ad1e6a56bea30a1449dbb37871c288fcf}{partits\_perdut}} += stats[2];
+43     \mbox{\hyperlink{class_jugador_a396b226c722425d387f36e239fc9855c}{sets\_guanyat}} += stats[3];
+44     \mbox{\hyperlink{class_jugador_a7c9fcb3ec52c2c400e7cf8faaf945426}{sets\_perdut}} += stats[4];
+45     \mbox{\hyperlink{class_jugador_a0eb97835e7dd3143f626c1d15edb7392}{jocs\_guanyat}} += stats[5];
+46     \mbox{\hyperlink{class_jugador_a04e5cf90e57c490b4c088e29763479f7}{jocs\_perdut}} += stats[6];
+47 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Dades Membre}
+\mbox{\Hypertarget{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}\label{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}} 
+\index{Jugador@{Jugador}!nom@{nom}}
+\index{nom@{nom}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{nom}{nom}}
+{\footnotesize\ttfamily string Jugador\+::nom\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 15 del fitxer Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a25a7eeb0d334b2fe60bb490704c6626d}\label{class_jugador_a25a7eeb0d334b2fe60bb490704c6626d}} 
+\index{Jugador@{Jugador}!pos@{pos}}
+\index{pos@{pos}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{pos}{pos}}
+{\footnotesize\ttfamily int Jugador\+::pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 16 del fitxer Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a2ef0821abd64385a58561b039c37a469}\label{class_jugador_a2ef0821abd64385a58561b039c37a469}} 
+\index{Jugador@{Jugador}!tornejos\+\_\+disputat@{tornejos\+\_\+disputat}}
+\index{tornejos\+\_\+disputat@{tornejos\+\_\+disputat}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{tornejos\+\_\+disputat}{tornejos\_disputat}}
+{\footnotesize\ttfamily int Jugador\+::tornejos\+\_\+disputat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 17 del fitxer Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a6bf9a674be86bfce7945f7c0dfbe531f}\label{class_jugador_a6bf9a674be86bfce7945f7c0dfbe531f}} 
+\index{Jugador@{Jugador}!partits\+\_\+guanyat@{partits\+\_\+guanyat}}
+\index{partits\+\_\+guanyat@{partits\+\_\+guanyat}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{partits\+\_\+guanyat}{partits\_guanyat}}
+{\footnotesize\ttfamily int Jugador\+::partits\+\_\+guanyat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 18 del fitxer Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_ad1e6a56bea30a1449dbb37871c288fcf}\label{class_jugador_ad1e6a56bea30a1449dbb37871c288fcf}} 
+\index{Jugador@{Jugador}!partits\+\_\+perdut@{partits\+\_\+perdut}}
+\index{partits\+\_\+perdut@{partits\+\_\+perdut}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{partits\+\_\+perdut}{partits\_perdut}}
+{\footnotesize\ttfamily int Jugador\+::partits\+\_\+perdut\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 19 del fitxer Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a396b226c722425d387f36e239fc9855c}\label{class_jugador_a396b226c722425d387f36e239fc9855c}} 
+\index{Jugador@{Jugador}!sets\+\_\+guanyat@{sets\+\_\+guanyat}}
+\index{sets\+\_\+guanyat@{sets\+\_\+guanyat}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{sets\+\_\+guanyat}{sets\_guanyat}}
+{\footnotesize\ttfamily int Jugador\+::sets\+\_\+guanyat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 20 del fitxer Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a7c9fcb3ec52c2c400e7cf8faaf945426}\label{class_jugador_a7c9fcb3ec52c2c400e7cf8faaf945426}} 
+\index{Jugador@{Jugador}!sets\+\_\+perdut@{sets\+\_\+perdut}}
+\index{sets\+\_\+perdut@{sets\+\_\+perdut}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{sets\+\_\+perdut}{sets\_perdut}}
+{\footnotesize\ttfamily int Jugador\+::sets\+\_\+perdut\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 21 del fitxer Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a0eb97835e7dd3143f626c1d15edb7392}\label{class_jugador_a0eb97835e7dd3143f626c1d15edb7392}} 
+\index{Jugador@{Jugador}!jocs\+\_\+guanyat@{jocs\+\_\+guanyat}}
+\index{jocs\+\_\+guanyat@{jocs\+\_\+guanyat}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{jocs\+\_\+guanyat}{jocs\_guanyat}}
+{\footnotesize\ttfamily int Jugador\+::jocs\+\_\+guanyat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 22 del fitxer Jugador.\+hh.
+
+\mbox{\Hypertarget{class_jugador_a04e5cf90e57c490b4c088e29763479f7}\label{class_jugador_a04e5cf90e57c490b4c088e29763479f7}} 
+\index{Jugador@{Jugador}!jocs\+\_\+perdut@{jocs\+\_\+perdut}}
+\index{jocs\+\_\+perdut@{jocs\+\_\+perdut}!Jugador@{Jugador}}
+\subsubsection{\texorpdfstring{jocs\+\_\+perdut}{jocs\_perdut}}
+{\footnotesize\ttfamily int Jugador\+::jocs\+\_\+perdut\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 23 del fitxer Jugador.\+hh.
+
+
+
+La documentació d\textquotesingle{}aquesta classe es va generar a partir dels següents fitxers\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_jugador_8hh}{Jugador.\+hh}}\item 
+\mbox{\hyperlink{_jugador_8cc}{Jugador.\+cc}}\end{DoxyCompactItemize}

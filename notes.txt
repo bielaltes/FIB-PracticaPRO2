@@ -1,0 +1,3 @@
+tenir una consultora de numero de categories no es eficient ja que es constant i pot estar al main definit com un int.
+
+

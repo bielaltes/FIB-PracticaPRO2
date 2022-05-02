@@ -1,0 +1,228 @@
+\hypertarget{class_cjt__categories}{}\section{Referència de la Classe Cjt\+\_\+categories}
+\label{class_cjt__categories}\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsection*{Mètodes públics}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_cjt__categories_a0a7b9eae526afdb8c18269fefcee1174}{Cjt\+\_\+categories}} (int \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}, int \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}})
+\begin{DoxyCompactList}\small\item\em Constructora de la classe. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_cjt__categories_a768f340b8389161d8dc565ecf8853f4f}{$\sim$\+Cjt\+\_\+categories}} ()
+\begin{DoxyCompactList}\small\item\em esborra automaticament els objectes locals en sortir d\textquotesingle{}un ambit de visibilitat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__categories_aec7c99f38b0e4a59e804b5bf9ed1a4c8}{llegir\+\_\+categories}} ()
+\begin{DoxyCompactList}\small\item\em Llegeix un conjunt de categories. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__categories_ad1a67d725173663782d1385ff59f0be6}{imprimir\+\_\+categories}} ()
+\begin{DoxyCompactList}\small\item\em Escriu un conjunt de categories. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_cjt__categories_a78445bc84e521a95e7314ec4ac2565ad}{num\+\_\+categories}} ()
+\begin{DoxyCompactList}\small\item\em Retorna el numero de categories del conjunt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Atributs Privats}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}
+\item 
+int \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}}
+\item 
+vector$<$ string $>$ \mbox{\hyperlink{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}{noms}}
+\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{class_cjt__categories_a121b331af19b7307f320b21f0edd8b30}{puntuacio}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descripció Detallada}
+
+
+Definició a la línia 12 del fitxer Cjt\+\_\+categories.\+hh.
+
+
+
+\subsection{Documentació del Constructor i el Destructor}
+\mbox{\Hypertarget{class_cjt__categories_a0a7b9eae526afdb8c18269fefcee1174}\label{class_cjt__categories_a0a7b9eae526afdb8c18269fefcee1174}} 
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsubsection{\texorpdfstring{Cjt\+\_\+categories()}{Cjt\_categories()}}
+{\footnotesize\ttfamily Cjt\+\_\+categories\+::\+Cjt\+\_\+categories (\begin{DoxyParamCaption}\item[{int}]{C,  }\item[{int}]{K }\end{DoxyParamCaption})}
+
+
+
+Constructora de la classe. 
+
+\begin{DoxyPrecond}{Precondició}
+C i K son dos enters no negatius. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+el resultat es un conjunt de C categories i K nivells com a maxim. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 3 del fitxer Cjt\+\_\+categories.\+cc.
+
+
+\begin{DoxyCode}
+3                                            \{
+4     \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}} = c;
+5     \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}} = k;
+6     \mbox{\hyperlink{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}{noms}} = vector<string> (\mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}});
+7     \mbox{\hyperlink{class_cjt__categories_a121b331af19b7307f320b21f0edd8b30}{puntuacio}} = vector<vector<int>> (\mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}, vector<int> (\mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}}));
+8 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__categories_a768f340b8389161d8dc565ecf8853f4f}\label{class_cjt__categories_a768f340b8389161d8dc565ecf8853f4f}} 
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!````~Cjt\+\_\+categories@{$\sim$\+Cjt\+\_\+categories}}
+\index{````~Cjt\+\_\+categories@{$\sim$\+Cjt\+\_\+categories}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsubsection{\texorpdfstring{$\sim$\+Cjt\+\_\+categories()}{~Cjt\_categories()}}
+{\footnotesize\ttfamily Cjt\+\_\+categories\+::$\sim$\+Cjt\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+esborra automaticament els objectes locals en sortir d\textquotesingle{}un ambit de visibilitat. 
+
+
+
+Definició a la línia 10 del fitxer Cjt\+\_\+categories.\+cc.
+
+
+\begin{DoxyCode}
+10                                 \{
+11     
+12 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Funcions Membre}
+\mbox{\Hypertarget{class_cjt__categories_aec7c99f38b0e4a59e804b5bf9ed1a4c8}\label{class_cjt__categories_aec7c99f38b0e4a59e804b5bf9ed1a4c8}} 
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!llegir\+\_\+categories@{llegir\+\_\+categories}}
+\index{llegir\+\_\+categories@{llegir\+\_\+categories}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsubsection{\texorpdfstring{llegir\+\_\+categories()}{llegir\_categories()}}
+{\footnotesize\ttfamily void Cjt\+\_\+categories\+::llegir\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Llegeix un conjunt de categories. 
+
+\begin{DoxyPrecond}{Precondició}
+estan preparats al canal estandard d\textquotesingle{}entrada un enter que representa el nombre total de categories i un altre enter que representa el nombre màxim de nivells i les dades d\textquotesingle{}aquests diferents nivells. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+el parametre implicit conte el conjunt de categories llegits del canal estandard d\textquotesingle{}entrada. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 14 del fitxer Cjt\+\_\+categories.\+cc.
+
+
+\begin{DoxyCode}
+14                                        \{
+15     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}; ++i) \{
+16         cin >> \mbox{\hyperlink{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}{noms}}[i]; 
+17     \}
+18     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}; ++i) \{ 
+19         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}}; ++j) \{ 
+20             cin >> \mbox{\hyperlink{class_cjt__categories_a121b331af19b7307f320b21f0edd8b30}{puntuacio}}[i][j];
+21         \}
+22     \}
+23 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__categories_ad1a67d725173663782d1385ff59f0be6}\label{class_cjt__categories_ad1a67d725173663782d1385ff59f0be6}} 
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!imprimir\+\_\+categories@{imprimir\+\_\+categories}}
+\index{imprimir\+\_\+categories@{imprimir\+\_\+categories}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsubsection{\texorpdfstring{imprimir\+\_\+categories()}{imprimir\_categories()}}
+{\footnotesize\ttfamily void Cjt\+\_\+categories\+::imprimir\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Escriu un conjunt de categories. 
+
+\begin{DoxyPrecond}{Precondició}
+cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}han escrit pel canal estandard de sortida les categories del parametre implicit en ordre ascendent per identificador, el nom i la taula de punts de cada categoria. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 25 del fitxer Cjt\+\_\+categories.\+cc.
+
+
+\begin{DoxyCode}
+25                                          \{
+26     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}; ++i) \{
+27         cout << \mbox{\hyperlink{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}{noms}}[i];
+28         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}}; ++j) \{ 
+29             cout << \textcolor{stringliteral}{" "} <<\mbox{\hyperlink{class_cjt__categories_a121b331af19b7307f320b21f0edd8b30}{puntuacio}}[i][j];
+30         \}
+31         cout << endl;
+32     \}
+33 \}
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__categories_a78445bc84e521a95e7314ec4ac2565ad}\label{class_cjt__categories_a78445bc84e521a95e7314ec4ac2565ad}} 
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!num\+\_\+categories@{num\+\_\+categories}}
+\index{num\+\_\+categories@{num\+\_\+categories}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsubsection{\texorpdfstring{num\+\_\+categories()}{num\_categories()}}
+{\footnotesize\ttfamily int Cjt\+\_\+categories\+::num\+\_\+categories (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna el numero de categories del conjunt. 
+
+\begin{DoxyPrecond}{Precondició}
+cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+el resultat es el numero de categories del parametre implicit. . 
+\end{DoxyPostcond}
+
+
+Definició a la línia 35 del fitxer Cjt\+\_\+categories.\+cc.
+
+
+\begin{DoxyCode}
+35                                    \{
+36     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}};
+37 \}
+\end{DoxyCode}
+
+
+\subsection{Documentació de les Dades Membre}
+\mbox{\Hypertarget{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}\label{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}} 
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!C@{C}}
+\index{C@{C}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsubsection{\texorpdfstring{C}{C}}
+{\footnotesize\ttfamily int Cjt\+\_\+categories\+::C\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 15 del fitxer Cjt\+\_\+categories.\+hh.
+
+\mbox{\Hypertarget{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}\label{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}} 
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!K@{K}}
+\index{K@{K}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsubsection{\texorpdfstring{K}{K}}
+{\footnotesize\ttfamily int Cjt\+\_\+categories\+::K\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 15 del fitxer Cjt\+\_\+categories.\+hh.
+
+\mbox{\Hypertarget{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}\label{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}} 
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!noms@{noms}}
+\index{noms@{noms}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsubsection{\texorpdfstring{noms}{noms}}
+{\footnotesize\ttfamily vector$<$string$>$ Cjt\+\_\+categories\+::noms\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 16 del fitxer Cjt\+\_\+categories.\+hh.
+
+\mbox{\Hypertarget{class_cjt__categories_a121b331af19b7307f320b21f0edd8b30}\label{class_cjt__categories_a121b331af19b7307f320b21f0edd8b30}} 
+\index{Cjt\+\_\+categories@{Cjt\+\_\+categories}!puntuacio@{puntuacio}}
+\index{puntuacio@{puntuacio}!Cjt\+\_\+categories@{Cjt\+\_\+categories}}
+\subsubsection{\texorpdfstring{puntuacio}{puntuacio}}
+{\footnotesize\ttfamily vector$<$vector$<$int$>$ $>$ Cjt\+\_\+categories\+::puntuacio\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 17 del fitxer Cjt\+\_\+categories.\+hh.
+
+
+
+La documentació d\textquotesingle{}aquesta classe es va generar a partir dels següents fitxers\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_cjt__categories_8hh}{Cjt\+\_\+categories.\+hh}}\item 
+\mbox{\hyperlink{_cjt__categories_8cc}{Cjt\+\_\+categories.\+cc}}\end{DoxyCompactItemize}
