@@ -11,24 +11,24 @@ Jugador::Jugador(string n, int ultima_pos) {
     sets_perdut = 0;
     jocs_guanyat = 0;
     jocs_perdut = 0;
-    
+
 }
 
 Jugador::~Jugador() {
-    
+
 }
 
 
 void Jugador::escriure_jugador(bool ranking, int punts) {
     if (ranking) {
         cout << nom << " " << punts << endl;
-    } 
+    }
     else {
         cout << nom << " Rk:" << pos << " Ps:" << punts << " Ts:" << tornejos_disputat << " WM:";
         cout << partits_guanyat << " LM:" << partits_perdut << " WS:" << sets_guanyat << " LS:";
         cout << sets_perdut << " WG:" << jocs_guanyat << " LG:" << jocs_perdut << endl;
     }
-    
+
 }
 
 int Jugador::consultar_posicio(){
@@ -37,6 +37,10 @@ int Jugador::consultar_posicio(){
 
 void Jugador::sumar_posicio() {
     pos -=1;
+}
+
+void Jugador::modificar_posicio(int posicio) {
+    pos = posicio;
 }
 
 

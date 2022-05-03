@@ -1,6 +1,6 @@
-\hypertarget{class_cjt__jugadors}{}\section{Referència de la Classe Cjt\+\_\+jugadors}
-\label{class_cjt__jugadors}\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsection*{Mètodes públics}
+\hypertarget{class_cjt__jugadors}{}\doxysection{Referència de la Classe Cjt\+\_\+jugadors}
+\label{class_cjt__jugadors}\index{Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsection*{Mètodes públics}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_cjt__jugadors_a473281833edd8838e3517fff07a6b9f1}{Cjt\+\_\+jugadors}} ()
@@ -13,17 +13,19 @@ void \mbox{\hyperlink{class_cjt__jugadors_a9821d65fda187cb5983d98e4e86fc073}{imp
 \begin{DoxyCompactList}\small\item\em Imprimeix un conjunt de jugadors ordenats lexicograficament. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__jugadors_a63581fdbdfaba9aeb5f0b3b466160902}{imprimir\+\_\+ranking}} ()
 \begin{DoxyCompactList}\small\item\em Imprimeix un conjunt de jugadors ordenats per ranking. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cjt__jugadors_abc12f64a28c23ba5bd1e94814476de6e}{nou\+\_\+jugador}} ()
+void \mbox{\hyperlink{class_cjt__jugadors_ad59d2f11a4bbfd1053c0dba9062595af}{nou\+\_\+jugador}} (string nom, bool first)
 \begin{DoxyCompactList}\small\item\em Afegeix un nou jugador al conjunt. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cjt__jugadors_a902057929aebe8b46ff16395ad22def2}{baixa\+\_\+jugador}} ()
+void \mbox{\hyperlink{class_cjt__jugadors_a45f7ccbdbfe93b545fa82a846f1e767d}{baixa\+\_\+jugador}} (string nom)
 \begin{DoxyCompactList}\small\item\em Dona de baixa a un jugador del conjunt. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cjt__jugadors_a2232be18d9336daa80680ee29a5e9f28}{consultar\+\_\+jugador}} ()
+void \mbox{\hyperlink{class_cjt__jugadors_a7f4014b50e2bf91f3b5e7286c2385edc}{consultar\+\_\+jugador}} (string nom)
 \begin{DoxyCompactList}\small\item\em Es consulta un jugador del conjunt. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__jugadors_a5e12a36a7049121aef6a5cb46e6528ad}{actualitzar\+\_\+ranking}} (const vector$<$ pair$<$ int, int $>$$>$ \&v, bool sumar)
 \begin{DoxyCompactList}\small\item\em Suma o resta punts als jugadors del ranking i n\textquotesingle{}actualitza el ordre. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__jugadors_ade2368355d0198eef0c8d06c932f1a17}{actualitzar\+\_\+estadistiques}} (vector$<$ pair$<$ int, vector$<$ int $>$ $>$ $>$ \&stats)
-\begin{DoxyCompactList}\small\item\em Actualitza les estadistiques d\textquotesingle{}un conjunt de jugadors. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Atributs Privats}
+\begin{DoxyCompactList}\small\item\em Actualitza les estadistiques d\textquotesingle{}un conjunt de jugadors. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_cjt__jugadors_afb644fcd07419fb30dc37db5a1663a73}{nom\+\_\+jugador}} (int n)
+\begin{DoxyCompactList}\small\item\em Retorna el nom d\textquotesingle{}un jugador del parametre implicit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributs Privats}
 \begin{DoxyCompactItemize}
 \item 
 map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$ \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}
@@ -32,18 +34,18 @@ vector$<$ pair$<$ int, map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} 
 \end{DoxyCompactItemize}
 
 
-\subsection{Descripció Detallada}
+\doxysubsection{Descripció Detallada}
 
 
 Definició a la línia 13 del fitxer Cjt\+\_\+jugadors.\+hh.
 
 
 
-\subsection{Documentació del Constructor i el Destructor}
+\doxysubsection{Documentació del Constructor i el Destructor}
 \mbox{\Hypertarget{class_cjt__jugadors_a473281833edd8838e3517fff07a6b9f1}\label{class_cjt__jugadors_a473281833edd8838e3517fff07a6b9f1}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{Cjt\+\_\+jugadors()}{Cjt\_jugadors()}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!Cjt\_jugadors@{Cjt\_jugadors}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{Cjt\_jugadors()}{Cjt\_jugadors()}}
 {\footnotesize\ttfamily Cjt\+\_\+jugadors\+::\+Cjt\+\_\+jugadors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -61,16 +63,16 @@ el resultat es un conjunt de jugadors buit.
 Definició a la línia 3 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-3                            \{
-4     map<string,Jugador> \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}();
-5     vector<pair<int,map<string,Jugador>::iterator>> \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}();
-6 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3                            \{}
+\DoxyCodeLine{4     \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}} = vector<pair<int,map<string,Jugador>::iterator>>();}
+\DoxyCodeLine{5 \}}
+
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadors_a49d29aca09d1060d8c3db9771125b85f}\label{class_cjt__jugadors_a49d29aca09d1060d8c3db9771125b85f}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!````~Cjt\+\_\+jugadors@{$\sim$\+Cjt\+\_\+jugadors}}
-\index{````~Cjt\+\_\+jugadors@{$\sim$\+Cjt\+\_\+jugadors}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{$\sim$\+Cjt\+\_\+jugadors()}{~Cjt\_jugadors()}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!````~Cjt\_jugadors@{$\sim$Cjt\_jugadors}}
+\index{````~Cjt\_jugadors@{$\sim$Cjt\_jugadors}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{$\sim$Cjt\_jugadors()}{~Cjt\_jugadors()}}
 {\footnotesize\ttfamily Cjt\+\_\+jugadors\+::$\sim$\+Cjt\+\_\+jugadors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -79,21 +81,22 @@ esborra automaticament els objectes locals en sortir d\textquotesingle{}un ambit
 
 
 
-Definició a la línia 8 del fitxer Cjt\+\_\+jugadors.\+cc.
+Definició a la línia 7 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-8                             \{
-9         
-10 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{7                             \{}
+\DoxyCodeLine{8 }
+\DoxyCodeLine{9 \}}
+
 \end{DoxyCode}
 
 
-\subsection{Documentació de les Funcions Membre}
+\doxysubsection{Documentació de les Funcions Membre}
 \mbox{\Hypertarget{class_cjt__jugadors_affe03f05c962b8689540de5e1aa97d0a}\label{class_cjt__jugadors_affe03f05c962b8689540de5e1aa97d0a}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!llegir\+\_\+jugadors@{llegir\+\_\+jugadors}}
-\index{llegir\+\_\+jugadors@{llegir\+\_\+jugadors}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{llegir\+\_\+jugadors()}{llegir\_jugadors()}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!llegir\_jugadors@{llegir\_jugadors}}
+\index{llegir\_jugadors@{llegir\_jugadors}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{llegir\_jugadors()}{llegir\_jugadors()}}
 {\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::llegir\+\_\+jugadors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -108,22 +111,25 @@ el parametre implicit conte el conjunt de jugadors llegits del canal estandard d
 \end{DoxyPostcond}
 
 
-Definició a la línia 12 del fitxer Cjt\+\_\+jugadors.\+cc.
+Definició a la línia 11 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-12                                    \{
-13     \textcolor{keywordtype}{int} P;
-14     cin >> P;
-15     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < P; ++i) \{
-16         \mbox{\hyperlink{class_cjt__jugadors_abc12f64a28c23ba5bd1e94814476de6e}{nou\_jugador}}();  
-17     \}
-18 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{11                                    \{}
+\DoxyCodeLine{12     \textcolor{keywordtype}{int} P;}
+\DoxyCodeLine{13     cin >> P;}
+\DoxyCodeLine{14     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < P; ++i) \{}
+\DoxyCodeLine{15         \textcolor{keywordtype}{string} nom;}
+\DoxyCodeLine{16         cin >> nom;}
+\DoxyCodeLine{17         \mbox{\hyperlink{class_cjt__jugadors_ad59d2f11a4bbfd1053c0dba9062595af}{nou\_jugador}}(nom, \textcolor{keyword}{true});}
+\DoxyCodeLine{18     \}}
+\DoxyCodeLine{19 \}}
+
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadors_a9821d65fda187cb5983d98e4e86fc073}\label{class_cjt__jugadors_a9821d65fda187cb5983d98e4e86fc073}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!imprimir\+\_\+jugadors@{imprimir\+\_\+jugadors}}
-\index{imprimir\+\_\+jugadors@{imprimir\+\_\+jugadors}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{imprimir\+\_\+jugadors()}{imprimir\_jugadors()}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!imprimir\_jugadors@{imprimir\_jugadors}}
+\index{imprimir\_jugadors@{imprimir\_jugadors}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{imprimir\_jugadors()}{imprimir\_jugadors()}}
 {\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::imprimir\+\_\+jugadors (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -138,23 +144,23 @@ s\textquotesingle{}han escrit pel canal estandard de sortida els jugadors del pa
 \end{DoxyPostcond}
 
 
-Definició a la línia 20 del fitxer Cjt\+\_\+jugadors.\+cc.
+Definició a la línia 21 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-20                                      \{
-21     \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.size();
-22     map<string,Jugador>::iterator it = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.begin();
-23     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{
-24         (*it).second.escriure\_jugador(\textcolor{keyword}{false}, \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[((*it).second).consultar\_posicio() -1].first);
-25         ++it;
-26     \}
-27 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{21                                      \{}
+\DoxyCodeLine{22     cout << endl << \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.size() << endl;}
+\DoxyCodeLine{23     map<string,Jugador>::iterator end = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.end();}
+\DoxyCodeLine{24     \textcolor{keywordflow}{for} (map<string,Jugador>::iterator it = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.begin(); it != end; ++it) \{}
+\DoxyCodeLine{25         (*it).second.escriure\_jugador(\textcolor{keyword}{false}, \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[((*it).second).consultar\_posicio() -\/1].first);}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27 \}}
+
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadors_a63581fdbdfaba9aeb5f0b3b466160902}\label{class_cjt__jugadors_a63581fdbdfaba9aeb5f0b3b466160902}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!imprimir\+\_\+ranking@{imprimir\+\_\+ranking}}
-\index{imprimir\+\_\+ranking@{imprimir\+\_\+ranking}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{imprimir\+\_\+ranking()}{imprimir\_ranking()}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!imprimir\_ranking@{imprimir\_ranking}}
+\index{imprimir\_ranking@{imprimir\_ranking}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{imprimir\_ranking()}{imprimir\_ranking()}}
 {\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::imprimir\+\_\+ranking (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -165,26 +171,30 @@ Imprimeix un conjunt de jugadors ordenats per ranking.
 cert. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-s\textquotesingle{}han escrit pel canal estandard de sortida els jugadors del parametre implicit en ordre descendent per punts, el nom la posició del ranking, els punts i la resta d\textquotesingle{}estadistiques de cada jugador del paràmetre implicit. 
+s\textquotesingle{}han escrit pel canal estandard de sortida els jugadors del parametre implicit en ordre descendent per punts, el nom la posició del ranking, els punts i la resta d\textquotesingle{}estadistiques de cada jugador del paràmetre implicit. ~\newline
+ 
 \end{DoxyPostcond}
 
 
 Definició a la línia 29 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-29                                     \{
-30     \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.size();
-31     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{
-32         (*(\mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[i].second)).second.escriure\_jugador(\textcolor{keyword}{true}, \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[i].first);
-33     \}
-34 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{29                                     \{}
+\DoxyCodeLine{30     cout << endl;}
+\DoxyCodeLine{31     \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.size();}
+\DoxyCodeLine{32     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{33         cout << i+1 << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{34         ((*(\mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[i].second)).second).escriure\_jugador(\textcolor{keyword}{true}, \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[i].first);}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36 \}}
+
 \end{DoxyCode}
-\mbox{\Hypertarget{class_cjt__jugadors_abc12f64a28c23ba5bd1e94814476de6e}\label{class_cjt__jugadors_abc12f64a28c23ba5bd1e94814476de6e}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!nou\+\_\+jugador@{nou\+\_\+jugador}}
-\index{nou\+\_\+jugador@{nou\+\_\+jugador}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{nou\+\_\+jugador()}{nou\_jugador()}}
-{\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::nou\+\_\+jugador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_cjt__jugadors_ad59d2f11a4bbfd1053c0dba9062595af}\label{class_cjt__jugadors_ad59d2f11a4bbfd1053c0dba9062595af}} 
+\index{Cjt\_jugadors@{Cjt\_jugadors}!nou\_jugador@{nou\_jugador}}
+\index{nou\_jugador@{nou\_jugador}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{nou\_jugador()}{nou\_jugador()}}
+{\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::nou\+\_\+jugador (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{bool}]{first }\end{DoxyParamCaption})}
 
 
 
@@ -198,26 +208,26 @@ s\textquotesingle{}ha afegit el jugador J al ranking i conjunt de jugadors del p
 \end{DoxyPostcond}
 
 
-Definició a la línia 36 del fitxer Cjt\+\_\+jugadors.\+cc.
+Definició a la línia 38 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-36                                \{
-37     \textcolor{keywordtype}{string} nom;
-38     cin >> nom;
-39     \mbox{\hyperlink{class_jugador}{Jugador}} J(nom, \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.size()+1);
-40     pair<map<string,Jugador>::iterator,\textcolor{keywordtype}{bool}> trobat = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.insert(pair<string,Jugador>(nom,J));
-41     \textcolor{keywordflow}{if} (not trobat.second) \{
-42         \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.push\_back(pair<\textcolor{keywordtype}{int},map<string,Jugador>::iterator>(0,trobat.first));
-43     \}
-44     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-45 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{38                                                      \{}
+\DoxyCodeLine{39     \mbox{\hyperlink{class_jugador}{Jugador}} J(nom, \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.size()+1);}
+\DoxyCodeLine{40     pair<map<string,Jugador>::iterator,\textcolor{keywordtype}{bool}> trobat = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.insert(pair<string,Jugador>(nom,J));}
+\DoxyCodeLine{41     \textcolor{keywordflow}{if} (trobat.second) \{}
+\DoxyCodeLine{42         \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.push\_back(pair<\textcolor{keywordtype}{int},map<string,Jugador>::iterator>(0,trobat.first));}
+\DoxyCodeLine{43         \textcolor{keywordflow}{if} (not first) cout << \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.size() << endl;;}
+\DoxyCodeLine{44     \}}
+\DoxyCodeLine{45     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: ya existe un jugador con ese nombre"{}} << endl;}
+\DoxyCodeLine{46 \}}
+
 \end{DoxyCode}
-\mbox{\Hypertarget{class_cjt__jugadors_a902057929aebe8b46ff16395ad22def2}\label{class_cjt__jugadors_a902057929aebe8b46ff16395ad22def2}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!baixa\+\_\+jugador@{baixa\+\_\+jugador}}
-\index{baixa\+\_\+jugador@{baixa\+\_\+jugador}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{baixa\+\_\+jugador()}{baixa\_jugador()}}
-{\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::baixa\+\_\+jugador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_cjt__jugadors_a45f7ccbdbfe93b545fa82a846f1e767d}\label{class_cjt__jugadors_a45f7ccbdbfe93b545fa82a846f1e767d}} 
+\index{Cjt\_jugadors@{Cjt\_jugadors}!baixa\_jugador@{baixa\_jugador}}
+\index{baixa\_jugador@{baixa\_jugador}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{baixa\_jugador()}{baixa\_jugador()}}
+{\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::baixa\+\_\+jugador (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})}
 
 
 
@@ -231,26 +241,40 @@ s\textquotesingle{}ha esborrat el jugador J del parametre implicit i s\textquote
 \end{DoxyPostcond}
 
 
-Definició a la línia 47 del fitxer Cjt\+\_\+jugadors.\+cc.
+Definició a la línia 48 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-47                                  \{
-48     \textcolor{keywordtype}{string} nom;
-49     cin >> nom;
-50     map<string,Jugador>::iterator trobat = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.find(nom); 
-51     \textcolor{keywordflow}{if} (trobat != \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.end()) \{
-52         \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.erase(\mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.begin() + (*trobat).second.consultar\_posicio() -1);
-53         \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.erase(trobat);
-54     \}
-55     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-56 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48                                            \{}
+\DoxyCodeLine{49     map<string,Jugador>::iterator trobat = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.find(nom);}
+\DoxyCodeLine{50     \textcolor{keywordflow}{if} (trobat != \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.end()) \{}
+\DoxyCodeLine{51 }
+\DoxyCodeLine{52         \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.size();}
+\DoxyCodeLine{53         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = ((*trobat).second).consultar\_posicio(); i <size; ++i) \{}
+\DoxyCodeLine{54                 ((*(\mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[i].second)).second).sumar\_posicio();}
+\DoxyCodeLine{55                 \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[i-\/1] = \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[i];}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{57 }
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59         \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.pop\_back();}
+\DoxyCodeLine{60 }
+\DoxyCodeLine{61         \textcolor{comment}{//map<string,Jugador>::iterator end = jugadors.end();}}
+\DoxyCodeLine{62         \textcolor{comment}{//for (map<string,Jugador>::iterator it = trobat;  it != end; ++it) \{}}
+\DoxyCodeLine{63         \textcolor{comment}{//    ((*it).second).sumar\_posicio();}}
+\DoxyCodeLine{64         \textcolor{comment}{//\}}}
+\DoxyCodeLine{65         \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.erase(trobat);}
+\DoxyCodeLine{66         cout << \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.size() << endl;}
+\DoxyCodeLine{67 }
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
+\DoxyCodeLine{70 \}}
+
 \end{DoxyCode}
-\mbox{\Hypertarget{class_cjt__jugadors_a2232be18d9336daa80680ee29a5e9f28}\label{class_cjt__jugadors_a2232be18d9336daa80680ee29a5e9f28}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!consultar\+\_\+jugador@{consultar\+\_\+jugador}}
-\index{consultar\+\_\+jugador@{consultar\+\_\+jugador}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{consultar\+\_\+jugador()}{consultar\_jugador()}}
-{\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::consultar\+\_\+jugador (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_cjt__jugadors_a7f4014b50e2bf91f3b5e7286c2385edc}\label{class_cjt__jugadors_a7f4014b50e2bf91f3b5e7286c2385edc}} 
+\index{Cjt\_jugadors@{Cjt\_jugadors}!consultar\_jugador@{consultar\_jugador}}
+\index{consultar\_jugador@{consultar\_jugador}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{consultar\_jugador()}{consultar\_jugador()}}
+{\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::consultar\+\_\+jugador (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})}
 
 
 
@@ -264,25 +288,23 @@ s\textquotesingle{}han impres el nom, els punts, la posició al ranking i les es
 \end{DoxyPostcond}
 
 
-Definició a la línia 58 del fitxer Cjt\+\_\+jugadors.\+cc.
+Definició a la línia 73 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-58                                      \{
-59     \textcolor{keywordtype}{string} n;
-60     cin >> n;
-61     map<string,Jugador>::iterator trobat = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.find(n);
-62     \textcolor{keywordflow}{if} (trobat!=\mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.end()) \{
-63         ((*trobat).second).escriure\_jugador(\textcolor{keyword}{false}, \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[((*trobat).second).consultar\_posicio() -1
-      ].first);
-64     \}
-65     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"error"} << endl;
-66 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{73                                                \{}
+\DoxyCodeLine{74     map<string,Jugador>::iterator trobat = \mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.find(nom);}
+\DoxyCodeLine{75     \textcolor{keywordflow}{if} (trobat!=\mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.end()) \{}
+\DoxyCodeLine{76         ((*trobat).second).escriure\_jugador(\textcolor{keyword}{false}, \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[((*trobat).second).consultar\_posicio() -\/1].first);}
+\DoxyCodeLine{77     \}}
+\DoxyCodeLine{78     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: el jugador no existe"{}} << endl;}
+\DoxyCodeLine{79 \}}
+
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadors_a5e12a36a7049121aef6a5cb46e6528ad}\label{class_cjt__jugadors_a5e12a36a7049121aef6a5cb46e6528ad}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!actualitzar\+\_\+ranking@{actualitzar\+\_\+ranking}}
-\index{actualitzar\+\_\+ranking@{actualitzar\+\_\+ranking}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{actualitzar\+\_\+ranking()}{actualitzar\_ranking()}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!actualitzar\_ranking@{actualitzar\_ranking}}
+\index{actualitzar\_ranking@{actualitzar\_ranking}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{actualitzar\_ranking()}{actualitzar\_ranking()}}
 {\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::actualitzar\+\_\+ranking (\begin{DoxyParamCaption}\item[{const vector$<$ pair$<$ int, int $>$$>$ \&}]{v,  }\item[{bool}]{sumar }\end{DoxyParamCaption})}
 
 
@@ -297,18 +319,35 @@ si bool sumar és cert, s\textquotesingle{}han sumat els punts indicats al ranki
 \end{DoxyPostcond}
 
 
-Definició a la línia 68 del fitxer Cjt\+\_\+jugadors.\+cc.
+Definició a la línia 81 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-68                                                                                  \{
-69     
-70 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{81                                                                                                   \{}
+\DoxyCodeLine{82    \textcolor{keywordtype}{int} size = participants.size();}
+\DoxyCodeLine{83    \textcolor{keywordflow}{if} (sumar)\{}
+\DoxyCodeLine{84      \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{85          \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[((*(\mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.find(participants[i]))).second).consultar\_posicio()-\/1].first += punts[i];}
+\DoxyCodeLine{86      \}}
+\DoxyCodeLine{87    \}}
+\DoxyCodeLine{88    \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{89      \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{90        \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[((*(\mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.find(participants[i]))).second).consultar\_posicio()-\/1].first -\/= punts[i];}
+\DoxyCodeLine{91      \}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93    \}}
+\DoxyCodeLine{94    sort(\mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.begin(), \mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}.end(), cmp());}
+\DoxyCodeLine{95 }
+\DoxyCodeLine{96    \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i< size; ++i) \{}
+\DoxyCodeLine{97      ((*(\mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[i].second)).second).modificar\_pocicio(i+1);}
+\DoxyCodeLine{98    \}}
+\DoxyCodeLine{99 \}}
+
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__jugadors_ade2368355d0198eef0c8d06c932f1a17}\label{class_cjt__jugadors_ade2368355d0198eef0c8d06c932f1a17}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!actualitzar\+\_\+estadistiques@{actualitzar\+\_\+estadistiques}}
-\index{actualitzar\+\_\+estadistiques@{actualitzar\+\_\+estadistiques}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{actualitzar\+\_\+estadistiques()}{actualitzar\_estadistiques()}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!actualitzar\_estadistiques@{actualitzar\_estadistiques}}
+\index{actualitzar\_estadistiques@{actualitzar\_estadistiques}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{actualitzar\_estadistiques()}{actualitzar\_estadistiques()}}
 {\footnotesize\ttfamily void Cjt\+\_\+jugadors\+::actualitzar\+\_\+estadistiques (\begin{DoxyParamCaption}\item[{vector$<$ pair$<$ int, vector$<$ int $>$ $>$ $>$ \&}]{stats }\end{DoxyParamCaption})}
 
 
@@ -323,25 +362,53 @@ s\textquotesingle{}han actualitzat les estadístiques dels jugadors.
 \end{DoxyPostcond}
 
 
-Definició a la línia 72 del fitxer Cjt\+\_\+jugadors.\+cc.
+Definició a la línia 101 del fitxer Cjt\+\_\+jugadors.\+cc.
 
 
-\begin{DoxyCode}
-72                                                                                    \{
-73     \textcolor{keywordtype}{int} size = stats.size();
-74     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{
-75         (*(\mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[stats[i].first-1].second)).second.modificar\_estadistiques(stats[i].second);
-76     \}
-77     
-78 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{101                                                                                                              \{}
+\DoxyCodeLine{102     \textcolor{keywordtype}{int} size = participants.size();}
+\DoxyCodeLine{103     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size; ++i) \{}
+\DoxyCodeLine{104         ((*(\mbox{\hyperlink{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}{jugadors}}.find(participants[i]))).second).modificar\_estadistiques(estadistiques[i]);}
+\DoxyCodeLine{105     \}}
+\DoxyCodeLine{106 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__jugadors_afb644fcd07419fb30dc37db5a1663a73}\label{class_cjt__jugadors_afb644fcd07419fb30dc37db5a1663a73}} 
+\index{Cjt\_jugadors@{Cjt\_jugadors}!nom\_jugador@{nom\_jugador}}
+\index{nom\_jugador@{nom\_jugador}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{nom\_jugador()}{nom\_jugador()}}
+{\footnotesize\ttfamily string Cjt\+\_\+jugadors\+::nom\+\_\+jugador (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Retorna el nom d\textquotesingle{}un jugador del parametre implicit. 
+
+\begin{DoxyPrecond}{Precondició}
+Existeix un jugador amb posició n. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+el resultat es el nom del jugador amb posició n. ~\newline
+ 
+\end{DoxyPostcond}
+
+
+Definició a la línia 108 del fitxer Cjt\+\_\+jugadors.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{108                                       \{}
+\DoxyCodeLine{109     \textcolor{keywordflow}{return} (*(\mbox{\hyperlink{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}{ranking}}[n-\/1].second)).first;}
+\DoxyCodeLine{110 \}}
+
 \end{DoxyCode}
 
 
-\subsection{Documentació de les Dades Membre}
+\doxysubsection{Documentació de les Dades Membre}
 \mbox{\Hypertarget{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}\label{class_cjt__jugadors_a9a7fd899cca7f3c126120c8e7b4719d4}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!jugadors@{jugadors}}
-\index{jugadors@{jugadors}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{jugadors}{jugadors}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!jugadors@{jugadors}}
+\index{jugadors@{jugadors}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{jugadors}{jugadors}}
 {\footnotesize\ttfamily map$<$string,\mbox{\hyperlink{class_jugador}{Jugador}}$>$ Cjt\+\_\+jugadors\+::jugadors\hspace{0.3cm}{\ttfamily [private]}}
 
 
@@ -349,9 +416,9 @@ Definició a la línia 72 del fitxer Cjt\+\_\+jugadors.\+cc.
 Definició a la línia 17 del fitxer Cjt\+\_\+jugadors.\+hh.
 
 \mbox{\Hypertarget{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}\label{class_cjt__jugadors_af9f7e71820fb657bf489ce72a31e8034}} 
-\index{Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}!ranking@{ranking}}
-\index{ranking@{ranking}!Cjt\+\_\+jugadors@{Cjt\+\_\+jugadors}}
-\subsubsection{\texorpdfstring{ranking}{ranking}}
+\index{Cjt\_jugadors@{Cjt\_jugadors}!ranking@{ranking}}
+\index{ranking@{ranking}!Cjt\_jugadors@{Cjt\_jugadors}}
+\doxysubsubsection{\texorpdfstring{ranking}{ranking}}
 {\footnotesize\ttfamily vector$<$pair$<$int,map$<$string,\mbox{\hyperlink{class_jugador}{Jugador}}$>$\+::iterator$>$ $>$ Cjt\+\_\+jugadors\+::ranking\hspace{0.3cm}{\ttfamily [private]}}
 
 

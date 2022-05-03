@@ -1,9 +1,9 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.14"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>Practica PRO2. &#39;Circuit de tornejos de tenis&#39;.: Fitxer de Codi Cjt_jugadors.hh</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
@@ -30,10 +30,10 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Generat per Doxygen 1.8.14 -->
+<!-- Generat per Doxygen 1.9.1 -->
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-var searchBox = new SearchBox("searchBox", "search",false,'Cerca');
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca','.html');
 /* @license-end */
 </script>
 <script type="text/javascript" src="menudata.js"></script>
@@ -66,17 +66,61 @@ $(function() {
 <div class="title">Cjt_jugadors.hh</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_cjt__jugadors_8hh.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONJ_JUG_HH</span></div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CONJ_JUG_HH</span></div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_jugador_8hh.html">Jugador.hh</a>&quot;</span></div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_cjt__jugadors.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a> {</div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div><div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_cjt__jugadors.html#a9a7fd899cca7f3c126120c8e7b4719d4">   17</a></span>&#160;    map&lt;string,Jugador&gt; <a class="code" href="class_cjt__jugadors.html#a9a7fd899cca7f3c126120c8e7b4719d4">jugadors</a>;</div><div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_cjt__jugadors.html#af9f7e71820fb657bf489ce72a31e8034">   18</a></span>&#160;    vector&lt;pair&lt;int,map&lt;string,Jugador&gt;::iterator&gt;&gt; <a class="code" href="class_cjt__jugadors.html#af9f7e71820fb657bf489ce72a31e8034">ranking</a>;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>();</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>();</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> llegir_jugadors();</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> imprimir_jugadors();</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> imprimir_ranking();</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div><div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> nou_jugador();</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div><div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> baixa_jugador();</div><div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> consultar_jugador();</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div><div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> actualitzar_ranking(<span class="keyword">const</span> vector&lt;pair&lt;int,int&gt;&gt;&amp; v, <span class="keywordtype">bool</span> sumar);</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> actualitzar_estadistiques(vector&lt;pair&lt;<span class="keywordtype">int</span>,vector&lt;int&gt; &gt; &gt;&amp; stats);</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div><div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    </div><div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;};</div><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
-<div class="ttc" id="class_cjt__jugadors_html_af9f7e71820fb657bf489ce72a31e8034"><div class="ttname"><a href="class_cjt__jugadors.html#af9f7e71820fb657bf489ce72a31e8034">Cjt_jugadors::ranking</a></div><div class="ttdeci">vector&lt; pair&lt; int, map&lt; string, Jugador &gt;::iterator &gt; &gt; ranking</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00018">Cjt_jugadors.hh:18</a></div></div>
-<div class="ttc" id="class_cjt__jugadors_html"><div class="ttname"><a href="class_cjt__jugadors.html">Cjt_jugadors</a></div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00013">Cjt_jugadors.hh:13</a></div></div>
-<div class="ttc" id="_jugador_8hh_html"><div class="ttname"><a href="_jugador_8hh.html">Jugador.hh</a></div></div>
-<div class="ttc" id="class_cjt__jugadors_html_a9a7fd899cca7f3c126120c8e7b4719d4"><div class="ttname"><a href="class_cjt__jugadors.html#a9a7fd899cca7f3c126120c8e7b4719d4">Cjt_jugadors::jugadors</a></div><div class="ttdeci">map&lt; string, Jugador &gt; jugadors</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00017">Cjt_jugadors.hh:17</a></div></div>
+<a href="_cjt__jugadors_8hh.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONJ_JUG_HH</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CONJ_JUG_HH</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_jugador_8hh.html">Jugador.hh</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_cjt__jugadors.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_cjt__jugadors.html#a9a7fd899cca7f3c126120c8e7b4719d4">   17</a></span>&#160;    map&lt;string,Jugador&gt; <a class="code" href="class_cjt__jugadors.html#a9a7fd899cca7f3c126120c8e7b4719d4">jugadors</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_cjt__jugadors.html#af9f7e71820fb657bf489ce72a31e8034">   18</a></span>&#160;    vector&lt;pair&lt;int,map&lt;string,Jugador&gt;::iterator&gt;&gt; <a class="code" href="class_cjt__jugadors.html#af9f7e71820fb657bf489ce72a31e8034">ranking</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> llegir_jugadors();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">void</span> imprimir_jugadors();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> imprimir_ranking();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">void</span> nou_jugador(<span class="keywordtype">string</span> nom, <span class="keywordtype">bool</span> first);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordtype">void</span> baixa_jugador(<span class="keywordtype">string</span> nom);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> consultar_jugador(<span class="keywordtype">string</span> nom);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> actualitzar_ranking(<span class="keyword">const</span> vector&lt;pair&lt;int,int&gt;&gt;&amp; v, <span class="keywordtype">bool</span> sumar);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> actualitzar_estadistiques(vector&lt;pair&lt;<span class="keywordtype">int</span>,vector&lt;int&gt; &gt; &gt;&amp; stats);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">string</span> nom_jugador(<span class="keywordtype">int</span> n);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    </div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_jugador_8hh_html"><div class="ttname"><a href="_jugador_8hh.html">Jugador.hh</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadors_html"><div class="ttname"><a href="class_cjt__jugadors.html">Cjt_jugadors</a></div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00013">Cjt_jugadors.hh:13</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadors_html_a9a7fd899cca7f3c126120c8e7b4719d4"><div class="ttname"><a href="class_cjt__jugadors.html#a9a7fd899cca7f3c126120c8e7b4719d4">Cjt_jugadors::jugadors</a></div><div class="ttdeci">map&lt; string, Jugador &gt; jugadors</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00017">Cjt_jugadors.hh:17</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadors_html_af9f7e71820fb657bf489ce72a31e8034"><div class="ttname"><a href="class_cjt__jugadors.html#af9f7e71820fb657bf489ce72a31e8034">Cjt_jugadors::ranking</a></div><div class="ttdeci">vector&lt; pair&lt; int, map&lt; string, Jugador &gt;::iterator &gt; &gt; ranking</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00018">Cjt_jugadors.hh:18</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generat per &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.14
+Generat per&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -6,7 +6,7 @@ Cjt_tornejos::Cjt_tornejos() {
 }
 
 Cjt_tornejos::~Cjt_tornejos() {
-    
+
 }
 
 void Cjt_tornejos::llegir_tornejos(int num_cat) {
@@ -40,17 +40,18 @@ void Cjt_tornejos::nou_torneig(string nom, int cat, int num_cat,bool first) {
         }
         else cout << "error: ya existe un torneo con ese nombre" << endl;
     }
-    else cout << "error: la categoria no existe" << endl;   
-    
+    else cout << "error: la categoria no existe" << endl;
+
 }
 
 void Cjt_tornejos::baixa_torneig(string nom) {
     map<string,Torneig>::iterator trobat = tornejos.find(nom);
     if ( trobat != tornejos.end()) {
         //ACTUALITZAR RANKING
+        trobat.restar_punts();
         tornejos.erase(trobat);
         --num_tornejos;
-        cout << num_tornejos << endl;   
+        cout << num_tornejos << endl;
     }
     else cout << "error: el torneo no existe" << endl;
 }
@@ -61,6 +62,6 @@ void Cjt_tornejos::iniciar_torneig(string nom, Cjt_jugadors& jugadors) {
 }
 
 void Cjt_tornejos::finalitzar_torneig(string nom) {
-    nom = nom;  
-    
+    nom = nom;
+
 }

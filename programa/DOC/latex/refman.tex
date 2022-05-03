@@ -1,19 +1,23 @@
-\documentclass[twoside]{book}
+\let\mypdfximage\pdfximage\def\pdfximage{\immediate\mypdfximage}\documentclass[twoside]{book}
 
+%% moved from doxygen.sty due to workaround for LaTex 2019 version and unmaintained tabu package
+\usepackage{ifthen}
+\ifx\requestedLaTeXdate\undefined
+\usepackage{array}
+\else
+\usepackage{array}[=2016-10-06]
+\fi
+%%
 % Packages required by doxygen
 \usepackage{fixltx2e}
-\usepackage{calc}
 \usepackage{doxygen}
-\usepackage[export]{adjustbox} % also loads graphicx
 \usepackage{graphicx}
 \usepackage[utf8]{inputenc}
 \usepackage{makeidx}
-\usepackage{multicol}
-\usepackage{multirow}
 \PassOptionsToPackage{warn}{textcomp}
 \usepackage{textcomp}
 \usepackage[nointegrals]{wasysym}
-\usepackage[table]{xcolor}
+\usepackage{ifxetex}
 
 % NLS support packages
 \usepackage[catalan]{babel}
@@ -22,9 +26,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[scaled=.90]{helvet}
 \usepackage{courier}
-\usepackage{amssymb}
-\usepackage{sectsty}
 \renewcommand{\familydefault}{\sfdefault}
+\usepackage{sectsty}
 \allsectionsfont{%
   \fontseries{bc}\selectfont%
   \color{darkgray}%
@@ -35,6 +38,13 @@
 }
 \newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
 
+% Arguments of doxygenemoji:
+% 1) ':<text>:' form of the emoji, already "LaTeX"-escaped
+% 2) file with the name of the emoji without the .png extension
+% in case image exist use this otherwise use the ':<text>:' form
+\newcommand{\doxygenemoji}[2]{%
+  \IfFileExists{./#2.png}{\raisebox{-0.1em}{\includegraphics[height=0.9em]{./#2.png}}}{#1}%
+}
 % Page & text layout
 \usepackage{geometry}
 \geometry{%
@@ -49,7 +59,9 @@
 \hbadness=750
 \setlength{\emergencystretch}{15pt}
 \setlength{\parindent}{0cm}
-\setlength{\parskip}{3ex plus 2ex minus 2ex}
+\newcommand{\doxynormalparskip}{\setlength{\parskip}{3ex plus 2ex minus 2ex}}
+\newcommand{\doxytocparskip}{\setlength{\parskip}{1ex plus 0ex minus 0ex}}
+\doxynormalparskip
 \makeatletter
 \renewcommand{\paragraph}{%
   \@startsection{paragraph}{4}{0ex}{-1.0ex}{1.0ex}{%
@@ -63,22 +75,30 @@
 }
 \makeatother
 
+\makeatletter
+\newcommand\hrulefilll{\leavevmode\leaders\hrule\hskip 0pt plus 1filll\kern\z@}
+\makeatother
+
 % Headers & footers
 \usepackage{fancyhdr}
 \pagestyle{fancyplain}
-\fancyhead[LE]{\fancyplain{}{\bfseries\thepage}}
-\fancyhead[CE]{\fancyplain{}{}}
-\fancyhead[RE]{\fancyplain{}{\bfseries\leftmark}}
-\fancyhead[LO]{\fancyplain{}{\bfseries\rightmark}}
-\fancyhead[CO]{\fancyplain{}{}}
-\fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
-\fancyfoot[LE]{\fancyplain{}{}}
-\fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Generat per Doxygen }}
-\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Generat per Doxygen }}
-\fancyfoot[CO]{\fancyplain{}{}}
-\fancyfoot[RO]{\fancyplain{}{}}
 \renewcommand{\footrulewidth}{0.4pt}
+%
+\fancypagestyle{fancyplain}{
+\fancyhf{}
+\fancyhead[LE, RO]{\bfseries\thepage}
+\fancyhead[LO]{\bfseries\rightmark}
+\fancyhead[RE]{\bfseries\leftmark}
+\fancyfoot[LO, RE]{\bfseries\scriptsize Generat per Doxygen }
+}
+%
+\fancypagestyle{plain}{
+\fancyhf{}
+\fancyfoot[LO, RE]{\bfseries\scriptsize Generat per Doxygen }
+\renewcommand{\headrulewidth}{0pt}}
+%
+\pagestyle{fancyplain}
+%
 \renewcommand{\chaptermark}[1]{%
   \markboth{#1}{}%
 }
@@ -93,13 +113,22 @@
 \setcounter{secnumdepth}{5}
 \makeindex
 
+\usepackage{newunicodechar}
+  \newunicodechar{⁻}{${}^{-}$}% Superscript minus
+  \newunicodechar{²}{${}^{2}$}% Superscript two
+  \newunicodechar{³}{${}^{3}$}% Superscript three
+
 % Hyperlinks (required, but should be loaded last)
-\usepackage{ifpdf}
 \ifpdf
   \usepackage[pdftex,pagebackref=true]{hyperref}
 \else
-  \usepackage[ps2pdf,pagebackref=true]{hyperref}
+  \ifxetex
+    \usepackage[pagebackref=true]{hyperref}
+  \else
+    \usepackage[ps2pdf,pagebackref=true]{hyperref}
+  \fi
 \fi
+
 \hypersetup{%
   colorlinks=true,%
   linkcolor=blue,%
@@ -115,9 +144,13 @@
 \usepackage{caption}
 \captionsetup{labelsep=space,justification=centering,font={bf},singlelinecheck=off,skip=4pt,position=top}
 
+\usepackage{etoc}
+\etocsettocstyle{\doxytocparskip}{\doxynormalparskip}
+\renewcommand{\numberline}[1]{#1~}
 %===== C O N T E N T S =====
 
 \begin{document}
+\raggedbottom
 
 % Titlepage & ToC
 \hypersetup{pageanchor=false,
@@ -128,9 +161,9 @@
 \begin{titlepage}
 \vspace*{7cm}
 \begin{center}%
-{\Large Practica P\+R\+O2. \textquotesingle{}Circuit de tornejos de tenis\textquotesingle{}. \\[1ex]\large Biel Altés }\\
+{\Large Practica PRO2. \textquotesingle{}Circuit de tornejos de tenis\textquotesingle{}. \\[1ex]\large Biel Altés }\\
 \vspace*{1cm}
-{\large Generat per Doxygen 1.8.14}\\
+{\large Generat per Doxygen 1.9.1}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage
@@ -146,12 +179,15 @@
 \chapter{Índex de Fitxers}
 \input{files}
 \chapter{Documentació de les Classes}
+\input{class_bin_tree}
 \input{class_cjt__categories}
 \input{class_cjt__jugadors}
 \input{class_cjt__tornejos}
 \input{class_jugador}
+\input{struct_bin_tree_1_1_node}
 \input{class_torneig}
 \chapter{Documentació dels Fitxers}
+\input{_bin_tree_8hh}
 \input{_cjt__categories_8cc}
 \input{_cjt__categories_8hh}
 \input{_cjt__jugadors_8cc}
@@ -161,6 +197,7 @@
 \input{_jugador_8cc}
 \input{_jugador_8hh}
 \input{program_8cc}
+\input{proves_8cc}
 \input{_torneig_8cc}
 \input{_torneig_8hh}
 %--- End generated contents ---
@@ -170,7 +207,7 @@
 \newpage
 \phantomsection
 \clearemptydoublepage
-\addcontentsline{toc}{chapter}{Índex}
+\addcontentsline{toc}{chapter}{\indexname}
 \printindex
 
 \end{document}

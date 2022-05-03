@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tornejos',['tornejos',['../class_cjt__tornejos.html#a4b3d9bdd2ed133d76284fb510ebe9800',1,'Cjt_tornejos']]],
-  ['tornejos_5fdisputat',['tornejos_disputat',['../class_jugador.html#a2ef0821abd64385a58561b039c37a469',1,'Jugador']]]
+  ['sets_5fguanyat_170',['sets_guanyat',['../class_jugador.html#a396b226c722425d387f36e239fc9855c',1,'Jugador']]],
+  ['sets_5fperdut_171',['sets_perdut',['../class_jugador.html#a7c9fcb3ec52c2c400e7cf8faaf945426',1,'Jugador']]]
 ];

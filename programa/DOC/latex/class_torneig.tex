@@ -1,6 +1,6 @@
-\hypertarget{class_torneig}{}\section{Referència de la Classe Torneig}
+\hypertarget{class_torneig}{}\doxysection{Referència de la Classe Torneig}
 \label{class_torneig}\index{Torneig@{Torneig}}
-\subsection*{Mètodes públics}
+\doxysubsection*{Mètodes públics}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_torneig_a9794723939612dccda9f9a3979789b11}{Torneig}} (int cat)
@@ -9,31 +9,44 @@
 \begin{DoxyCompactList}\small\item\em esborra automaticament els objectes locals en sortir d\textquotesingle{}un ambit de visibilitat. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_torneig_a78a82b011e01b5d07ade6378da916c3c}{consultar\+\_\+categoria}} ()
 \begin{DoxyCompactList}\small\item\em Retorna la categoria d\textquotesingle{}un torneig. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_torneig_aef12c108d9872a53f8a54f03135c7344}{iniciar\+\_\+torneig}} ()
+void \mbox{\hyperlink{class_torneig_abcc9f0b1127a5fdd57856a59e5034e1f}{iniciar\+\_\+torneig}} (\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors)
 \begin{DoxyCompactList}\small\item\em Confecciona i imprimeix els emparellaments d\textquotesingle{}un torneig. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\subsection*{Atributs Privats}
+\doxysubsection*{Mètodes Privats}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_torneig_ac0ec8f0a5c71dd78980c86f3ccc75620}{llegir\+\_\+inscripcio}} (\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors)
+\begin{DoxyCompactList}\small\item\em Llegeix la inscripcio a un torneig. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_aa09fd7516f9bb459938ec2be6b4e726a}{imprimir\+\_\+torneig}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&a, bool left, bool pare, int prof)
+\item 
+void \mbox{\hyperlink{class_torneig_a33a31f943b6b18e5ef4923963a5363df}{crear\+\_\+imprimir\+\_\+emparellaments}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&a, int profunditat)
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributs Privats}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}}
 \item 
-vector$<$ int $>$ \mbox{\hyperlink{class_torneig_a7146b542f678d15c1847f9ec57c866bf}{participants}}
+int \mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\+\_\+participants}}
 \item 
-vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{class_torneig_afb270c579c18c46261a52122fb152942}{estadistiques}}\+: Bin\+Tree$<$int$>$ Partits
+vector$<$ string $>$ \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}
+\item 
+vector$<$ vector$<$ int $>$ $>$ \mbox{\hyperlink{class_torneig_afb270c579c18c46261a52122fb152942}{estadistiques}}
+\item 
+\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \mbox{\hyperlink{class_torneig_aa9f31aa63e50e5995b91c35d0e1e0baa}{partits}}
 \end{DoxyCompactItemize}
 
 
-\subsection{Descripció Detallada}
+\doxysubsection{Descripció Detallada}
 
 
-Definició a la línia 12 del fitxer Torneig.\+hh.
+Definició a la línia 16 del fitxer Torneig.\+hh.
 
 
 
-\subsection{Documentació del Constructor i el Destructor}
+\doxysubsection{Documentació del Constructor i el Destructor}
 \mbox{\Hypertarget{class_torneig_a9794723939612dccda9f9a3979789b11}\label{class_torneig_a9794723939612dccda9f9a3979789b11}} 
 \index{Torneig@{Torneig}!Torneig@{Torneig}}
 \index{Torneig@{Torneig}!Torneig@{Torneig}}
-\subsubsection{\texorpdfstring{Torneig()}{Torneig()}}
+\doxysubsubsection{\texorpdfstring{Torneig()}{Torneig()}}
 {\footnotesize\ttfamily Torneig\+::\+Torneig (\begin{DoxyParamCaption}\item[{int}]{cat }\end{DoxyParamCaption})}
 
 
@@ -48,20 +61,21 @@ el resultat es un torneig amb categoria cat.
 \end{DoxyPostcond}
 
 
-Definició a la línia 1 del fitxer Torneig.\+cc.
+Definició a la línia 3 del fitxer Torneig.\+cc.
 
 
-\begin{DoxyCode}
-1                         \{
-2     \mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}} = cat;
-3     vector<int> \mbox{\hyperlink{class_torneig_a7146b542f678d15c1847f9ec57c866bf}{participants}}(0);
-4     vector<vector<int>> \mbox{\hyperlink{class_torneig_afb270c579c18c46261a52122fb152942}{estadistiques}}(0,vector<int>(7)):
-5 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{3                         \{}
+\DoxyCodeLine{4     \mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}} = cat;}
+\DoxyCodeLine{5     \mbox{\hyperlink{class_torneig_afb270c579c18c46261a52122fb152942}{estadistiques}} = vector<vector<int>> (0,vector<int>(0)); }
+\DoxyCodeLine{6     \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}} = vector<string>(0);}
+\DoxyCodeLine{7 \}}
+
 \end{DoxyCode}
 \mbox{\Hypertarget{class_torneig_ab5184085575669dd522e11a25f602943}\label{class_torneig_ab5184085575669dd522e11a25f602943}} 
-\index{Torneig@{Torneig}!````~Torneig@{$\sim$\+Torneig}}
-\index{````~Torneig@{$\sim$\+Torneig}!Torneig@{Torneig}}
-\subsubsection{\texorpdfstring{$\sim$\+Torneig()}{~Torneig()}}
+\index{Torneig@{Torneig}!````~Torneig@{$\sim$Torneig}}
+\index{````~Torneig@{$\sim$Torneig}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{$\sim$Torneig()}{~Torneig()}}
 {\footnotesize\ttfamily Torneig\+::$\sim$\+Torneig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -70,21 +84,110 @@ esborra automaticament els objectes locals en sortir d\textquotesingle{}un ambit
 
 
 
-Definició a la línia 7 del fitxer Torneig.\+cc.
+Definició a la línia 9 del fitxer Torneig.\+cc.
 
 
-\begin{DoxyCode}
-7                   \{
-8     
-9 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9                   \{}
+\DoxyCodeLine{10     }
+\DoxyCodeLine{11 \}}
+
 \end{DoxyCode}
 
 
-\subsection{Documentació de les Funcions Membre}
+\doxysubsection{Documentació de les Funcions Membre}
+\mbox{\Hypertarget{class_torneig_ac0ec8f0a5c71dd78980c86f3ccc75620}\label{class_torneig_ac0ec8f0a5c71dd78980c86f3ccc75620}} 
+\index{Torneig@{Torneig}!llegir\_inscripcio@{llegir\_inscripcio}}
+\index{llegir\_inscripcio@{llegir\_inscripcio}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{llegir\_inscripcio()}{llegir\_inscripcio()}}
+{\footnotesize\ttfamily void Torneig\+::llegir\+\_\+inscripcio (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&}]{jugadors }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Llegeix la inscripcio a un torneig. 
+
+\begin{DoxyPrecond}{Precondició}
+Per el canal habitual d\textquotesingle{}entrada trobem un int que representa el numero d\textquotesingle{}inscrits i seguidament n enters que representen la seva posició al ranking. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}ha omplert el vector participants amb el ranking i el nom de tots els participants. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 13 del fitxer Torneig.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{13                                                        \{}
+\DoxyCodeLine{14     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{15     cin >> n;}
+\DoxyCodeLine{16     \mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\_participants}} = n;}
+\DoxyCodeLine{17     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < n; ++i) \{}
+\DoxyCodeLine{18         \textcolor{keywordtype}{int} pos;}
+\DoxyCodeLine{19         cin >> pos;}
+\DoxyCodeLine{20         \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}.push\_back(jugadors.\mbox{\hyperlink{class_cjt__jugadors_afb644fcd07419fb30dc37db5a1663a73}{nom\_jugador}}(pos));}
+\DoxyCodeLine{21     \}}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_aa09fd7516f9bb459938ec2be6b4e726a}\label{class_torneig_aa09fd7516f9bb459938ec2be6b4e726a}} 
+\index{Torneig@{Torneig}!imprimir\_torneig@{imprimir\_torneig}}
+\index{imprimir\_torneig@{imprimir\_torneig}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{imprimir\_torneig()}{imprimir\_torneig()}}
+{\footnotesize\ttfamily void Torneig\+::imprimir\+\_\+torneig (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&}]{a,  }\item[{bool}]{left,  }\item[{bool}]{pare,  }\item[{int}]{prof }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 34 del fitxer Torneig.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{34                                                                              \{}
+\DoxyCodeLine{35     \textcolor{keywordflow}{if} (not a.\mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}()) \{}
+\DoxyCodeLine{36         \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} l = a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}();}
+\DoxyCodeLine{37         \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} r = a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}();}
+\DoxyCodeLine{38         \textcolor{keywordflow}{if} (not l.\mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}()) cout << \textcolor{stringliteral}{"{}("{}};}
+\DoxyCodeLine{39         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{40             cout << a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}() << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()-\/1];}
+\DoxyCodeLine{41             \textcolor{keywordflow}{if} (left) cout << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{42         \}}
+\DoxyCodeLine{43         \mbox{\hyperlink{class_torneig_aa09fd7516f9bb459938ec2be6b4e726a}{imprimir\_torneig}}(l, \textcolor{keyword}{true}, left ,prof+1);}
+\DoxyCodeLine{44         \mbox{\hyperlink{class_torneig_aa09fd7516f9bb459938ec2be6b4e726a}{imprimir\_torneig}}(r, \textcolor{keyword}{false}, not left,prof+1);}
+\DoxyCodeLine{45         \textcolor{keywordflow}{if} (not left) \{}
+\DoxyCodeLine{46             cout << \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{47             \textcolor{keywordflow}{if} (not pare and prof!=2) cout << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{48         \}}
+\DoxyCodeLine{49     \}}
+\DoxyCodeLine{50 \}  }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a33a31f943b6b18e5ef4923963a5363df}\label{class_torneig_a33a31f943b6b18e5ef4923963a5363df}} 
+\index{Torneig@{Torneig}!crear\_imprimir\_emparellaments@{crear\_imprimir\_emparellaments}}
+\index{crear\_imprimir\_emparellaments@{crear\_imprimir\_emparellaments}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{crear\_imprimir\_emparellaments()}{crear\_imprimir\_emparellaments()}}
+{\footnotesize\ttfamily void Torneig\+::crear\+\_\+imprimir\+\_\+emparellaments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ int $>$ \&}]{a,  }\item[{int}]{profunditat }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 24 del fitxer Torneig.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{24                                                                   \{}
+\DoxyCodeLine{25     \textcolor{keywordflow}{if} (m+1-\/a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}() <= \mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\_participants}}) \{}
+\DoxyCodeLine{26         \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} l(a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}());}
+\DoxyCodeLine{27         \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} r(m+1-\/a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}());}
+\DoxyCodeLine{28         \mbox{\hyperlink{class_torneig_a33a31f943b6b18e5ef4923963a5363df}{crear\_imprimir\_emparellaments}}(l,2*m);}
+\DoxyCodeLine{29         \mbox{\hyperlink{class_torneig_a33a31f943b6b18e5ef4923963a5363df}{crear\_imprimir\_emparellaments}}(r,2*m);}
+\DoxyCodeLine{30         a = \mbox{\hyperlink{class_bin_tree}{BinTree<int>}}(a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}(),l,r);}
+\DoxyCodeLine{31     \}}
+\DoxyCodeLine{32 \}}
+
+\end{DoxyCode}
 \mbox{\Hypertarget{class_torneig_a78a82b011e01b5d07ade6378da916c3c}\label{class_torneig_a78a82b011e01b5d07ade6378da916c3c}} 
-\index{Torneig@{Torneig}!consultar\+\_\+categoria@{consultar\+\_\+categoria}}
-\index{consultar\+\_\+categoria@{consultar\+\_\+categoria}!Torneig@{Torneig}}
-\subsubsection{\texorpdfstring{consultar\+\_\+categoria()}{consultar\_categoria()}}
+\index{Torneig@{Torneig}!consultar\_categoria@{consultar\_categoria}}
+\index{consultar\_categoria@{consultar\_categoria}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{consultar\_categoria()}{consultar\_categoria()}}
 {\footnotesize\ttfamily int Torneig\+::consultar\+\_\+categoria (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
@@ -95,23 +198,25 @@ Retorna la categoria d\textquotesingle{}un torneig.
 cert. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-el resultat es la categoria del parametre implicit. 
+el resultat es la categoria del parametre implicit. ~\newline
+ 
 \end{DoxyPostcond}
 
 
-Definició a la línia 11 del fitxer Torneig.\+cc.
+Definició a la línia 52 del fitxer Torneig.\+cc.
 
 
-\begin{DoxyCode}
-11                                  \{
-12     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}};
-13 \}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{52                                  \{}
+\DoxyCodeLine{53     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}};}
+\DoxyCodeLine{54 \}}
+
 \end{DoxyCode}
-\mbox{\Hypertarget{class_torneig_aef12c108d9872a53f8a54f03135c7344}\label{class_torneig_aef12c108d9872a53f8a54f03135c7344}} 
-\index{Torneig@{Torneig}!iniciar\+\_\+torneig@{iniciar\+\_\+torneig}}
-\index{iniciar\+\_\+torneig@{iniciar\+\_\+torneig}!Torneig@{Torneig}}
-\subsubsection{\texorpdfstring{iniciar\+\_\+torneig()}{iniciar\_torneig()}}
-{\footnotesize\ttfamily void Torneig\+::iniciar\+\_\+torneig (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+\mbox{\Hypertarget{class_torneig_abcc9f0b1127a5fdd57856a59e5034e1f}\label{class_torneig_abcc9f0b1127a5fdd57856a59e5034e1f}} 
+\index{Torneig@{Torneig}!iniciar\_torneig@{iniciar\_torneig}}
+\index{iniciar\_torneig@{iniciar\_torneig}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{iniciar\_torneig()}{iniciar\_torneig()}}
+{\footnotesize\ttfamily void Torneig\+::iniciar\+\_\+torneig (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&}]{jugadors }\end{DoxyParamCaption})}
 
 
 
@@ -121,40 +226,77 @@ Confecciona i imprimeix els emparellaments d\textquotesingle{}un torneig.
 Al canal habitual d\textquotesingle{}entrada hi trobem un enter que representa el nombre total d\textquotesingle{}inscrits al torneig i seguidament les seves posicions. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-imprimeix el quadre d\textquotesingle{}emparellaments del torneig. 
+imprimeix el quadre d\textquotesingle{}emparellaments del torneig. ~\newline
+ 
 \end{DoxyPostcond}
 
 
-\subsection{Documentació de les Dades Membre}
+Definició a la línia 59 del fitxer Torneig.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59                                                     \{}
+\DoxyCodeLine{60     \mbox{\hyperlink{class_torneig_ac0ec8f0a5c71dd78980c86f3ccc75620}{llegir\_inscripcio}}(jugadors);}
+\DoxyCodeLine{61     }
+\DoxyCodeLine{62     \mbox{\hyperlink{class_bin_tree}{BinTree<int>}} a(1);}
+\DoxyCodeLine{63     \mbox{\hyperlink{class_torneig_a33a31f943b6b18e5ef4923963a5363df}{crear\_imprimir\_emparellaments}}(a,2);}
+\DoxyCodeLine{64     \mbox{\hyperlink{class_torneig_aa09fd7516f9bb459938ec2be6b4e726a}{imprimir\_torneig}}(a, \textcolor{keyword}{true}, \textcolor{keyword}{true}, 1);}
+\DoxyCodeLine{65     cout << endl;}
+\DoxyCodeLine{66 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Documentació de les Dades Membre}
 \mbox{\Hypertarget{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}\label{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}} 
 \index{Torneig@{Torneig}!categoria@{categoria}}
 \index{categoria@{categoria}!Torneig@{Torneig}}
-\subsubsection{\texorpdfstring{categoria}{categoria}}
+\doxysubsubsection{\texorpdfstring{categoria}{categoria}}
 {\footnotesize\ttfamily int Torneig\+::categoria\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definició a la línia 16 del fitxer Torneig.\+hh.
+Definició a la línia 19 del fitxer Torneig.\+hh.
 
-\mbox{\Hypertarget{class_torneig_a7146b542f678d15c1847f9ec57c866bf}\label{class_torneig_a7146b542f678d15c1847f9ec57c866bf}} 
+\mbox{\Hypertarget{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}\label{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}} 
+\index{Torneig@{Torneig}!num\_participants@{num\_participants}}
+\index{num\_participants@{num\_participants}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{num\_participants}{num\_participants}}
+{\footnotesize\ttfamily int Torneig\+::num\+\_\+participants\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 20 del fitxer Torneig.\+hh.
+
+\mbox{\Hypertarget{class_torneig_a87196328ace3bbbae6f17f387835b3a6}\label{class_torneig_a87196328ace3bbbae6f17f387835b3a6}} 
 \index{Torneig@{Torneig}!participants@{participants}}
 \index{participants@{participants}!Torneig@{Torneig}}
-\subsubsection{\texorpdfstring{participants}{participants}}
-{\footnotesize\ttfamily vector$<$int$>$ Torneig\+::participants\hspace{0.3cm}{\ttfamily [private]}}
+\doxysubsubsection{\texorpdfstring{participants}{participants}}
+{\footnotesize\ttfamily vector$<$string$>$ Torneig\+::participants\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definició a la línia 17 del fitxer Torneig.\+hh.
+Definició a la línia 21 del fitxer Torneig.\+hh.
 
 \mbox{\Hypertarget{class_torneig_afb270c579c18c46261a52122fb152942}\label{class_torneig_afb270c579c18c46261a52122fb152942}} 
 \index{Torneig@{Torneig}!estadistiques@{estadistiques}}
 \index{estadistiques@{estadistiques}!Torneig@{Torneig}}
-\subsubsection{\texorpdfstring{estadistiques}{estadistiques}}
+\doxysubsubsection{\texorpdfstring{estadistiques}{estadistiques}}
 {\footnotesize\ttfamily vector$<$vector$<$int$>$ $>$ Torneig\+::estadistiques\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definició a la línia 19 del fitxer Torneig.\+hh.
+Definició a la línia 22 del fitxer Torneig.\+hh.
+
+\mbox{\Hypertarget{class_torneig_aa9f31aa63e50e5995b91c35d0e1e0baa}\label{class_torneig_aa9f31aa63e50e5995b91c35d0e1e0baa}} 
+\index{Torneig@{Torneig}!partits@{partits}}
+\index{partits@{partits}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{partits}{partits}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$int$>$ Torneig\+::partits\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definició a la línia 23 del fitxer Torneig.\+hh.
 
 
 

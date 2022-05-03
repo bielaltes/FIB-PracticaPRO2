@@ -2,12 +2,12 @@
 
 Torneig::Torneig(int cat) {
     categoria = cat;
-    estadistiques = vector<vector<int>> (0,vector<int>(0)); 
+    estadistiques = vector<vector<int>> (0,vector<int>(0));
     participants = vector<string>(0);
 }
 
 Torneig::~Torneig() {
-    
+
 }
 
 void Torneig::llegir_inscripcio( Cjt_jugadors& jugadors) {
@@ -47,7 +47,7 @@ void Torneig::imprimir_torneig(BinTree<int>& a, bool left, bool pare,int prof) {
             if (not pare and prof!=2) cout << " ";
         }
     }
-}  
+}
 
 int Torneig::consultar_categoria() {
     return categoria;
@@ -56,9 +56,14 @@ int Torneig::consultar_categoria() {
 int Torneig::consultar_participants() {
     return participants.size();
 }
+
+void Torneig::restar_punts() {
+    actualitzar_ranking(participants,punts,false);
+}
+
 void Torneig::iniciar_torneig(Cjt_jugadors& jugadors) {
     llegir_inscripcio(jugadors);
-    
+
     BinTree<int> a(1);
     crear_imprimir_emparellaments(a,2);
     imprimir_torneig(a, true, true, 1);

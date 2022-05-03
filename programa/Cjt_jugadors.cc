@@ -5,7 +5,7 @@ Cjt_jugadors::Cjt_jugadors() {
 }
 
 Cjt_jugadors::~Cjt_jugadors() {
-        
+
 }
 
 void Cjt_jugadors::llegir_jugadors() {
@@ -14,7 +14,7 @@ void Cjt_jugadors::llegir_jugadors() {
     for (int i = 0; i < P; ++i) {
         string nom;
         cin >> nom;
-        nou_jugador(nom, true);  
+        nou_jugador(nom, true);
     }
 }
 
@@ -46,28 +46,29 @@ void Cjt_jugadors::nou_jugador(string nom, bool first) {
 }
 
 void Cjt_jugadors::baixa_jugador(string nom) {
-    map<string,Jugador>::iterator trobat = jugadors.find(nom); 
+    map<string,Jugador>::iterator trobat = jugadors.find(nom);
     if (trobat != jugadors.end()) {
-        
+
         int size = ranking.size();
         for (int i = ((*trobat).second).consultar_posicio(); i <size; ++i) {
                 ((*(ranking[i].second)).second).sumar_posicio();
                 ranking[i-1] = ranking[i];
-                
-                
+
+
         }
         ranking.pop_back();
-        
+
         //map<string,Jugador>::iterator end = jugadors.end();
         //for (map<string,Jugador>::iterator it = trobat;  it != end; ++it) {
         //    ((*it).second).sumar_posicio();
         //}
         jugadors.erase(trobat);
         cout << ranking.size() << endl;
-        
+
     }
     else cout << "error: el jugador no existe" << endl;
 }
+
 
 void Cjt_jugadors::consultar_jugador(string nom) {
     map<string,Jugador>::iterator trobat = jugadors.find(nom);
@@ -77,19 +78,33 @@ void Cjt_jugadors::consultar_jugador(string nom) {
     else cout << "error: el jugador no existe" << endl;
 }
 
-void Cjt_jugadors::actualitzar_ranking(const vector<pair<int,int>>& v, bool sumar) {
-    v.size();
-    if (sumar) cout << "hola" << endl;
+void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int> punts, bool sumar) {
+   int size = participants.size();
+   if (sumar){
+	   for (int i = 0; i < size; ++i) {
+	       ranking[((*(jugadors.find(participants[i]))).second).consultar_posicio()-1].first += punts[i];
+	   }
+   }
+   else {
+	   for (int i = 0; i < size; ++i) {
+		   ranking[((*(jugadors.find(participants[i]))).second).consultar_posicio()-1].first -= punts[i];
+	   }
+
+   }
+   sort(ranking.begin(), ranking.end(), cmp());
+
+   for (int i = 0; i< size; ++i) {
+	   ((*(ranking[i].second)).second).modificar_pocicio(i+1);
+   }
 }
 
 void Cjt_jugadors::actualitzar_estadistiques(vector<string>& participants, vector<vector<int>>& estadistiques) {
-    int size = stats.size();
+    int size = participants.size();
     for (int i = 0; i < size; ++i) {
         ((*(jugadors.find(participants[i]))).second).modificar_estadistiques(estadistiques[i]);
     }
 }
-    
+
 string Cjt_jugadors::nom_jugador(int n) {
     return (*(ranking[n-1].second)).first;
 }
-
