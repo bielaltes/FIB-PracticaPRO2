@@ -63,7 +63,13 @@ int main() {
             string nom;
             cin >> nom;
             cout << " " << nom << endl;
-            tornejos.finalitzar_torneig(nom);
+            
+            num_participants = ((*(tornejos.find(nom))).second).consultar_participants();
+            vector<string> participants(num_participants);
+            vector<vector<int>> estadistiques(num_participants, vector<int>(7));
+            
+            tornejos.finalitzar_torneig(nom, participants, estadistiques);
+            jugadors.actualitzar_estadistiques(participants, estadistiques);
         }
         else if (comanda == "listar_ranking" or comanda == "lr") {
             jugadors.imprimir_ranking();

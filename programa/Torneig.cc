@@ -53,6 +53,9 @@ int Torneig::consultar_categoria() {
     return categoria;
 }
 
+int Torneig::consultar_participants() {
+    return participants.size();
+}
 void Torneig::iniciar_torneig(Cjt_jugadors& jugadors) {
     llegir_inscripcio(jugadors);
     

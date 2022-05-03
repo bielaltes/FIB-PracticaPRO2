@@ -82,10 +82,10 @@ void Cjt_jugadors::actualitzar_ranking(const vector<pair<int,int>>& v, bool suma
     if (sumar) cout << "hola" << endl;
 }
 
-void Cjt_jugadors::actualitzar_estadistiques(vector<pair<int,vector<int> > >& stats) {
+void Cjt_jugadors::actualitzar_estadistiques(vector<string>& participants, vector<vector<int>>& estadistiques) {
     int size = stats.size();
     for (int i = 0; i < size; ++i) {
-        (*(ranking[stats[i].first-1].second)).second.modificar_estadistiques(stats[i].second);
+        ((*(jugadors.find(participants[i]))).second).modificar_estadistiques(estadistiques[i]);
     }
 }
     

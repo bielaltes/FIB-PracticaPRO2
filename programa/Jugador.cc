@@ -40,7 +40,7 @@ void Jugador::sumar_posicio() {
 }
 
 
-void Jugador::modificar_estadistiques(const vector<int>& stats) {
+void Jugador::modificar_estadistiques(const vector<int>& estadistiques) {
     tornejos_disputat += stats[0];
     partits_guanyat += stats[1];
     partits_perdut += stats[2];
