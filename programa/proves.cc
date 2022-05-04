@@ -3,11 +3,11 @@
 #include <vector>
 #include <utility>
 #include <cmath>
+#include "BinTree.hh"
 #endif
 using namespace std;
 
 int main() {
-    int num_partits = 0;
-    for (int i = 0; i < log2(14); ++i) num_partits += pow(2,i);
-    cout << num_partits << endl;
+    BinTree<pair<int,string>> a = BinTree<pair<int,string>> (pair<int,string>(1,"hola"));
+    cout << (a.value()).first << endl;
 }

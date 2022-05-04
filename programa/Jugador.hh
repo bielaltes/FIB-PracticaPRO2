@@ -51,7 +51,7 @@ public:
 
     void sumar_posicio();
 
-    void modificar_posicio();
+    void modificar_posicio(int posicio);
 
 /** @brief Modifica les estadistiques d'un jugador
     \pre  el vector te 7 enters que indiquen com s'han de modificar les estadistiques.

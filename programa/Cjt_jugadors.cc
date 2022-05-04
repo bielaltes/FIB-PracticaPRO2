@@ -78,6 +78,11 @@ void Cjt_jugadors::consultar_jugador(string nom) {
     else cout << "error: el jugador no existe" << endl;
 }
 
+bool cmp(pair<int,map<string,Jugador>::iterator> r1, pair<int,map<string,Jugador>::iterator> r2 ) {
+    if (r1.first > r2.first) return true;
+    return false;
+}
+
 void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int> punts, bool sumar) {
    int size = participants.size();
    if (sumar){
@@ -91,10 +96,11 @@ void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int>
 	   }
 
    }
-   sort(ranking.begin(), ranking.end(), cmp());
+   sort(ranking.begin(), ranking.end(), cmp);
 
+   size = ranking.size();
    for (int i = 0; i< size; ++i) {
-	   ((*(ranking[i].second)).second).modificar_pocicio(i+1);
+	   ((*(ranking[i].second)).second).modificar_posicio(i+1);
    }
 }
 

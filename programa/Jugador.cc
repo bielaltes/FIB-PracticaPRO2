@@ -26,7 +26,7 @@ void Jugador::escriure_jugador(bool ranking, int punts) {
     else {
         cout << nom << " Rk:" << pos << " Ps:" << punts << " Ts:" << tornejos_disputat << " WM:";
         cout << partits_guanyat << " LM:" << partits_perdut << " WS:" << sets_guanyat << " LS:";
-        cout << sets_perdut << " WG:" << jocs_guanyat << " LG:" << jocs_perdut << endl;
+        cout << sets_perdut << " WG:" << jocs_guanyat << " LG:" << jocs_perdut <<endl;
     }
 
 }
@@ -44,8 +44,8 @@ void Jugador::modificar_posicio(int posicio) {
 }
 
 
-void Jugador::modificar_estadistiques(const vector<int>& estadistiques) {
-    tornejos_disputat += stats[0];
+void Jugador::modificar_estadistiques(const vector<int>& stats) {
+    tornejos_disputat += 1;
     partits_guanyat += stats[1];
     partits_perdut += stats[2];
     sets_guanyat += stats[3];

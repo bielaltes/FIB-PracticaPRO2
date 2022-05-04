@@ -2,6 +2,7 @@
 #define TORNEIG_HH
 
 #include "Cjt_jugadors.hh"
+#include "Cjt_categories.hh"
 
 #ifndef NO_DIAGRAM
 #include <iostream>
@@ -19,9 +20,8 @@ private:
     int categoria;
     int num_participants;
     vector<string> participants;
-    vector<vector<int>> estadistiques;  
     vector<int> punts;
-    BinTree<int> partits;
+    BinTree<pair<int, string>> partits;
 
 /** @brief Llegeix la inscripcio a un torneig
     \pre Per el canal habitual d'entrada trobem un int que representa
@@ -32,9 +32,9 @@ private:
 */
     void llegir_inscripcio(Cjt_jugadors& jugadors);
 
-    void imprimir_torneig(BinTree<int>& a, bool left, bool pare,int prof);
+    void imprimir_emparellaments(BinTree<pair<int,string>>& a, bool left, bool pare,int prof);
 
-    void crear_imprimir_emparellaments(BinTree<int>& a, int profunditat);
+    void crear_emparellaments(BinTree<pair<int,string>>& a, int m);
 
 public:
 
@@ -55,12 +55,26 @@ public:
 */
     int consultar_categoria();
 
+    int consultar_participants();
+
+    void restar_punts(Cjt_jugadors& jugadors);
+
 /** @brief Confecciona i imprimeix els emparellaments d'un torneig
     \pre  Al canal habitual d'entrada hi trobem un enter que representa
      el nombre total d'inscrits al torneig i seguidament les seves posicions.
     \post imprimeix el quadre d'emparellaments del torneig.
 */
     void iniciar_torneig(Cjt_jugadors& jugadors);
+
+    void llegir_resultats(BinTree<pair<int,string>>& a);
+
+    void calcular_guanyadors(BinTree<pair<int,string>>& a, Cjt_categories& categories, int nivell, vector<vector<int>>& estadistiques);
+
+    void imprimir_resultats(BinTree<pair<int,string>>& a);
+
+    void imprimir_punts();
+
+    void finalitzar_torneig(Cjt_jugadors& jugadors, Cjt_categories& categories, vector<string>& participants_estadistiques, vector<int>& punts_estadistiques,vector<vector<int>>& estadistiques);
 
 
 };

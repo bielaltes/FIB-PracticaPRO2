@@ -9,6 +9,10 @@ Cjt_tornejos::~Cjt_tornejos() {
 
 }
 
+int Cjt_tornejos::consultar_participants(string nom) {
+    return ((*(tornejos.find(nom))).second).consultar_participants();
+}
+
 void Cjt_tornejos::llegir_tornejos(int num_cat) {
     int T;
     cin >> T;
@@ -44,11 +48,11 @@ void Cjt_tornejos::nou_torneig(string nom, int cat, int num_cat,bool first) {
 
 }
 
-void Cjt_tornejos::baixa_torneig(string nom) {
+void Cjt_tornejos::baixa_torneig(string nom, Cjt_jugadors& jugadors) {
     map<string,Torneig>::iterator trobat = tornejos.find(nom);
     if ( trobat != tornejos.end()) {
         //ACTUALITZAR RANKING
-        trobat.restar_punts();
+        ((*(trobat)).second).restar_punts(jugadors);
         tornejos.erase(trobat);
         --num_tornejos;
         cout << num_tornejos << endl;
@@ -61,7 +65,7 @@ void Cjt_tornejos::iniciar_torneig(string nom, Cjt_jugadors& jugadors) {
     ((*it).second).iniciar_torneig(jugadors);
 }
 
-void Cjt_tornejos::finalitzar_torneig(string nom) {
-    nom = nom;
-
+void Cjt_tornejos::finalitzar_torneig(string nom, Cjt_jugadors& jugadors, Cjt_categories& categories, vector<string>& participants,vector<int>& punts, vector<vector<int>>& estadistiques) {
+    map<string,Torneig>::iterator it = tornejos.find(nom);
+    ((*it).second).finalitzar_torneig(jugadors,categories, participants, punts, estadistiques);
 }

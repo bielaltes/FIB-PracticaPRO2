@@ -8,15 +8,15 @@ Cjt_categories::Cjt_categories(int c, int k) {
 }
 
 Cjt_categories::~Cjt_categories() {
-    
+
 }
 
 void Cjt_categories::llegir_categories() {
     for (int i = 0; i < C; ++i) {
-        cin >> noms[i]; 
+        cin >> noms[i];
     }
-    for (int i = 0; i < C; ++i) { 
-        for (int j = 0; j < K; ++j) { 
+    for (int i = 0; i < C; ++i) {
+        for (int j = 0; j < K; ++j) {
             cin >> puntuacio[i][j];
         }
     }
@@ -27,7 +27,7 @@ void Cjt_categories::imprimir_categories() {
     cout << C << " " << K << endl;
     for (int i = 0; i < C; ++i) {
         cout << noms[i];
-        for (int j = 0; j < K; ++j) { 
+        for (int j = 0; j < K; ++j) {
             cout << " " <<puntuacio[i][j];
         }
         cout << endl;
@@ -40,4 +40,8 @@ int Cjt_categories::num_categories() {
 
 string Cjt_categories::nom_categoria(int num) {
     return noms[num-1];
+}
+
+int Cjt_categories::consultar_punts(int categoria, int nivell) {
+    return puntuacio[categoria-1][ nivell];
 }

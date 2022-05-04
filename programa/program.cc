@@ -10,8 +10,8 @@ using namespace std;
 
 
 int main() {
-    clock_t start,end;
-    start = clock();
+    //clock_t start,end;
+    //start = clock();
     int C, K;
     cin >> C >> K;
     Cjt_categories categories(C,K);
@@ -55,7 +55,7 @@ int main() {
             string nom;
             cin >> nom;
             cout << " " << nom << endl;
-            tornejos.baixa_torneig(nom);
+            tornejos.baixa_torneig(nom, jugadors);
         }
 
         else if (comanda == "iniciar_torneo" or comanda == "it") {
@@ -70,13 +70,12 @@ int main() {
             cin >> nom;
             cout << " " << nom << endl;
 
-            num_participants = ((*(tornejos.find(nom))).second).consultar_participants();
+            int num_participants = tornejos.consultar_participants(nom);
             vector<string> participants(num_participants);
+            vector<int> punts(num_participants);
             vector<vector<int>> estadistiques(num_participants, vector<int>(7));
 
-            tornejos.finalitzar_torneig(nom, participants, estadistiques);
-
-            jugadors.actualitzar_estadistiques(participants, estadistiques);
+            tornejos.finalitzar_torneig(nom,jugadors,categories, participants, punts, estadistiques);
 
         }
 
@@ -106,7 +105,7 @@ int main() {
         cin >> comanda;
 
     }
-    end = clock();
-    double time_taken = double(end-start) /double(CLOCKS_PER_SEC);
-    cout << time_taken << endl;
+    //end = clock();
+    //double time_taken = double(end-start) /double(CLOCKS_PER_SEC);
+    //cout << time_taken << endl;
 }
