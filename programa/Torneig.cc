@@ -13,10 +13,11 @@ void Torneig::llegir_inscripcio( Cjt_jugadors& jugadors) {
     int n;
     cin >> n;
     num_participants = n;
+    participants = vector<string>(num_participants);
     for (int i = 0; i < n; ++i) {
         int pos;
         cin >> pos;
-        participants.push_back(jugadors.nom_jugador(pos));
+        participants[i] = jugadors.nom_jugador(pos);
     }
 }
 
@@ -84,15 +85,17 @@ void Torneig::llegir_resultats(BinTree<pair<int,string>>& a) {
 }
 
 void Torneig::calcular_guanyadors(BinTree<pair<int,string>>& a, Cjt_categories& categories, int nivell, vector<vector<int>>& estadistiques) {
-    if (not (a.left()).empty()) {
+    if (not (a.right()).empty()) {
         BinTree<pair<int,string>> l = a.left();
         BinTree<pair<int,string>> r = a.right();
         calcular_guanyadors(l, categories, nivell +1, estadistiques);
         calcular_guanyadors(r, categories, nivell +1, estadistiques);
 
         //GUANYA DRET
-        if ( (((a.value()).second).back()-'0') >= ((a.value()).second[((a.value()).second).size() - 3]-'0') ) {
-            a = BinTree<pair<int,string>>(pair<int,string> ((((a.right()).value()).first), (a.value()).second), l, r);
+        if ( ((a.value()).second[((a.value()).second).size() - 1]-'0') > ((a.value()).second[((a.value()).second).size() - 3]-'0') ) {
+
+            a = BinTree<pair<int,string>>(pair<int,string> (((r.value()).first), (a.value()).second), l, r);
+
             punts[(((a.left()).value()).first)-1] = categories.consultar_punts(categoria, nivell);
 
             //partits
@@ -131,8 +134,10 @@ void Torneig::calcular_guanyadors(BinTree<pair<int,string>>& a, Cjt_categories& 
 
         }
         //GUANYA ESQUERRE
-        else {
-            a = BinTree<pair<int,string>>(pair<int,string> ((((a.left()).value()).first), (a.value()).second), l, r);
+        else if (((a.value()).second[((a.value()).second).size() - 1]-'0') < ((a.value()).second[((a.value()).second).size() - 3]-'0') ){
+
+            a = BinTree<pair<int,string>>(pair<int,string> (((l.value()).first), (a.value()).second), l, r);
+
             punts[(((a.right()).value()).first)-1] = categories.consultar_punts(categoria, nivell);
 
             //partits
@@ -168,6 +173,7 @@ void Torneig::calcular_guanyadors(BinTree<pair<int,string>>& a, Cjt_categories& 
                 estadistiques[(((a.right()).value()).first) -1][6] += (((a.value()).second)[0]-'0') + (((a.value()).second)[4]-'0');
             }
         }
+        else cout << "error" << endl;
 
 
     }
@@ -185,13 +191,16 @@ void Torneig::imprimir_resultats(BinTree<pair<int,string>>& a){
 }
 
 void Torneig::imprimir_punts() {
-    int size = participants.size();
-    for (int i = 0; i < size; ++i) {
+    for (int i = 0; i < num_participants; ++i) {
         cout << i+1 << "." << participants[i] << " " << punts[i] << endl;
     }
 }
 
 void Torneig::finalitzar_torneig(Cjt_jugadors& jugadors, Cjt_categories& categories, vector<string>& participants_estadistiques, vector<int>& punts_estadistiques,vector<vector<int>>& estadistiques) {
+
+    //restar punts
+
+    //if (participants_anteriors.size() > 0) jugadors.actualitzar_ranking(participants_anteriors, punts_anteriors, false);
 
     llegir_resultats(partits);
 

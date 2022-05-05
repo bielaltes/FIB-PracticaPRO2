@@ -79,22 +79,23 @@ void Cjt_jugadors::consultar_jugador(string nom) {
 }
 
 bool cmp(pair<int,map<string,Jugador>::iterator> r1, pair<int,map<string,Jugador>::iterator> r2 ) {
-    if (r1.first > r2.first) return true;
+    if (r1.first == r2.first) return ( ((*(r1.second)).second).consultar_posicio() < ((*(r2.second)).second).consultar_posicio() );
+    else if (r1.first > r2.first) return true;
     return false;
 }
 
-void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int> punts, bool sumar) {
+void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int>& punts, bool sumar) {
    int size = participants.size();
-   if (sumar){
-	   for (int i = 0; i < size; ++i) {
-	       ranking[((*(jugadors.find(participants[i]))).second).consultar_posicio()-1].first += punts[i];
-	   }
-   }
-   else {
-	   for (int i = 0; i < size; ++i) {
-		   ranking[((*(jugadors.find(participants[i]))).second).consultar_posicio()-1].first -= punts[i];
-	   }
-
+   for (int i = 0; i < size; ++i) {
+        map<string,Jugador>::iterator trobat = (jugadors.find(participants[i]));
+        if (trobat != jugadors.end()) {
+            if (sumar){
+    	       ranking[((*trobat).second).consultar_posicio()-1].first += punts[i];
+            }
+            else {
+    		   ranking[((*trobat).second).consultar_posicio()-1].first -= punts[i];
+    	    }
+        }
    }
    sort(ranking.begin(), ranking.end(), cmp);
 
