@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['sets_5fguanyat_68',['sets_guanyat',['../class_jugador.html#a396b226c722425d387f36e239fc9855c',1,'Jugador']]],
-  ['sets_5fperdut_69',['sets_perdut',['../class_jugador.html#a7c9fcb3ec52c2c400e7cf8faaf945426',1,'Jugador']]],
-  ['sumar_5fposicio_70',['sumar_posicio',['../class_jugador.html#acf0b8889293fdbe6e94edb4537847350',1,'Jugador']]]
+  ['ramos_85',['Ramos',['../proves_8cc.html#a61b87a67934fef7341d457ca155473b1',1,'proves.cc']]],
+  ['ranking_86',['ranking',['../class_cjt__jugadors.html#af9f7e71820fb657bf489ce72a31e8034',1,'Cjt_jugadors']]],
+  ['restar_5fpunts_87',['restar_punts',['../class_torneig.html#ac8a8318fd1bc940649d12e300906c530',1,'Torneig']]],
+  ['right_88',['right',['../struct_bin_tree_1_1_node.html#a6df770137090da60cd0376ce06893cbd',1,'BinTree::Node::right()'],['../class_bin_tree.html#aff8e96651b27284c329667b5ad3e4d0b',1,'BinTree::right()']]]
 ];

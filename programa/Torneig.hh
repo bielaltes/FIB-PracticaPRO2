@@ -22,6 +22,8 @@ private:
     vector<string> participants;
     vector<int> punts;
     BinTree<pair<int, string>> partits;
+    bool jugat;
+    vector<string> anteriors_participants;
 
 /** @brief Llegeix la inscripcio a un torneig
     \pre Per el canal habitual d'entrada trobem un int que representa
@@ -54,6 +56,8 @@ public:
     \post el resultat es la categoria del parametre implicit.
 */
     int consultar_categoria();
+
+    void eliminar_participant(string nom);
 
     int consultar_participants();
 

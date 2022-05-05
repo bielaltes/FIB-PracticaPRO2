@@ -14,6 +14,8 @@ void \mbox{\hyperlink{class_cjt__categories_ad1a67d725173663782d1385ff59f0be6}{i
 int \mbox{\hyperlink{class_cjt__categories_a78445bc84e521a95e7314ec4ac2565ad}{num\+\_\+categories}} ()
 \begin{DoxyCompactList}\small\item\em Retorna el numero de categories del conjunt. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_cjt__categories_abf84a9eb9c89846b4746a8f0cc3afb2f}{nom\+\_\+categoria}} (int num)
+\item 
+int \mbox{\hyperlink{class_cjt__categories_a21bb1f3a366e5e5a59130dc9d65b799c}{consultar\+\_\+punts}} (int categoria, int nivell)
 \end{DoxyCompactItemize}
 \doxysubsection*{Atributs Privats}
 \begin{DoxyCompactItemize}
@@ -83,7 +85,7 @@ Definició a la línia 10 del fitxer Cjt\+\_\+categories.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{10                                 \{}
-\DoxyCodeLine{11     }
+\DoxyCodeLine{11 }
 \DoxyCodeLine{12 \}}
 
 \end{DoxyCode}
@@ -114,10 +116,10 @@ Definició a la línia 14 del fitxer Cjt\+\_\+categories.\+cc.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{14                                        \{}
 \DoxyCodeLine{15     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}; ++i) \{}
-\DoxyCodeLine{16         cin >> \mbox{\hyperlink{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}{noms}}[i]; }
+\DoxyCodeLine{16         cin >> \mbox{\hyperlink{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}{noms}}[i];}
 \DoxyCodeLine{17     \}}
-\DoxyCodeLine{18     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}; ++i) \{ }
-\DoxyCodeLine{19         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}}; ++j) \{ }
+\DoxyCodeLine{18     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}; ++i) \{}
+\DoxyCodeLine{19         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}}; ++j) \{}
 \DoxyCodeLine{20             cin >> \mbox{\hyperlink{class_cjt__categories_a121b331af19b7307f320b21f0edd8b30}{puntuacio}}[i][j];}
 \DoxyCodeLine{21         \}}
 \DoxyCodeLine{22     \}}
@@ -151,7 +153,7 @@ Definició a la línia 25 del fitxer Cjt\+\_\+categories.\+cc.
 \DoxyCodeLine{27     cout << \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}} << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}} << endl;}
 \DoxyCodeLine{28     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_cjt__categories_a1d3d6eb2bd5a981ca1e56d4d16e7d1c1}{C}}; ++i) \{}
 \DoxyCodeLine{29         cout << \mbox{\hyperlink{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}{noms}}[i];}
-\DoxyCodeLine{30         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}}; ++j) \{ }
+\DoxyCodeLine{30         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} j = 0; j < \mbox{\hyperlink{class_cjt__categories_a3e7981c4f9b0aa3e0d5999ffa291ce54}{K}}; ++j) \{}
 \DoxyCodeLine{31             cout << \textcolor{stringliteral}{"{} "{}} <<\mbox{\hyperlink{class_cjt__categories_a121b331af19b7307f320b21f0edd8b30}{puntuacio}}[i][j];}
 \DoxyCodeLine{32         \}}
 \DoxyCodeLine{33         cout << endl;}
@@ -201,6 +203,23 @@ Definició a la línia 41 del fitxer Cjt\+\_\+categories.\+cc.
 \DoxyCodeLine{41                                             \{}
 \DoxyCodeLine{42     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__categories_a45622c30fae365dc72f2d7aa5fbc3bfc}{noms}}[num-\/1];}
 \DoxyCodeLine{43 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__categories_a21bb1f3a366e5e5a59130dc9d65b799c}\label{class_cjt__categories_a21bb1f3a366e5e5a59130dc9d65b799c}} 
+\index{Cjt\_categories@{Cjt\_categories}!consultar\_punts@{consultar\_punts}}
+\index{consultar\_punts@{consultar\_punts}!Cjt\_categories@{Cjt\_categories}}
+\doxysubsubsection{\texorpdfstring{consultar\_punts()}{consultar\_punts()}}
+{\footnotesize\ttfamily int Cjt\+\_\+categories\+::consultar\+\_\+punts (\begin{DoxyParamCaption}\item[{int}]{categoria,  }\item[{int}]{nivell }\end{DoxyParamCaption})}
+
+
+
+Definició a la línia 45 del fitxer Cjt\+\_\+categories.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45                                                              \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_cjt__categories_a121b331af19b7307f320b21f0edd8b30}{puntuacio}}[categoria-\/1][ nivell];}
+\DoxyCodeLine{47 \}}
 
 \end{DoxyCode}
 

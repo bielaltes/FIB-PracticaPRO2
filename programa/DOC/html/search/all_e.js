@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['torneig_71',['Torneig',['../class_torneig.html',1,'Torneig'],['../class_torneig.html#a9794723939612dccda9f9a3979789b11',1,'Torneig::Torneig()']]],
-  ['torneig_2ecc_72',['Torneig.cc',['../_torneig_8cc.html',1,'']]],
-  ['torneig_2ehh_73',['Torneig.hh',['../_torneig_8hh.html',1,'']]],
-  ['tornejos_74',['tornejos',['../class_cjt__tornejos.html#a4b3d9bdd2ed133d76284fb510ebe9800',1,'Cjt_tornejos']]],
-  ['tornejos_5fdisputat_75',['tornejos_disputat',['../class_jugador.html#a2ef0821abd64385a58561b039c37a469',1,'Jugador']]]
+  ['sets_5fguanyat_89',['sets_guanyat',['../class_jugador.html#a396b226c722425d387f36e239fc9855c',1,'Jugador']]],
+  ['sets_5fperdut_90',['sets_perdut',['../class_jugador.html#a7c9fcb3ec52c2c400e7cf8faaf945426',1,'Jugador']]],
+  ['sumar_5fposicio_91',['sumar_posicio',['../class_jugador.html#acf0b8889293fdbe6e94edb4537847350',1,'Jugador']]]
 ];

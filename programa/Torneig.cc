@@ -3,10 +3,19 @@
 Torneig::Torneig(int cat) {
     categoria = cat;
     participants = vector<string>(0);
+    jugat = false;
 }
 
 Torneig::~Torneig() {
 
+}
+
+void Torneig::eliminar_participant(string nom){
+    int size = participants.size();
+    bool trobat = false;
+    for (int i = 0; i < size and not trobat; ++i){
+        if (participants[i] == nom) {punts[i] = 0; trobat = true;}
+    }
 }
 
 void Torneig::llegir_inscripcio( Cjt_jugadors& jugadors) {
@@ -58,10 +67,11 @@ int Torneig::consultar_participants() {
 }
 
 void Torneig::restar_punts(Cjt_jugadors& jugadors) {
-    jugadors.actualitzar_ranking(participants,punts,false);
+    jugadors.actualitzar_ranking(participants,punts,false, true);
 }
 
 void Torneig::iniciar_torneig(Cjt_jugadors& jugadors) {
+    if (jugat) anteriors_participants = participants;
     llegir_inscripcio(jugadors);
 
     partits = BinTree<pair<int,string>>(pair<int,string>(1, " "));
@@ -198,9 +208,12 @@ void Torneig::imprimir_punts() {
 
 void Torneig::finalitzar_torneig(Cjt_jugadors& jugadors, Cjt_categories& categories, vector<string>& participants_estadistiques, vector<int>& punts_estadistiques,vector<vector<int>>& estadistiques) {
 
-    //restar punts
+    if(jugat){
+        participants_estadistiques = anteriors_participants;
+       jugadors.actualitzar_ranking(participants_estadistiques, punts, false, false);
+    }
 
-    //if (participants_anteriors.size() > 0) jugadors.actualitzar_ranking(participants_anteriors, punts_anteriors, false);
+    jugat = true;
 
     llegir_resultats(partits);
 
@@ -217,5 +230,5 @@ void Torneig::finalitzar_torneig(Cjt_jugadors& jugadors, Cjt_categories& categor
     jugadors.actualitzar_estadistiques(participants_estadistiques, estadistiques);
 
     punts_estadistiques = punts;
-    jugadors.actualitzar_ranking(participants_estadistiques, punts_estadistiques, true);
+    jugadors.actualitzar_ranking(participants_estadistiques, punts_estadistiques, true, true);
 }

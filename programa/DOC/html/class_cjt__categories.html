@@ -90,6 +90,8 @@ Mètodes públics</h2></td></tr>
 <tr class="separator:a78445bc84e521a95e7314ec4ac2565ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf84a9eb9c89846b4746a8f0cc3afb2f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cjt__categories.html#abf84a9eb9c89846b4746a8f0cc3afb2f">nom_categoria</a> (int num)</td></tr>
 <tr class="separator:abf84a9eb9c89846b4746a8f0cc3afb2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a21bb1f3a366e5e5a59130dc9d65b799c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_cjt__categories.html#a21bb1f3a366e5e5a59130dc9d65b799c">consultar_punts</a> (int categoria, int nivell)</td></tr>
+<tr class="separator:a21bb1f3a366e5e5a59130dc9d65b799c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Atributs Privats</h2></td></tr>
@@ -169,7 +171,7 @@ Atributs Privats</h2></td></tr>
 
 <p class="definition">Definició a la línia <a class="el" href="_cjt__categories_8cc_source.html#l00010">10</a> del fitxer <a class="el" href="_cjt__categories_8cc_source.html">Cjt_categories.cc</a>.</p>
 <div class="fragment"><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;                                {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
@@ -197,10 +199,10 @@ Atributs Privats</h2></td></tr>
 <p class="definition">Definició a la línia <a class="el" href="_cjt__categories_8cc_source.html#l00014">14</a> del fitxer <a class="el" href="_cjt__categories_8cc_source.html">Cjt_categories.cc</a>.</p>
 <div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                                       {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_cjt__categories.html#a1d3d6eb2bd5a981ca1e56d4d16e7d1c1">C</a>; ++i) {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        cin &gt;&gt; <a class="code" href="class_cjt__categories.html#a45622c30fae365dc72f2d7aa5fbc3bfc">noms</a>[i]; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        cin &gt;&gt; <a class="code" href="class_cjt__categories.html#a45622c30fae365dc72f2d7aa5fbc3bfc">noms</a>[i];</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_cjt__categories.html#a1d3d6eb2bd5a981ca1e56d4d16e7d1c1">C</a>; ++i) { </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_cjt__categories.html#a3e7981c4f9b0aa3e0d5999ffa291ce54">K</a>; ++j) { </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_cjt__categories.html#a1d3d6eb2bd5a981ca1e56d4d16e7d1c1">C</a>; ++i) {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_cjt__categories.html#a3e7981c4f9b0aa3e0d5999ffa291ce54">K</a>; ++j) {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            cin &gt;&gt; <a class="code" href="class_cjt__categories.html#a121b331af19b7307f320b21f0edd8b30">puntuacio</a>[i][j];</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        }</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    }</div>
@@ -233,7 +235,7 @@ Atributs Privats</h2></td></tr>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    cout &lt;&lt; <a class="code" href="class_cjt__categories.html#a1d3d6eb2bd5a981ca1e56d4d16e7d1c1">C</a> &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; <a class="code" href="class_cjt__categories.html#a3e7981c4f9b0aa3e0d5999ffa291ce54">K</a> &lt;&lt; endl;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_cjt__categories.html#a1d3d6eb2bd5a981ca1e56d4d16e7d1c1">C</a>; ++i) {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        cout &lt;&lt; <a class="code" href="class_cjt__categories.html#a45622c30fae365dc72f2d7aa5fbc3bfc">noms</a>[i];</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_cjt__categories.html#a3e7981c4f9b0aa3e0d5999ffa291ce54">K</a>; ++j) { </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_cjt__categories.html#a3e7981c4f9b0aa3e0d5999ffa291ce54">K</a>; ++j) {</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt;<a class="code" href="class_cjt__categories.html#a121b331af19b7307f320b21f0edd8b30">puntuacio</a>[i][j];</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        }</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        cout &lt;&lt; endl;</div>
@@ -288,6 +290,39 @@ Atributs Privats</h2></td></tr>
 <div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                            {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_cjt__categories.html#a45622c30fae365dc72f2d7aa5fbc3bfc">noms</a>[num-1];</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a21bb1f3a366e5e5a59130dc9d65b799c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a21bb1f3a366e5e5a59130dc9d65b799c">&#9670;&nbsp;</a></span>consultar_punts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Cjt_categories::consultar_punts </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>categoria</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nivell</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definició a la línia <a class="el" href="_cjt__categories_8cc_source.html#l00045">45</a> del fitxer <a class="el" href="_cjt__categories_8cc_source.html">Cjt_categories.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                                             {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_cjt__categories.html#a121b331af19b7307f320b21f0edd8b30">puntuacio</a>[categoria-1][ nivell];</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
 </div><!-- fragment -->
 </div>
 </div>

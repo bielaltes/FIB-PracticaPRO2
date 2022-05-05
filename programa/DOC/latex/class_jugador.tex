@@ -13,7 +13,7 @@ int \mbox{\hyperlink{class_jugador_ac23e47ec747a3bfcabcf047ef9b599de}{consultar\
 \begin{DoxyCompactList}\small\item\em Retorna la posicio d\textquotesingle{}un jugador. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_jugador_acf0b8889293fdbe6e94edb4537847350}{sumar\+\_\+posicio}} ()
 \item 
-void \mbox{\hyperlink{class_jugador_a108f30a754fc78f3c2b4680f4d8d70f2}{modificar\+\_\+posicio}} ()
+void \mbox{\hyperlink{class_jugador_aa9e09965d8b76997ec4913ca355daf1e}{modificar\+\_\+posicio}} (int posicio)
 \item 
 void \mbox{\hyperlink{class_jugador_ab002dbf870a93bbe498d1f76f9e43e43}{modificar\+\_\+estadistiques}} (const vector$<$ int $>$ \&stats)
 \begin{DoxyCompactList}\small\item\em Modifica les estadistiques d\textquotesingle{}un jugador. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -137,7 +137,7 @@ Definició a la línia 22 del fitxer Jugador.\+cc.
 \DoxyCodeLine{26     \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{27         cout << \mbox{\hyperlink{class_jugador_afd6bec98df8ebb3d2db3ef583a76cfa1}{nom}} << \textcolor{stringliteral}{"{} Rk:"{}} << \mbox{\hyperlink{class_jugador_a25a7eeb0d334b2fe60bb490704c6626d}{pos}} << \textcolor{stringliteral}{"{} Ps:"{}} << punts << \textcolor{stringliteral}{"{} Ts:"{}} << \mbox{\hyperlink{class_jugador_a2ef0821abd64385a58561b039c37a469}{tornejos\_disputat}} << \textcolor{stringliteral}{"{} WM:"{}};}
 \DoxyCodeLine{28         cout << \mbox{\hyperlink{class_jugador_a6bf9a674be86bfce7945f7c0dfbe531f}{partits\_guanyat}} << \textcolor{stringliteral}{"{} LM:"{}} << \mbox{\hyperlink{class_jugador_ad1e6a56bea30a1449dbb37871c288fcf}{partits\_perdut}} << \textcolor{stringliteral}{"{} WS:"{}} << \mbox{\hyperlink{class_jugador_a396b226c722425d387f36e239fc9855c}{sets\_guanyat}} << \textcolor{stringliteral}{"{} LS:"{}};}
-\DoxyCodeLine{29         cout << \mbox{\hyperlink{class_jugador_a7c9fcb3ec52c2c400e7cf8faaf945426}{sets\_perdut}} << \textcolor{stringliteral}{"{} WG:"{}} << \mbox{\hyperlink{class_jugador_a0eb97835e7dd3143f626c1d15edb7392}{jocs\_guanyat}} << \textcolor{stringliteral}{"{} LG:"{}} << \mbox{\hyperlink{class_jugador_a04e5cf90e57c490b4c088e29763479f7}{jocs\_perdut}} << endl;}
+\DoxyCodeLine{29         cout << \mbox{\hyperlink{class_jugador_a7c9fcb3ec52c2c400e7cf8faaf945426}{sets\_perdut}} << \textcolor{stringliteral}{"{} WG:"{}} << \mbox{\hyperlink{class_jugador_a0eb97835e7dd3143f626c1d15edb7392}{jocs\_guanyat}} << \textcolor{stringliteral}{"{} LG:"{}} << \mbox{\hyperlink{class_jugador_a04e5cf90e57c490b4c088e29763479f7}{jocs\_perdut}} <<endl;}
 \DoxyCodeLine{30     \}}
 \DoxyCodeLine{31 }
 \DoxyCodeLine{32 \}}
@@ -187,11 +187,11 @@ Definició a la línia 38 del fitxer Jugador.\+cc.
 \DoxyCodeLine{40 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_jugador_a108f30a754fc78f3c2b4680f4d8d70f2}\label{class_jugador_a108f30a754fc78f3c2b4680f4d8d70f2}} 
+\mbox{\Hypertarget{class_jugador_aa9e09965d8b76997ec4913ca355daf1e}\label{class_jugador_aa9e09965d8b76997ec4913ca355daf1e}} 
 \index{Jugador@{Jugador}!modificar\_posicio@{modificar\_posicio}}
 \index{modificar\_posicio@{modificar\_posicio}!Jugador@{Jugador}}
 \doxysubsubsection{\texorpdfstring{modificar\_posicio()}{modificar\_posicio()}}
-{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+posicio (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Jugador\+::modificar\+\_\+posicio (\begin{DoxyParamCaption}\item[{int}]{posicio }\end{DoxyParamCaption})}
 
 
 
@@ -226,8 +226,8 @@ Definició a la línia 47 del fitxer Jugador.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{47                                                                       \{}
-\DoxyCodeLine{48     \mbox{\hyperlink{class_jugador_a2ef0821abd64385a58561b039c37a469}{tornejos\_disputat}} += stats[0];}
+\DoxyCodeLine{47                                                               \{}
+\DoxyCodeLine{48     \mbox{\hyperlink{class_jugador_a2ef0821abd64385a58561b039c37a469}{tornejos\_disputat}} += 1;}
 \DoxyCodeLine{49     \mbox{\hyperlink{class_jugador_a6bf9a674be86bfce7945f7c0dfbe531f}{partits\_guanyat}} += stats[1];}
 \DoxyCodeLine{50     \mbox{\hyperlink{class_jugador_ad1e6a56bea30a1449dbb37871c288fcf}{partits\_perdut}} += stats[2];}
 \DoxyCodeLine{51     \mbox{\hyperlink{class_jugador_a396b226c722425d387f36e239fc9855c}{sets\_guanyat}} += stats[3];}

@@ -1,4 +1,4 @@
-#include "Cjt_jugadors.hh"
+    #include "Cjt_jugadors.hh"
 
 Cjt_jugadors::Cjt_jugadors() {
     ranking = vector<pair<int,map<string,Jugador>::iterator>>();
@@ -58,10 +58,6 @@ void Cjt_jugadors::baixa_jugador(string nom) {
         }
         ranking.pop_back();
 
-        //map<string,Jugador>::iterator end = jugadors.end();
-        //for (map<string,Jugador>::iterator it = trobat;  it != end; ++it) {
-        //    ((*it).second).sumar_posicio();
-        //}
         jugadors.erase(trobat);
         cout << ranking.size() << endl;
 
@@ -84,7 +80,7 @@ bool cmp(pair<int,map<string,Jugador>::iterator> r1, pair<int,map<string,Jugador
     return false;
 }
 
-void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int>& punts, bool sumar) {
+void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int>& punts, bool sumar, bool ordenar) {
    int size = participants.size();
    for (int i = 0; i < size; ++i) {
         map<string,Jugador>::iterator trobat = (jugadors.find(participants[i]));
@@ -95,9 +91,10 @@ void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int>
             else {
     		   ranking[((*trobat).second).consultar_posicio()-1].first -= punts[i];
     	    }
+
         }
    }
-   sort(ranking.begin(), ranking.end(), cmp);
+   if (ordenar) sort(ranking.begin(), ranking.end(), cmp);
 
    size = ranking.size();
    for (int i = 0; i< size; ++i) {

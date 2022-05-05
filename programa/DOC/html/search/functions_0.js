@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['actualitzar_5festadistiques_104',['actualitzar_estadistiques',['../class_cjt__jugadors.html#ade2368355d0198eef0c8d06c932f1a17',1,'Cjt_jugadors']]],
-  ['actualitzar_5franking_105',['actualitzar_ranking',['../class_cjt__jugadors.html#a5e12a36a7049121aef6a5cb46e6528ad',1,'Cjt_jugadors']]]
+  ['actualitzar_5festadistiques_125',['actualitzar_estadistiques',['../class_cjt__jugadors.html#a3dbb9da444951739e8d07fdc80c68d82',1,'Cjt_jugadors']]],
+  ['actualitzar_5franking_126',['actualitzar_ranking',['../class_cjt__jugadors.html#a4c63be8c65b87d98ceb08af52a810fc5',1,'Cjt_jugadors']]]
 ];

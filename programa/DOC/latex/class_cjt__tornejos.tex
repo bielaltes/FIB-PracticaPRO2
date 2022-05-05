@@ -9,15 +9,19 @@
 \begin{DoxyCompactList}\small\item\em esborra automaticament els objectes locals en sortir d\textquotesingle{}un ambit de visibilitat. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_cjt__tornejos_a1353b909daa12fb1f542d028f1d79529}{llegir\+\_\+tornejos}} (int num\+\_\+cat)
 \begin{DoxyCompactList}\small\item\em Llegeix un conjunt de tornejos. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cjt__tornejos_a52b8a773c1e137c268d847a9da81e891}{imprimir\+\_\+tornejos}} (\mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&categories)
+int \mbox{\hyperlink{class_cjt__tornejos_a8638a74dc5a2677cb3c66be1fc397ea0}{consultar\+\_\+participants}} (string nom)
 \begin{DoxyCompactList}\small\item\em Imprimeix un conjunt de tornejos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__tornejos_a52b8a773c1e137c268d847a9da81e891}{imprimir\+\_\+tornejos}} (\mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&categories)
+\item 
 void \mbox{\hyperlink{class_cjt__tornejos_a71e258c45895e7e97bdf201bec99f865}{nou\+\_\+torneig}} (string nom, int cat, int num\+\_\+categories, bool first)
 \begin{DoxyCompactList}\small\item\em Afegeix un torneig al conjunt. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cjt__tornejos_a1a65189a8723f8bf3dd0b02dd8922921}{baixa\+\_\+torneig}} (string nom)
+void \mbox{\hyperlink{class_cjt__tornejos_a77750c86e1c2b57d8781e565bbd22625}{baixa\+\_\+torneig}} (string nom, \mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors)
 \begin{DoxyCompactList}\small\item\em Dona de baixa un torneig del conjunt. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_cjt__tornejos_acd74b9196cc0c9af8cc572e2112d0279}{eliminar\+\_\+jugador}} (string nom)
+\item 
 void \mbox{\hyperlink{class_cjt__tornejos_ae8c099350f8903c61ca73fddfaeebffa}{iniciar\+\_\+torneig}} (string nom, \mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors)
 \begin{DoxyCompactList}\small\item\em Inicia un torneig. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_cjt__tornejos_a510f0bc1e499183ecc93a46d19caafa1}{finalitzar\+\_\+torneig}} (string nom)
+void \mbox{\hyperlink{class_cjt__tornejos_a5afcab41626cbc22d7a4cad33adf8297}{finalitzar\+\_\+torneig}} (string nom, \mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors, \mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&categories, vector$<$ string $>$ \&participants, vector$<$ int $>$ \&punts, vector$<$ vector$<$ int $>$$>$ \&estadistiques)
 \begin{DoxyCompactList}\small\item\em Finalitza un torneig. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributs Privats}
 \begin{DoxyCompactItemize}
@@ -80,7 +84,7 @@ Definició a la línia 8 del fitxer Cjt\+\_\+tornejos.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{8                             \{}
-\DoxyCodeLine{9     }
+\DoxyCodeLine{9 }
 \DoxyCodeLine{10 \}}
 
 \end{DoxyCode}
@@ -101,8 +105,41 @@ Llegeix un conjunt de tornejos.
 esta preparat al canal estandard d\textquotesingle{}entrada un enter que representa el nombre total de tornejos i seguidament les dades que defineixen aquests diferents tornejos. 
 \end{DoxyPrecond}
 \begin{DoxyPostcond}{Postcondició}
-el parametre implicit conte el conjunt de tornejos llegits del canal estandard d\textquotesingle{}entrada. ~\newline
- 
+el parametre implicit conte el conjunt de tornejos llegits del canal estandard d\textquotesingle{}entrada. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 16 del fitxer Cjt\+\_\+tornejos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16                                               \{}
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} T;}
+\DoxyCodeLine{18     cin >> T;}
+\DoxyCodeLine{19     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < T; ++i) \{}
+\DoxyCodeLine{20         \textcolor{keywordtype}{string} nom;}
+\DoxyCodeLine{21         \textcolor{keywordtype}{int} cat;}
+\DoxyCodeLine{22         cin >> nom >> cat;}
+\DoxyCodeLine{23         \mbox{\hyperlink{class_cjt__tornejos_a71e258c45895e7e97bdf201bec99f865}{nou\_torneig}}(nom,cat, num\_cat,\textcolor{keyword}{true});}
+\DoxyCodeLine{24     \}}
+\DoxyCodeLine{25 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__tornejos_a8638a74dc5a2677cb3c66be1fc397ea0}\label{class_cjt__tornejos_a8638a74dc5a2677cb3c66be1fc397ea0}} 
+\index{Cjt\_tornejos@{Cjt\_tornejos}!consultar\_participants@{consultar\_participants}}
+\index{consultar\_participants@{consultar\_participants}!Cjt\_tornejos@{Cjt\_tornejos}}
+\doxysubsubsection{\texorpdfstring{consultar\_participants()}{consultar\_participants()}}
+{\footnotesize\ttfamily int Cjt\+\_\+tornejos\+::consultar\+\_\+participants (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})}
+
+
+
+Imprimeix un conjunt de tornejos. 
+
+\begin{DoxyPrecond}{Precondició}
+cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}han escrit pel canal estandard de sortida els tornejos del parametre implicit en ordre ascendent per identificador, el nom i la categoria de cada torneig del circuit. 
 \end{DoxyPostcond}
 
 
@@ -110,16 +147,9 @@ Definició a la línia 12 del fitxer Cjt\+\_\+tornejos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{12                                               \{}
-\DoxyCodeLine{13     \textcolor{keywordtype}{int} T;}
-\DoxyCodeLine{14     cin >> T;}
-\DoxyCodeLine{15     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < T; ++i) \{}
-\DoxyCodeLine{16         \textcolor{keywordtype}{string} nom;}
-\DoxyCodeLine{17         \textcolor{keywordtype}{int} cat;}
-\DoxyCodeLine{18         cin >> nom >> cat;}
-\DoxyCodeLine{19         \mbox{\hyperlink{class_cjt__tornejos_a71e258c45895e7e97bdf201bec99f865}{nou\_torneig}}(nom,cat, num\_cat,\textcolor{keyword}{true});}
-\DoxyCodeLine{20     \}}
-\DoxyCodeLine{21 \}}
+\DoxyCodeLine{12                                                    \{}
+\DoxyCodeLine{13     \textcolor{keywordflow}{return} ((*(\mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.find(nom))).second).consultar\_participants();}
+\DoxyCodeLine{14 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__tornejos_a52b8a773c1e137c268d847a9da81e891}\label{class_cjt__tornejos_a52b8a773c1e137c268d847a9da81e891}} 
@@ -130,30 +160,19 @@ Definició a la línia 12 del fitxer Cjt\+\_\+tornejos.\+cc.
 
 
 
-Imprimeix un conjunt de tornejos. 
-
-\begin{DoxyPrecond}{Precondició}
-cert. 
-\end{DoxyPrecond}
-\begin{DoxyPostcond}{Postcondició}
-s\textquotesingle{}han escrit pel canal estandard de sortida els tornejos del parametre implicit en ordre ascendent per identificador, el nom i la categoria de cada torneig del circuit. ~\newline
- 
-\end{DoxyPostcond}
-
-
-Definició a la línia 23 del fitxer Cjt\+\_\+tornejos.\+cc.
+Definició a la línia 27 del fitxer Cjt\+\_\+tornejos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{23                                                                \{}
-\DoxyCodeLine{24     cout << endl;}
-\DoxyCodeLine{25     cout << \mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}} << endl;}
-\DoxyCodeLine{26     map<string,Torneig>::iterator it = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.begin();}
-\DoxyCodeLine{27     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}}; ++i) \{}
-\DoxyCodeLine{28         cout << (*it).first << \textcolor{stringliteral}{"{} "{}} << categories.\mbox{\hyperlink{class_cjt__categories_abf84a9eb9c89846b4746a8f0cc3afb2f}{nom\_categoria}}(((*it).second).consultar\_categoria()) << endl;}
-\DoxyCodeLine{29         ++it;}
-\DoxyCodeLine{30     \}}
-\DoxyCodeLine{31 \}}
+\DoxyCodeLine{27                                                                \{}
+\DoxyCodeLine{28     cout << endl;}
+\DoxyCodeLine{29     cout << \mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}} << endl;}
+\DoxyCodeLine{30     map<string,Torneig>::iterator it = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.begin();}
+\DoxyCodeLine{31     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}}; ++i) \{}
+\DoxyCodeLine{32         cout << (*it).first << \textcolor{stringliteral}{"{} "{}} << categories.\mbox{\hyperlink{class_cjt__categories_abf84a9eb9c89846b4746a8f0cc3afb2f}{nom\_categoria}}(((*it).second).consultar\_categoria()) << endl;}
+\DoxyCodeLine{33         ++it;}
+\DoxyCodeLine{34     \}}
+\DoxyCodeLine{35 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__tornejos_a71e258c45895e7e97bdf201bec99f865}\label{class_cjt__tornejos_a71e258c45895e7e97bdf201bec99f865}} 
@@ -174,30 +193,30 @@ s\textquotesingle{}ha afegit el torneig T al parametre implicit i s\textquotesin
 \end{DoxyPostcond}
 
 
-Definició a la línia 33 del fitxer Cjt\+\_\+tornejos.\+cc.
+Definició a la línia 37 del fitxer Cjt\+\_\+tornejos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{33                                                                           \{}
-\DoxyCodeLine{34     \textcolor{keywordflow}{if} ( cat > 0 and cat <= num\_cat) \{}
-\DoxyCodeLine{35         \mbox{\hyperlink{class_torneig}{Torneig}} t(cat);}
-\DoxyCodeLine{36         pair<map<string,Torneig>::iterator,\textcolor{keywordtype}{bool}> trobat = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.insert(pair<string,Torneig>(nom, t));}
-\DoxyCodeLine{37         \textcolor{keywordflow}{if} ( trobat.second) \{}
-\DoxyCodeLine{38             ++\mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}};}
-\DoxyCodeLine{39             \textcolor{keywordflow}{if} (not first) cout << \mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}} << endl;}
-\DoxyCodeLine{40         \}}
-\DoxyCodeLine{41         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: ya existe un torneo con ese nombre"{}} << endl;}
-\DoxyCodeLine{42     \}}
-\DoxyCodeLine{43     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: la categoria no existe"{}} << endl;   }
-\DoxyCodeLine{44     }
-\DoxyCodeLine{45 \}}
+\DoxyCodeLine{37                                                                           \{}
+\DoxyCodeLine{38     \textcolor{keywordflow}{if} ( cat > 0 and cat <= num\_cat) \{}
+\DoxyCodeLine{39         \mbox{\hyperlink{class_torneig}{Torneig}} t(cat);}
+\DoxyCodeLine{40         pair<map<string,Torneig>::iterator,\textcolor{keywordtype}{bool}> trobat = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.insert(pair<string,Torneig>(nom, t));}
+\DoxyCodeLine{41         \textcolor{keywordflow}{if} ( trobat.second) \{}
+\DoxyCodeLine{42             ++\mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}};}
+\DoxyCodeLine{43             \textcolor{keywordflow}{if} (not first) cout << \mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}} << endl;}
+\DoxyCodeLine{44         \}}
+\DoxyCodeLine{45         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: ya existe un torneo con ese nombre"{}} << endl;}
+\DoxyCodeLine{46     \}}
+\DoxyCodeLine{47     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: la categoria no existe"{}} << endl;}
+\DoxyCodeLine{48 }
+\DoxyCodeLine{49 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_cjt__tornejos_a1a65189a8723f8bf3dd0b02dd8922921}\label{class_cjt__tornejos_a1a65189a8723f8bf3dd0b02dd8922921}} 
+\mbox{\Hypertarget{class_cjt__tornejos_a77750c86e1c2b57d8781e565bbd22625}\label{class_cjt__tornejos_a77750c86e1c2b57d8781e565bbd22625}} 
 \index{Cjt\_tornejos@{Cjt\_tornejos}!baixa\_torneig@{baixa\_torneig}}
 \index{baixa\_torneig@{baixa\_torneig}!Cjt\_tornejos@{Cjt\_tornejos}}
 \doxysubsubsection{\texorpdfstring{baixa\_torneig()}{baixa\_torneig()}}
-{\footnotesize\ttfamily void Cjt\+\_\+tornejos\+::baixa\+\_\+torneig (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Cjt\+\_\+tornejos\+::baixa\+\_\+torneig (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&}]{jugadors }\end{DoxyParamCaption})}
 
 
 
@@ -211,20 +230,43 @@ s\textquotesingle{}ha afegit el torneig T al parametre implicit i s\textquotesin
 \end{DoxyPostcond}
 
 
-Definició a la línia 47 del fitxer Cjt\+\_\+tornejos.\+cc.
+Definició a la línia 51 del fitxer Cjt\+\_\+tornejos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{47                                            \{}
-\DoxyCodeLine{48     map<string,Torneig>::iterator trobat = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.find(nom);}
-\DoxyCodeLine{49     \textcolor{keywordflow}{if} ( trobat != \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.end()) \{}
-\DoxyCodeLine{50         \textcolor{comment}{//ACTUALITZAR RANKING}}
-\DoxyCodeLine{51         \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.erase(trobat);}
-\DoxyCodeLine{52         -\/-\/\mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}};}
-\DoxyCodeLine{53         cout << \mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}} << endl;   }
-\DoxyCodeLine{54     \}}
-\DoxyCodeLine{55     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: el torneo no existe"{}} << endl;}
-\DoxyCodeLine{56 \}}
+\DoxyCodeLine{51                                                                    \{}
+\DoxyCodeLine{52     map<string,Torneig>::iterator trobat = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.find(nom);}
+\DoxyCodeLine{53     \textcolor{keywordflow}{if} ( trobat != \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.end()) \{}
+\DoxyCodeLine{54         \textcolor{comment}{//ACTUALITZAR RANKING}}
+\DoxyCodeLine{55         ((*(trobat)).second).restar\_punts(jugadors);}
+\DoxyCodeLine{56         \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.erase(trobat);}
+\DoxyCodeLine{57         -\/-\/\mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}};}
+\DoxyCodeLine{58         cout << \mbox{\hyperlink{class_cjt__tornejos_afe968dc02bf4f83842c53c5a76182f2f}{num\_tornejos}} << endl;}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error: el torneo no existe"{}} << endl;}
+\DoxyCodeLine{61 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_cjt__tornejos_acd74b9196cc0c9af8cc572e2112d0279}\label{class_cjt__tornejos_acd74b9196cc0c9af8cc572e2112d0279}} 
+\index{Cjt\_tornejos@{Cjt\_tornejos}!eliminar\_jugador@{eliminar\_jugador}}
+\index{eliminar\_jugador@{eliminar\_jugador}!Cjt\_tornejos@{Cjt\_tornejos}}
+\doxysubsubsection{\texorpdfstring{eliminar\_jugador()}{eliminar\_jugador()}}
+{\footnotesize\ttfamily void Cjt\+\_\+tornejos\+::eliminar\+\_\+jugador (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})}
+
+
+
+Definició a la línia 63 del fitxer Cjt\+\_\+tornejos.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63                                               \{}
+\DoxyCodeLine{64     map<string,Torneig>::iterator it;}
+\DoxyCodeLine{65     map<string,Torneig>::iterator end = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.end();}
+\DoxyCodeLine{66     \textcolor{keywordflow}{for} (it = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.begin(); it != end; ++it)\{}
+\DoxyCodeLine{67         ((*(it)).second).eliminar\_participant(nom);}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69 }
+\DoxyCodeLine{70 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_cjt__tornejos_ae8c099350f8903c61ca73fddfaeebffa}\label{class_cjt__tornejos_ae8c099350f8903c61ca73fddfaeebffa}} 
@@ -245,21 +287,21 @@ el parametre implicit passa a tenir un torneig amb l\textquotesingle{}estructura
 \end{DoxyPostcond}
 
 
-Definició a la línia 58 del fitxer Cjt\+\_\+tornejos.\+cc.
+Definició a la línia 72 del fitxer Cjt\+\_\+tornejos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{58                                                                      \{}
-\DoxyCodeLine{59     map<string,Torneig>::iterator it = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.find(nom);}
-\DoxyCodeLine{60     ((*it).second).\mbox{\hyperlink{class_cjt__tornejos_ae8c099350f8903c61ca73fddfaeebffa}{iniciar\_torneig}}(jugadors);}
-\DoxyCodeLine{61 \}}
+\DoxyCodeLine{72                                                                      \{}
+\DoxyCodeLine{73     map<string,Torneig>::iterator it = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.find(nom);}
+\DoxyCodeLine{74     ((*it).second).\mbox{\hyperlink{class_cjt__tornejos_ae8c099350f8903c61ca73fddfaeebffa}{iniciar\_torneig}}(jugadors);}
+\DoxyCodeLine{75 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_cjt__tornejos_a510f0bc1e499183ecc93a46d19caafa1}\label{class_cjt__tornejos_a510f0bc1e499183ecc93a46d19caafa1}} 
+\mbox{\Hypertarget{class_cjt__tornejos_a5afcab41626cbc22d7a4cad33adf8297}\label{class_cjt__tornejos_a5afcab41626cbc22d7a4cad33adf8297}} 
 \index{Cjt\_tornejos@{Cjt\_tornejos}!finalitzar\_torneig@{finalitzar\_torneig}}
 \index{finalitzar\_torneig@{finalitzar\_torneig}!Cjt\_tornejos@{Cjt\_tornejos}}
 \doxysubsubsection{\texorpdfstring{finalitzar\_torneig()}{finalitzar\_torneig()}}
-{\footnotesize\ttfamily void Cjt\+\_\+tornejos\+::finalitzar\+\_\+torneig (\begin{DoxyParamCaption}\item[{string}]{nom }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Cjt\+\_\+tornejos\+::finalitzar\+\_\+torneig (\begin{DoxyParamCaption}\item[{string}]{nom,  }\item[{\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&}]{jugadors,  }\item[{\mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&}]{categories,  }\item[{vector$<$ string $>$ \&}]{participants,  }\item[{vector$<$ int $>$ \&}]{punts,  }\item[{vector$<$ vector$<$ int $>$$>$ \&}]{estadistiques }\end{DoxyParamCaption})}
 
 
 
@@ -273,14 +315,14 @@ s\textquotesingle{}ha imprès el quadre oficial de resultats i s\textquotesingle
 \end{DoxyPostcond}
 
 
-Definició a la línia 63 del fitxer Cjt\+\_\+tornejos.\+cc.
+Definició a la línia 77 del fitxer Cjt\+\_\+tornejos.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{63                                                 \{}
-\DoxyCodeLine{64     nom = nom;  }
-\DoxyCodeLine{65     }
-\DoxyCodeLine{66 \}}
+\DoxyCodeLine{77                                                                                                                                                                                          \{}
+\DoxyCodeLine{78     map<string,Torneig>::iterator it = \mbox{\hyperlink{class_cjt__tornejos_a4b3d9bdd2ed133d76284fb510ebe9800}{tornejos}}.find(nom);}
+\DoxyCodeLine{79     ((*it).second).\mbox{\hyperlink{class_cjt__tornejos_a5afcab41626cbc22d7a4cad33adf8297}{finalitzar\_torneig}}(jugadors,categories, participants, punts, estadistiques);}
+\DoxyCodeLine{80 \}}
 
 \end{DoxyCode}
 

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['jocs_5fguanyat_152',['jocs_guanyat',['../class_jugador.html#a0eb97835e7dd3143f626c1d15edb7392',1,'Jugador']]],
-  ['jocs_5fperdut_153',['jocs_perdut',['../class_jugador.html#a04e5cf90e57c490b4c088e29763479f7',1,'Jugador']]],
-  ['jugadors_154',['jugadors',['../class_cjt__jugadors.html#a9a7fd899cca7f3c126120c8e7b4719d4',1,'Cjt_jugadors']]]
+  ['c_184',['C',['../class_cjt__categories.html#a1d3d6eb2bd5a981ca1e56d4d16e7d1c1',1,'Cjt_categories']]],
+  ['carreno_185',['Carreno',['../proves_8cc.html#abe8034bd287b33db96bcbdbfdb5eae87',1,'proves.cc']]],
+  ['categoria_186',['categoria',['../class_torneig.html#a8a80ab41ebab7d88a2569247c6ec4c81',1,'Torneig']]]
 ];

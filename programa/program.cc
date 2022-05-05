@@ -49,6 +49,7 @@ int main() {
             cin >> nom;
             cout << " " << nom << endl;
             jugadors.baixa_jugador(nom);
+            tornejos.eliminar_jugador(nom);
         }
 
         else if (comanda == "baja_torneo" or comanda == "bt") {

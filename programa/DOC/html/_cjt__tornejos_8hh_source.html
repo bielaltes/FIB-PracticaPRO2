@@ -85,8 +85,8 @@ $(function() {
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_cjt__tornejos.html#afe968dc02bf4f83842c53c5a76182f2f">   18</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_cjt__tornejos.html#afe968dc02bf4f83842c53c5a76182f2f">num_tornejos</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_cjt__tornejos.html#a4b3d9bdd2ed133d76284fb510ebe9800">   19</a></span>&#160;    map&lt;string,Torneig&gt; <a class="code" href="class_cjt__tornejos.html#a4b3d9bdd2ed133d76284fb510ebe9800">tornejos</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
@@ -95,29 +95,33 @@ $(function() {
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    ~<a class="code" href="class_cjt__tornejos.html">Cjt_tornejos</a>();</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> llegir_tornejos(<span class="keywordtype">int</span> num_cat);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">void</span> imprimir_tornejos(<a class="code" href="class_cjt__categories.html">Cjt_categories</a>&amp; categories);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keywordtype">void</span> nou_torneig(<span class="keywordtype">string</span> nom, <span class="keywordtype">int</span> cat, <span class="keywordtype">int</span> num_categories, <span class="keywordtype">bool</span> first);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> baixa_torneig(<span class="keywordtype">string</span> nom);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> iniciar_torneig(<span class="keywordtype">string</span> nom, <a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>&amp; jugadors);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> finalitzar_torneig(<span class="keywordtype">string</span> nom);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;};</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">int</span> consultar_participants(<span class="keywordtype">string</span> nom);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">void</span> imprimir_tornejos(<a class="code" href="class_cjt__categories.html">Cjt_categories</a>&amp; categories);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> nou_torneig(<span class="keywordtype">string</span> nom, <span class="keywordtype">int</span> cat, <span class="keywordtype">int</span> num_categories, <span class="keywordtype">bool</span> first);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> baixa_torneig(<span class="keywordtype">string</span> nom, <a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>&amp; jugadors);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> eliminar_jugador(<span class="keywordtype">string</span> nom);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">void</span> iniciar_torneig(<span class="keywordtype">string</span> nom, <a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>&amp; jugadors);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> finalitzar_torneig(<span class="keywordtype">string</span> nom, <a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>&amp; jugadors, <a class="code" href="class_cjt__categories.html">Cjt_categories</a>&amp; categories,vector&lt;string&gt;&amp; participants,vector&lt;int&gt;&amp; punts, vector&lt;vector&lt;int&gt;&gt;&amp; estadistiques);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="a_cjt__categories_8hh_html"><div class="ttname"><a href="_cjt__categories_8hh.html">Cjt_categories.hh</a></div></div>
 <div class="ttc" id="a_cjt__jugadors_8hh_html"><div class="ttname"><a href="_cjt__jugadors_8hh.html">Cjt_jugadors.hh</a></div></div>
 <div class="ttc" id="a_torneig_8hh_html"><div class="ttname"><a href="_torneig_8hh.html">Torneig.hh</a></div></div>
 <div class="ttc" id="aclass_cjt__categories_html"><div class="ttname"><a href="class_cjt__categories.html">Cjt_categories</a></div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categories_8hh_source.html#l00012">Cjt_categories.hh:12</a></div></div>
-<div class="ttc" id="aclass_cjt__jugadors_html"><div class="ttname"><a href="class_cjt__jugadors.html">Cjt_jugadors</a></div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00013">Cjt_jugadors.hh:13</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadors_html"><div class="ttname"><a href="class_cjt__jugadors.html">Cjt_jugadors</a></div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00015">Cjt_jugadors.hh:15</a></div></div>
 <div class="ttc" id="aclass_cjt__tornejos_html"><div class="ttname"><a href="class_cjt__tornejos.html">Cjt_tornejos</a></div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8hh_source.html#l00015">Cjt_tornejos.hh:15</a></div></div>
 <div class="ttc" id="aclass_cjt__tornejos_html_a4b3d9bdd2ed133d76284fb510ebe9800"><div class="ttname"><a href="class_cjt__tornejos.html#a4b3d9bdd2ed133d76284fb510ebe9800">Cjt_tornejos::tornejos</a></div><div class="ttdeci">map&lt; string, Torneig &gt; tornejos</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8hh_source.html#l00019">Cjt_tornejos.hh:19</a></div></div>
 <div class="ttc" id="aclass_cjt__tornejos_html_afe968dc02bf4f83842c53c5a76182f2f"><div class="ttname"><a href="class_cjt__tornejos.html#afe968dc02bf4f83842c53c5a76182f2f">Cjt_tornejos::num_tornejos</a></div><div class="ttdeci">int num_tornejos</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8hh_source.html#l00018">Cjt_tornejos.hh:18</a></div></div>

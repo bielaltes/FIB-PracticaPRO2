@@ -1,12 +1,13 @@
 var searchData=
 [
-  ['p_57',['p',['../class_bin_tree.html#afe3647af1dda90f6ddf1deee6560fcf1',1,'BinTree']]],
-  ['participants_58',['participants',['../class_torneig.html#a87196328ace3bbbae6f17f387835b3a6',1,'Torneig']]],
-  ['partits_59',['partits',['../class_torneig.html#aa9f31aa63e50e5995b91c35d0e1e0baa',1,'Torneig']]],
-  ['partits_5fguanyat_60',['partits_guanyat',['../class_jugador.html#a6bf9a674be86bfce7945f7c0dfbe531f',1,'Jugador']]],
-  ['partits_5fperdut_61',['partits_perdut',['../class_jugador.html#ad1e6a56bea30a1449dbb37871c288fcf',1,'Jugador']]],
-  ['pos_62',['pos',['../class_jugador.html#a25a7eeb0d334b2fe60bb490704c6626d',1,'Jugador']]],
-  ['program_2ecc_63',['program.cc',['../program_8cc.html',1,'']]],
-  ['proves_2ecc_64',['proves.cc',['../proves_8cc.html',1,'']]],
-  ['puntuacio_65',['puntuacio',['../class_cjt__categories.html#a121b331af19b7307f320b21f0edd8b30',1,'Cjt_categories']]]
+  ['node_65',['Node',['../struct_bin_tree_1_1_node.html',1,'BinTree&lt; T &gt;::Node'],['../struct_bin_tree_1_1_node.html#af45885e303875c018e89fa5c8b96bde0',1,'BinTree::Node::Node()']]],
+  ['nom_66',['nom',['../class_jugador.html#afd6bec98df8ebb3d2db3ef583a76cfa1',1,'Jugador']]],
+  ['nom_5fcategoria_67',['nom_categoria',['../class_cjt__categories.html#abf84a9eb9c89846b4746a8f0cc3afb2f',1,'Cjt_categories']]],
+  ['nom_5fjugador_68',['nom_jugador',['../class_cjt__jugadors.html#afb644fcd07419fb30dc37db5a1663a73',1,'Cjt_jugadors']]],
+  ['noms_69',['noms',['../class_cjt__categories.html#a45622c30fae365dc72f2d7aa5fbc3bfc',1,'Cjt_categories']]],
+  ['nou_5fjugador_70',['nou_jugador',['../class_cjt__jugadors.html#ad59d2f11a4bbfd1053c0dba9062595af',1,'Cjt_jugadors']]],
+  ['nou_5ftorneig_71',['nou_torneig',['../class_cjt__tornejos.html#a71e258c45895e7e97bdf201bec99f865',1,'Cjt_tornejos']]],
+  ['num_5fcategories_72',['num_categories',['../class_cjt__categories.html#a78445bc84e521a95e7314ec4ac2565ad',1,'Cjt_categories']]],
+  ['num_5fparticipants_73',['num_participants',['../class_torneig.html#aef9f0b6e93895593e4527cdd3e4e31ea',1,'Torneig']]],
+  ['num_5ftornejos_74',['num_tornejos',['../class_cjt__tornejos.html#afe968dc02bf4f83842c53c5a76182f2f',1,'Cjt_tornejos']]]
 ];

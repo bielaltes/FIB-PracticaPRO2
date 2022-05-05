@@ -62,6 +62,8 @@ $(function() {
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#func-members">Funcions</a>  </div>
   <div class="headertitle">
 <div class="title">Referència del Fitxer Cjt_jugadors.cc</div>  </div>
 </div><!--header-->
@@ -71,13 +73,58 @@ Inclou el graf de dependències per a Cjt_jugadors.cc:</div>
 <div class="dyncontent">
 <div class="center"><img src="_cjt__jugadors_8cc__incl.png" border="0" usemap="#a_cjt__jugadors_8cc" alt=""/></div>
 <map name="a_cjt__jugadors_8cc" id="a_cjt__jugadors_8cc">
-<area shape="rect" title=" " alt="" coords="6,5,127,32"/>
-<area shape="rect" href="_cjt__jugadors_8hh.html" title=" " alt="" coords="5,80,128,107"/>
-<area shape="rect" href="_jugador_8hh.html" title=" " alt="" coords="21,155,112,181"/>
+<area shape="rect" title=" " alt="" coords="119,5,241,32"/>
+<area shape="rect" href="_cjt__jugadors_8hh.html" title=" " alt="" coords="119,80,241,107"/>
+<area shape="rect" href="_jugador_8hh.html" title=" " alt="" coords="5,155,96,181"/>
+<area shape="rect" href="_cjt__tornejos_8hh.html" title=" " alt="" coords="120,155,240,181"/>
+<area shape="rect" href="_cjt__categories_8hh.html" title=" " alt="" coords="154,304,289,331"/>
+<area shape="rect" href="_torneig_8hh.html" title=" " alt="" coords="218,229,307,256"/>
 </map>
 </div>
 </div>
 <p><a href="_cjt__jugadors_8cc_source.html">Veure el codi d'aquest fitxer.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funcions</h2></td></tr>
+<tr class="memitem:acc6257dda590027b6fc6b4d51fd85f8e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_cjt__jugadors_8cc.html#acc6257dda590027b6fc6b4d51fd85f8e">cmp</a> (pair&lt; int, map&lt; string, <a class="el" href="class_jugador.html">Jugador</a> &gt;::iterator &gt; r1, pair&lt; int, map&lt; string, <a class="el" href="class_jugador.html">Jugador</a> &gt;::iterator &gt; r2)</td></tr>
+<tr class="separator:acc6257dda590027b6fc6b4d51fd85f8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentació de les Funcions</h2>
+<a id="acc6257dda590027b6fc6b4d51fd85f8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc6257dda590027b6fc6b4d51fd85f8e">&#9670;&nbsp;</a></span>cmp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool cmp </td>
+          <td>(</td>
+          <td class="paramtype">pair&lt; int, map&lt; string, <a class="el" href="class_jugador.html">Jugador</a> &gt;::iterator &gt;&#160;</td>
+          <td class="paramname"><em>r1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">pair&lt; int, map&lt; string, <a class="el" href="class_jugador.html">Jugador</a> &gt;::iterator &gt;&#160;</td>
+          <td class="paramname"><em>r2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definició a la línia <a class="el" href="_cjt__jugadors_8cc_source.html#l00079">79</a> del fitxer <a class="el" href="_cjt__jugadors_8cc_source.html">Cjt_jugadors.cc</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                                                                                              {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordflow">if</span> (r1.first == r2.first) <span class="keywordflow">return</span> ( ((*(r1.second)).second).consultar_posicio() &lt; ((*(r2.second)).second).consultar_posicio() );</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (r1.first &gt; r2.first) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

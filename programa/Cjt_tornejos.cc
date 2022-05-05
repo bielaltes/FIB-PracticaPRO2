@@ -60,6 +60,15 @@ void Cjt_tornejos::baixa_torneig(string nom, Cjt_jugadors& jugadors) {
     else cout << "error: el torneo no existe" << endl;
 }
 
+void Cjt_tornejos::eliminar_jugador(string nom) {
+    map<string,Torneig>::iterator it;
+    map<string,Torneig>::iterator end = tornejos.end();
+    for (it = tornejos.begin(); it != end; ++it){
+        ((*(it)).second).eliminar_participant(nom);
+    }
+
+}
+
 void Cjt_tornejos::iniciar_torneig(string nom, Cjt_jugadors& jugadors) {
     map<string,Torneig>::iterator it = tornejos.find(nom);
     ((*it).second).iniciar_torneig(jugadors);

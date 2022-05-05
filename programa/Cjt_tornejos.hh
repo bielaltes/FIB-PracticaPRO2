@@ -69,6 +69,8 @@ public:
 */
     void baixa_torneig(string nom, Cjt_jugadors& jugadors);
 
+    void eliminar_jugador(string nom);
+
 /** @brief Inicia un torneig
     \pre  hi ha preparats al canal estandard un string que representa el
      torneig a iniciar, un enter que representa el nombre total d'inscrits

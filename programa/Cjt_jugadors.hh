@@ -87,7 +87,7 @@ public:
     \post si bool sumar és cert, s'han sumat els punts indicats al ranking, altrament s'han restat.
     Sigui com sigui, posteriorment s'han actualitzat les posicions al ranking.
 */
-    void actualitzar_ranking(vector<string>& participants, vector<int>& punts, bool sumar);
+    void actualitzar_ranking(vector<string>& participants, vector<int>& punts, bool sumar, bool ordenar);
 
 /** @brief Actualitza les estadistiques d'un conjunt de jugadors
     \pre  v és un vector de pair que indiquen la posició del ranking d'un jugador i les estadistiques a

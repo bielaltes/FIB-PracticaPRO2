@@ -5,6 +5,33 @@ Inclou el graf de dependències per a Cjt\+\_\+jugadors.\+cc\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=172pt]{_cjt__jugadors_8cc__incl}
+\includegraphics[width=307pt]{_cjt__jugadors_8cc__incl}
 \end{center}
 \end{figure}
+\doxysubsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_cjt__jugadors_8cc_acc6257dda590027b6fc6b4d51fd85f8e}{cmp}} (pair$<$ int, map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$\+::iterator $>$ r1, pair$<$ int, map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$\+::iterator $>$ r2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Documentació de les Funcions}
+\mbox{\Hypertarget{_cjt__jugadors_8cc_acc6257dda590027b6fc6b4d51fd85f8e}\label{_cjt__jugadors_8cc_acc6257dda590027b6fc6b4d51fd85f8e}} 
+\index{Cjt\_jugadors.cc@{Cjt\_jugadors.cc}!cmp@{cmp}}
+\index{cmp@{cmp}!Cjt\_jugadors.cc@{Cjt\_jugadors.cc}}
+\doxysubsubsection{\texorpdfstring{cmp()}{cmp()}}
+{\footnotesize\ttfamily bool cmp (\begin{DoxyParamCaption}\item[{pair$<$ int, map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$\+::iterator $>$}]{r1,  }\item[{pair$<$ int, map$<$ string, \mbox{\hyperlink{class_jugador}{Jugador}} $>$\+::iterator $>$}]{r2 }\end{DoxyParamCaption})}
+
+
+
+Definició a la línia 79 del fitxer Cjt\+\_\+jugadors.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{79                                                                                               \{}
+\DoxyCodeLine{80     \textcolor{keywordflow}{if} (r1.first == r2.first) \textcolor{keywordflow}{return} ( ((*(r1.second)).second).consultar\_posicio() < ((*(r2.second)).second).consultar\_posicio() );}
+\DoxyCodeLine{81     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (r1.first > r2.first) \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{82     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{83 \}}
+
+\end{DoxyCode}

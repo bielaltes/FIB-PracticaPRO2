@@ -1,9 +1,11 @@
 var searchData=
 [
-  ['jocs_5fguanyat_32',['jocs_guanyat',['../class_jugador.html#a0eb97835e7dd3143f626c1d15edb7392',1,'Jugador']]],
-  ['jocs_5fperdut_33',['jocs_perdut',['../class_jugador.html#a04e5cf90e57c490b4c088e29763479f7',1,'Jugador']]],
-  ['jugador_34',['Jugador',['../class_jugador.html',1,'Jugador'],['../class_jugador.html#a0bac6ebd78bbdc5ed61be887a163ecc0',1,'Jugador::Jugador()']]],
-  ['jugador_2ecc_35',['Jugador.cc',['../_jugador_8cc.html',1,'']]],
-  ['jugador_2ehh_36',['Jugador.hh',['../_jugador_8hh.html',1,'']]],
-  ['jugadors_37',['jugadors',['../class_cjt__jugadors.html#a9a7fd899cca7f3c126120c8e7b4719d4',1,'Cjt_jugadors']]]
+  ['imprimir_5fcategories_38',['imprimir_categories',['../class_cjt__categories.html#ad1a67d725173663782d1385ff59f0be6',1,'Cjt_categories']]],
+  ['imprimir_5femparellaments_39',['imprimir_emparellaments',['../class_torneig.html#a17f4a939167e6ed018ee46580621abae',1,'Torneig']]],
+  ['imprimir_5fjugadors_40',['imprimir_jugadors',['../class_cjt__jugadors.html#a9821d65fda187cb5983d98e4e86fc073',1,'Cjt_jugadors']]],
+  ['imprimir_5fpunts_41',['imprimir_punts',['../class_torneig.html#a2e0eb7f4e3837fd969046f9f221b7fc6',1,'Torneig']]],
+  ['imprimir_5franking_42',['imprimir_ranking',['../class_cjt__jugadors.html#a63581fdbdfaba9aeb5f0b3b466160902',1,'Cjt_jugadors']]],
+  ['imprimir_5fresultats_43',['imprimir_resultats',['../class_torneig.html#a14dcde3f1ecc6e7c86a1c1dd925d029f',1,'Torneig']]],
+  ['imprimir_5ftornejos_44',['imprimir_tornejos',['../class_cjt__tornejos.html#a52b8a773c1e137c268d847a9da81e891',1,'Cjt_tornejos']]],
+  ['iniciar_5ftorneig_45',['iniciar_torneig',['../class_cjt__tornejos.html#ae8c099350f8903c61ca73fddfaeebffa',1,'Cjt_tornejos::iniciar_torneig()'],['../class_torneig.html#abcc9f0b1127a5fdd57856a59e5034e1f',1,'Torneig::iniciar_torneig()']]]
 ];
