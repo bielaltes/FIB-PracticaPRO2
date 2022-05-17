@@ -1,3 +1,6 @@
+/** @file Cjt_tornejos.cc
+    @brief Codi de la classe Cjt_tornejos
+*/
 
 #include "Cjt_tornejos.hh"
 
@@ -5,13 +8,6 @@ Cjt_tornejos::Cjt_tornejos() {
     num_tornejos = 0;
 }
 
-Cjt_tornejos::~Cjt_tornejos() {
-
-}
-
-int Cjt_tornejos::consultar_participants(string nom) {
-    return ((*(tornejos.find(nom))).second).consultar_participants();
-}
 
 void Cjt_tornejos::llegir_tornejos(int num_cat) {
     int T;
@@ -74,7 +70,7 @@ void Cjt_tornejos::iniciar_torneig(string nom, Cjt_jugadors& jugadors) {
     ((*it).second).iniciar_torneig(jugadors);
 }
 
-void Cjt_tornejos::finalitzar_torneig(string nom, Cjt_jugadors& jugadors, Cjt_categories& categories, vector<string>& participants,vector<int>& punts, vector<vector<int>>& estadistiques) {
+void Cjt_tornejos::finalitzar_torneig(string nom, Cjt_jugadors& jugadors, Cjt_categories& categories) {
     map<string,Torneig>::iterator it = tornejos.find(nom);
-    ((*it).second).finalitzar_torneig(jugadors,categories, participants, punts, estadistiques);
+    ((*it).second).finalitzar_torneig(jugadors,categories);
 }

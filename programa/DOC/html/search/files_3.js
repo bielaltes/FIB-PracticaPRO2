@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['program_2ecc_121',['program.cc',['../program_8cc.html',1,'']]],
-  ['proves_2ecc_122',['proves.cc',['../proves_8cc.html',1,'']]]
+  ['torneig_2ecc_97',['Torneig.cc',['../_torneig_8cc.html',1,'']]],
+  ['torneig_2ehh_98',['Torneig.hh',['../_torneig_8hh.html',1,'']]]
 ];

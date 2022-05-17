@@ -1,5 +1,8 @@
-#include "Jugador.hh"
+/** @file Jugador.cc
+    @brief Codi de la classe Jugador
+*/
 
+#include "Jugador.hh"
 
 Jugador::Jugador(string n, int ultima_pos) {
     nom = n;
@@ -14,9 +17,6 @@ Jugador::Jugador(string n, int ultima_pos) {
 
 }
 
-Jugador::~Jugador() {
-
-}
 
 
 void Jugador::escriure_jugador(bool ranking, int punts) {

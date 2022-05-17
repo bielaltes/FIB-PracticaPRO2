@@ -1,0 +1,131 @@
+\hypertarget{program_8cc}{}\doxysection{Referència del Fitxer program.\+cc}
+\label{program_8cc}\index{program.cc@{program.cc}}
+
+
+Programa principal de la pràctica.  
+
+
+Inclou el graf de dependències per a program.\+cc\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{program_8cc__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funcions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descripció Detallada}
+Programa principal de la pràctica. 
+
+No es comprova que les comandes siguin correctes, així que suposem que sempre s\textquotesingle{}introduira una comanda entre les opcions disponibles. 
+
+\doxysubsection{Documentació de les Funcions}
+\mbox{\Hypertarget{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{program_8cc_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{program.cc@{program.cc}!main@{main}}
+\index{main@{main}!program.cc@{program.cc}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definició a la línia 12 del fitxer program.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12            \{}
+\DoxyCodeLine{13     \textcolor{keywordtype}{int} C, K;}
+\DoxyCodeLine{14     cin >> C >> K;}
+\DoxyCodeLine{15     \mbox{\hyperlink{class_cjt__categories}{Cjt\_categories}} categories(C,K);}
+\DoxyCodeLine{16     categories.llegir\_categories();}
+\DoxyCodeLine{17 }
+\DoxyCodeLine{18     \mbox{\hyperlink{class_cjt__tornejos}{Cjt\_tornejos}} tornejos;}
+\DoxyCodeLine{19     tornejos.\mbox{\hyperlink{class_cjt__tornejos_a1353b909daa12fb1f542d028f1d79529}{llegir\_tornejos}}(C);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21     \mbox{\hyperlink{class_cjt__jugadors}{Cjt\_jugadors}} jugadors;}
+\DoxyCodeLine{22     jugadors.\mbox{\hyperlink{class_cjt__jugadors_affe03f05c962b8689540de5e1aa97d0a}{llegir\_jugadors}}();}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{string} comanda;}
+\DoxyCodeLine{25     cin >> comanda;}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{27     \textcolor{keywordflow}{while} (comanda!= \textcolor{stringliteral}{"{}fin"{}}) \{}
+\DoxyCodeLine{28         cout << \textcolor{stringliteral}{"{}\#"{}} << comanda;}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30         \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}nuevo\_jugador"{}} or comanda == \textcolor{stringliteral}{"{}nj"{}}) \{}
+\DoxyCodeLine{31             \textcolor{keywordtype}{string} nom;}
+\DoxyCodeLine{32             cin >> nom;}
+\DoxyCodeLine{33             cout << \textcolor{stringliteral}{"{} "{}} << nom << endl;}
+\DoxyCodeLine{34             jugadors.\mbox{\hyperlink{class_cjt__jugadors_ad59d2f11a4bbfd1053c0dba9062595af}{nou\_jugador}}(nom, \textcolor{keyword}{false});}
+\DoxyCodeLine{35         \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}nuevo\_torneo"{}} or comanda == \textcolor{stringliteral}{"{}nt"{}}) \{}
+\DoxyCodeLine{38             \textcolor{keywordtype}{string} nom;}
+\DoxyCodeLine{39             \textcolor{keywordtype}{int} cat;}
+\DoxyCodeLine{40             cin >> nom >> cat;}
+\DoxyCodeLine{41             cout << \textcolor{stringliteral}{"{} "{}} << nom << \textcolor{stringliteral}{"{} "{}} << cat << endl;}
+\DoxyCodeLine{42             tornejos.\mbox{\hyperlink{class_cjt__tornejos_a71e258c45895e7e97bdf201bec99f865}{nou\_torneig}}(nom,cat,categories.num\_categories(),\textcolor{keyword}{false});}
+\DoxyCodeLine{43         \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}baja\_jugador"{}} or comanda == \textcolor{stringliteral}{"{}bj"{}}) \{}
+\DoxyCodeLine{46             \textcolor{keywordtype}{string} nom;}
+\DoxyCodeLine{47             cin >> nom;}
+\DoxyCodeLine{48             cout << \textcolor{stringliteral}{"{} "{}} << nom << endl;}
+\DoxyCodeLine{49             jugadors.\mbox{\hyperlink{class_cjt__jugadors_a45f7ccbdbfe93b545fa82a846f1e767d}{baixa\_jugador}}(nom);}
+\DoxyCodeLine{50             tornejos.\mbox{\hyperlink{class_cjt__tornejos_acd74b9196cc0c9af8cc572e2112d0279}{eliminar\_jugador}}(nom);}
+\DoxyCodeLine{51         \}}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{53         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}baja\_torneo"{}} or comanda == \textcolor{stringliteral}{"{}bt"{}}) \{}
+\DoxyCodeLine{54             \textcolor{keywordtype}{string} nom;}
+\DoxyCodeLine{55             cin >> nom;}
+\DoxyCodeLine{56             cout << \textcolor{stringliteral}{"{} "{}} << nom << endl;}
+\DoxyCodeLine{57             tornejos.\mbox{\hyperlink{class_cjt__tornejos_a77750c86e1c2b57d8781e565bbd22625}{baixa\_torneig}}(nom, jugadors);}
+\DoxyCodeLine{58         \}}
+\DoxyCodeLine{59 }
+\DoxyCodeLine{60         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}iniciar\_torneo"{}} or comanda == \textcolor{stringliteral}{"{}it"{}}) \{}
+\DoxyCodeLine{61             \textcolor{keywordtype}{string} nom;}
+\DoxyCodeLine{62             cin >>nom;}
+\DoxyCodeLine{63             cout << \textcolor{stringliteral}{"{} "{}} << nom << endl;}
+\DoxyCodeLine{64             tornejos.\mbox{\hyperlink{class_cjt__tornejos_ae8c099350f8903c61ca73fddfaeebffa}{iniciar\_torneig}}(nom,jugadors);}
+\DoxyCodeLine{65         \}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{67         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}finalizar\_torneo"{}} or comanda == \textcolor{stringliteral}{"{}ft"{}}) \{}
+\DoxyCodeLine{68             \textcolor{keywordtype}{string} nom;}
+\DoxyCodeLine{69             cin >> nom;}
+\DoxyCodeLine{70             cout << \textcolor{stringliteral}{"{} "{}} << nom << endl;}
+\DoxyCodeLine{71             tornejos.\mbox{\hyperlink{class_cjt__tornejos_aab5eafe1fe6bb194a3a3350723b9c734}{finalitzar\_torneig}}(nom,jugadors,categories);}
+\DoxyCodeLine{72         \}}
+\DoxyCodeLine{73 }
+\DoxyCodeLine{74         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}listar\_ranking"{}} or comanda == \textcolor{stringliteral}{"{}lr"{}}) \{}
+\DoxyCodeLine{75             jugadors.\mbox{\hyperlink{class_cjt__jugadors_a63581fdbdfaba9aeb5f0b3b466160902}{imprimir\_ranking}}();}
+\DoxyCodeLine{76         \}}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}listar\_jugadores"{}} or comanda == \textcolor{stringliteral}{"{}lj"{}}) \{}
+\DoxyCodeLine{79             jugadors.\mbox{\hyperlink{class_cjt__jugadors_a9821d65fda187cb5983d98e4e86fc073}{imprimir\_jugadors}}();}
+\DoxyCodeLine{80         \}}
+\DoxyCodeLine{81 }
+\DoxyCodeLine{82         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}consultar\_jugador"{}} or comanda == \textcolor{stringliteral}{"{}cj"{}}) \{}
+\DoxyCodeLine{83             \textcolor{keywordtype}{string} nom;}
+\DoxyCodeLine{84             cin >> nom;}
+\DoxyCodeLine{85             cout << \textcolor{stringliteral}{"{} "{}} << nom << endl;}
+\DoxyCodeLine{86             jugadors.\mbox{\hyperlink{class_cjt__jugadors_a7f4014b50e2bf91f3b5e7286c2385edc}{consultar\_jugador}}(nom);}
+\DoxyCodeLine{87         \}}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}listar\_torneos"{}} or comanda == \textcolor{stringliteral}{"{}lt"{}}) \{}
+\DoxyCodeLine{90             tornejos.\mbox{\hyperlink{class_cjt__tornejos_a52b8a773c1e137c268d847a9da81e891}{imprimir\_tornejos}}(categories);}
+\DoxyCodeLine{91         \}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{93         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (comanda == \textcolor{stringliteral}{"{}listar\_categorias"{}} or comanda == \textcolor{stringliteral}{"{}lc"{}}) \{}
+\DoxyCodeLine{94             categories.imprimir\_categories();}
+\DoxyCodeLine{95         \}}
+\DoxyCodeLine{96 }
+\DoxyCodeLine{97         cin >> comanda;}
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     \}}
+\DoxyCodeLine{100 \}}
+
+\end{DoxyCode}

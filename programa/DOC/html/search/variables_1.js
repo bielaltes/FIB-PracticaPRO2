@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['bautista_182',['Bautista',['../proves_8cc.html#a1907df21f4cdb306c58ea3f3aa7fe463',1,'proves.cc']]],
-  ['berrettini_183',['Berrettini',['../proves_8cc.html#af89570e08079e02ecedd16da97fdafa9',1,'proves.cc']]]
+  ['c_148',['C',['../class_cjt__categories.html#a1d3d6eb2bd5a981ca1e56d4d16e7d1c1',1,'Cjt_categories']]],
+  ['categoria_149',['categoria',['../class_torneig.html#a8a80ab41ebab7d88a2569247c6ec4c81',1,'Torneig']]]
 ];

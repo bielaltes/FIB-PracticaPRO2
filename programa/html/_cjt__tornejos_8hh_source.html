@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Pràctica de PRO2. Circuit de tornejos de tenis.: Fitxer de Codi Cjt_tornejos.hh</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Pràctica de PRO2. Circuit de tornejos de tenis.
+   &#160;<span id="projectnumber">QP 2021-2022</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generat per Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Cerca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Cerca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Cjt_tornejos.hh</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_cjt__tornejos_8hh.html">Veure la documentació d'aquest fitxer.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#ifndef CONJ_TOR_HH</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define CONJ_TOR_HH</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__jugadors_8hh.html">Cjt_jugadors.hh</a>&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_cjt__categories_8hh.html">Cjt_categories.hh</a>&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_torneig_8hh.html">Torneig.hh</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef NO_DIAGRAM</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;list&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_cjt__tornejos.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_cjt__tornejos.html">Cjt_tornejos</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_cjt__tornejos.html#afe968dc02bf4f83842c53c5a76182f2f">   26</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_cjt__tornejos.html#afe968dc02bf4f83842c53c5a76182f2f">num_tornejos</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_cjt__tornejos.html#a4b3d9bdd2ed133d76284fb510ebe9800">   27</a></span>&#160;    map&lt;string,Torneig&gt; <a class="code" href="class_cjt__tornejos.html#a4b3d9bdd2ed133d76284fb510ebe9800">tornejos</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="class_cjt__tornejos.html">Cjt_tornejos</a>();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> llegir_tornejos(<span class="keywordtype">int</span> num_cat);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> imprimir_tornejos(<a class="code" href="class_cjt__categories.html">Cjt_categories</a>&amp; categories);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> nou_torneig(<span class="keywordtype">string</span> nom, <span class="keywordtype">int</span> cat, <span class="keywordtype">int</span> num_categories, <span class="keywordtype">bool</span> first);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> baixa_torneig(<span class="keywordtype">string</span> nom, <a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>&amp; jugadors);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    <span class="keywordtype">void</span> eliminar_jugador(<span class="keywordtype">string</span> nom);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> iniciar_torneig(<span class="keywordtype">string</span> nom, <a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>&amp; jugadors);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">void</span> finalitzar_torneig(<span class="keywordtype">string</span> nom, <a class="code" href="class_cjt__jugadors.html">Cjt_jugadors</a>&amp; jugadors, <a class="code" href="class_cjt__categories.html">Cjt_categories</a>&amp; categories);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="a_cjt__categories_8hh_html"><div class="ttname"><a href="_cjt__categories_8hh.html">Cjt_categories.hh</a></div><div class="ttdoc">Especificació de la classe Cjt_categories.</div></div>
+<div class="ttc" id="a_cjt__jugadors_8hh_html"><div class="ttname"><a href="_cjt__jugadors_8hh.html">Cjt_jugadors.hh</a></div><div class="ttdoc">Especificació de la classe Cjt_jugadors.</div></div>
+<div class="ttc" id="a_torneig_8hh_html"><div class="ttname"><a href="_torneig_8hh.html">Torneig.hh</a></div><div class="ttdoc">Especificació de la classe Torneig.</div></div>
+<div class="ttc" id="aclass_cjt__categories_html"><div class="ttname"><a href="class_cjt__categories.html">Cjt_categories</a></div><div class="ttdoc">Representa el conjunt de categories disponibles al circuit.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categories_8hh_source.html#l00020">Cjt_categories.hh:20</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadors_html"><div class="ttname"><a href="class_cjt__jugadors.html">Cjt_jugadors</a></div><div class="ttdoc">Representa el conjunt de jugadors inscrits al circuit.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00023">Cjt_jugadors.hh:23</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html"><div class="ttname"><a href="class_cjt__tornejos.html">Cjt_tornejos</a></div><div class="ttdoc">Representa el conjunt de tornejos del circuit.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8hh_source.html#l00023">Cjt_tornejos.hh:23</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html_a4b3d9bdd2ed133d76284fb510ebe9800"><div class="ttname"><a href="class_cjt__tornejos.html#a4b3d9bdd2ed133d76284fb510ebe9800">Cjt_tornejos::tornejos</a></div><div class="ttdeci">map&lt; string, Torneig &gt; tornejos</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8hh_source.html#l00027">Cjt_tornejos.hh:27</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html_afe968dc02bf4f83842c53c5a76182f2f"><div class="ttname"><a href="class_cjt__tornejos.html#afe968dc02bf4f83842c53c5a76182f2f">Cjt_tornejos::num_tornejos</a></div><div class="ttdeci">int num_tornejos</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8hh_source.html#l00026">Cjt_tornejos.hh:26</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generat per&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

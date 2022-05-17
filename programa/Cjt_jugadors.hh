@@ -1,3 +1,7 @@
+/** @file Cjt_jugadors.hh
+    @brief Especificació de la classe Cjt_jugadors
+*/
+
 #ifndef CONJ_JUG_HH
 #define CONJ_JUG_HH
 
@@ -10,6 +14,11 @@
 #endif
 
 using namespace std;
+
+
+/** @class Cjt_jugadors
+    @brief Representa el conjunt de jugadors inscrits al circuit.
+*/
 
 class Cjt_jugadors {
 
@@ -27,10 +36,6 @@ public:
 */
     Cjt_jugadors();
 
-/** @brief esborra automaticament els objectes locals en sortir
-     d'un ambit de visibilitat.
-*/
-    ~Cjt_jugadors();
 
 /** @brief Llegeix un conjunt de jugadors
     \pre  esta preparat al canal estandard d'entrada un enter que representa
@@ -58,15 +63,16 @@ public:
     void imprimir_ranking();
 
 /** @brief Afegeix un nou jugador al conjunt
-    \pre  per el canal d'entrada trobem un string que representa el nom del jugador J.
+    \pre  nom representa el identificador del nou Jugador i first s'hi es tracta de la lectura
+     inicial.
     \post s'ha afegit el jugador J al ranking i conjunt de jugadors del  parametre implicit
-     i s'ha imprès el nombre total de jugadors en cas de que el nom sigui vàlid. En cas
-     contrari s'imprimeix un missatge d'error.
+     i s'ha imprès el nombre total de jugadors en cas de que el nom sigui vàlid i first sigui fals.
+     Si el nom no es vàlid s'imprimeix un missatge d'error.
 */
     void nou_jugador(string nom, bool first);
 
 /** @brief Dona de baixa a un jugador del conjunt
-    \pre  per el canal d'entrada trobem un string que representa el nom del jugador J.
+    \pre  nom és l'identificador del jugador J a donar de baixa.
     \post s'ha esborrat el jugador J del parametre implicit i s'ha imprès el nombre
      total de jugadors en cas de que el nom sigui vàlid. En cas contrari s'imprimeix
      un missatge d'error.
@@ -74,7 +80,7 @@ public:
     void baixa_jugador(string nom);
 
 /** @brief Es consulta un jugador del conjunt
-    \pre  per el canal d'entrada trobem un string que representa el nom del jugador J.
+    \pre  nom representa el identificador del jugador J.
     \post s'han impres el nom, els punts, la posició al ranking i les estadístiques
      del jugador amb identificador de J, en cas de que sigui correcte. En cas contrari
      s'imprimeix un missatge d'error.
@@ -82,19 +88,19 @@ public:
     void consultar_jugador(string nom);
 
 /** @brief Suma o resta punts als jugadors del ranking i n'actualitza el ordre
-    \pre  v és un vector de pair que indiquen la posició del ranking d'un jugador i els punts a
-    sumar o restar segons si el bool es true o false.
-    \post si bool sumar és cert, s'han sumat els punts indicats al ranking, altrament s'han restat.
-    Sigui com sigui, posteriorment s'han actualitzat les posicions al ranking.
+    \pre  participants representa el nom dels jugadors a actualitzar els punts que trobem al vector punts.
+     Els punts els sumem o restem depenent si sumar es true o false. El bool ordenar ens diu si hem d'actualitzar
+     les posicions o no.
+    \post s'ha actualitzar el ranking i s'ha ordenat el vector en cas de que ordenar sigui cert.
 */
-    void actualitzar_ranking(vector<string>& participants, vector<int>& punts, bool sumar, bool ordenar);
+    void actualitzar_ranking(const vector<string>& participants,const vector<int>& punts, bool sumar, bool ordenar);
 
 /** @brief Actualitza les estadistiques d'un conjunt de jugadors
-    \pre  v és un vector de pair que indiquen la posició del ranking d'un jugador i les estadistiques a
-    sumar .
+    \pre  participants es un vector amb els identificadors d'un seguit de jugadors i estadistiques una matriu de Nx7
+     que representa les estadistiques a actualitzar i on N representa la mida del vector participants.
     \post s'han actualitzat les estadístiques dels jugadors.
 */
-    void actualitzar_estadistiques(vector<string>& participants, vector<vector<int>>& estadistiques);
+    void actualitzar_estadistiques(const vector<string>& participants,const vector<vector<int>>& estadistiques);
 
 /** @brief Retorna el nom d'un jugador del parametre implicit.
     \pre  Existeix un jugador amb posició n.

@@ -24,7 +24,7 @@ program.o: program.cc
 	g++ -c program.cc $(OPCIONS)
 	
 practica.tar: Jugador.hh Cjt_jugadors.hh Torneig.hh Cjt_tornejos.hh Cjt_categories.hh Jugador.cc Cjt_jugadors.cc Torneig.cc 		Cjt_tornejos.cc Cjt_categories.cc BinTree.hh Makefile program.cc
-	tar -cvf practica.tar Jugador.hh Cjt_jugadors.hh Torneig.hh Cjt_tornejos.hh Cjt_categories.hh Jugador.cc Cjt_jugadors.cc Torneig.cc Cjt_tornejos.cc Cjt_categories.cc BinTree.hh Makefile program.cc
+	tar -cvf practica.tar Jugador.hh Cjt_jugadors.hh Torneig.hh Cjt_tornejos.hh Cjt_categories.hh Jugador.cc Cjt_jugadors.cc Torneig.cc Cjt_tornejos.cc Cjt_categories.cc BinTree.hh Makefile program.cc html.zip
 
 clean:
 	rm *.o

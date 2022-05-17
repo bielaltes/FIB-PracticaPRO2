@@ -1,12 +1,13 @@
-    #include "Cjt_jugadors.hh"
+/** @file Cjt_jugadors.cc
+    @brief Codi de la classe Cjt_jugadors
+*/
+
+#include "Cjt_jugadors.hh"
 
 Cjt_jugadors::Cjt_jugadors() {
     ranking = vector<pair<int,map<string,Jugador>::iterator>>();
 }
 
-Cjt_jugadors::~Cjt_jugadors() {
-
-}
 
 void Cjt_jugadors::llegir_jugadors() {
     int P;
@@ -74,13 +75,13 @@ void Cjt_jugadors::consultar_jugador(string nom) {
     else cout << "error: el jugador no existe" << endl;
 }
 
-bool cmp(pair<int,map<string,Jugador>::iterator> r1, pair<int,map<string,Jugador>::iterator> r2 ) {
+bool cmp(pair<int,map<string,Jugador>::iterator>& r1, pair<int,map<string,Jugador>::iterator>& r2 ) {
     if (r1.first == r2.first) return ( ((*(r1.second)).second).consultar_posicio() < ((*(r2.second)).second).consultar_posicio() );
     else if (r1.first > r2.first) return true;
     return false;
 }
 
-void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int>& punts, bool sumar, bool ordenar) {
+void Cjt_jugadors::actualitzar_ranking(const vector<string>& participants,const vector<int>& punts, bool sumar, bool ordenar) {
    int size = participants.size();
    for (int i = 0; i < size; ++i) {
         map<string,Jugador>::iterator trobat = (jugadors.find(participants[i]));
@@ -102,7 +103,7 @@ void Cjt_jugadors::actualitzar_ranking(vector<string>& participants, vector<int>
    }
 }
 
-void Cjt_jugadors::actualitzar_estadistiques(vector<string>& participants, vector<vector<int>>& estadistiques) {
+void Cjt_jugadors::actualitzar_estadistiques(const vector<string>& participants, const vector<vector<int>>& estadistiques) {
     int size = participants.size();
     for (int i = 0; i < size; ++i) {
         ((*(jugadors.find(participants[i]))).second).modificar_estadistiques(estadistiques[i]);

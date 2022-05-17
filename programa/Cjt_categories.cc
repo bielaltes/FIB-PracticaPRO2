@@ -1,3 +1,7 @@
+/** @file Cjt_categories.cc
+    @brief Codi de la classe Cjt_categories
+*/
+
 #include "Cjt_categories.hh"
 
 Cjt_categories::Cjt_categories(int c, int k) {
@@ -7,9 +11,6 @@ Cjt_categories::Cjt_categories(int c, int k) {
     puntuacio = vector<vector<int>> (C, vector<int> (K));
 }
 
-Cjt_categories::~Cjt_categories() {
-
-}
 
 void Cjt_categories::llegir_categories() {
     for (int i = 0; i < C; ++i) {

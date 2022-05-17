@@ -1,7 +1,4 @@
 <map id="Cjt_jugadors.hh" name="Cjt_jugadors.hh">
-<area shape="rect" id="node1" title=" " alt="" coords="119,5,241,32"/>
-<area shape="rect" id="node2" href="$_jugador_8hh.html" title=" " alt="" coords="5,80,96,107"/>
-<area shape="rect" id="node3" href="$_cjt__tornejos_8hh.html" title=" " alt="" coords="120,80,240,107"/>
-<area shape="rect" id="node4" href="$_cjt__categories_8hh.html" title=" " alt="" coords="154,229,289,256"/>
-<area shape="rect" id="node5" href="$_torneig_8hh.html" title=" " alt="" coords="218,155,307,181"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,128,32"/>
+<area shape="rect" id="node2" href="$_jugador_8hh.html" title=" " alt="" coords="21,80,112,107"/>
 </map>

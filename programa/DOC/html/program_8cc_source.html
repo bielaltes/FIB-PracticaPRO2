@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Practica PRO2. &#39;Circuit de tornejos de tenis&#39;.: Fitxer de Codi program.cc</title>
+<title>Practica PRO2. &#39;Circuit de tornejos de tenis&#39;: Fitxer de Codi program.cc</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Practica PRO2. &#39;Circuit de tornejos de tenis&#39;.
+   <div id="projectname">Practica PRO2. &#39;Circuit de tornejos de tenis&#39;
    &#160;<span id="projectnumber">Biel Altés</span>
    </div>
   </td>
@@ -116,67 +116,61 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordtype">string</span> nom;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            cin &gt;&gt; nom;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; nom &lt;&lt; endl;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            jugadors.<a class="code" href="class_cjt__jugadors.html#a6a47033f41e090850b7d4585ecd64cff">baixa_jugador</a>(nom, tornejos);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;baja_torneo&quot;</span> or comanda == <span class="stringliteral">&quot;bt&quot;</span>) {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordtype">string</span> nom;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            cin &gt;&gt; nom;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; nom &lt;&lt; endl;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            tornejos.<a class="code" href="class_cjt__tornejos.html#a77750c86e1c2b57d8781e565bbd22625">baixa_torneig</a>(nom, jugadors);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;iniciar_torneo&quot;</span> or comanda == <span class="stringliteral">&quot;it&quot;</span>) {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordtype">string</span> nom;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            cin &gt;&gt;nom;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; nom &lt;&lt; endl;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            tornejos.<a class="code" href="class_cjt__tornejos.html#ae8c099350f8903c61ca73fddfaeebffa">iniciar_torneig</a>(nom,jugadors);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;finalizar_torneo&quot;</span> or comanda == <span class="stringliteral">&quot;ft&quot;</span>) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">string</span> nom;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            cin &gt;&gt; nom;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; nom &lt;&lt; endl;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">int</span> num_participants = tornejos.<a class="code" href="class_cjt__tornejos.html#a8638a74dc5a2677cb3c66be1fc397ea0">consultar_participants</a>(nom);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            vector&lt;string&gt; participants(num_participants);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            vector&lt;int&gt; punts(num_participants);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            vector&lt;vector&lt;int&gt;&gt; estadistiques(num_participants, vector&lt;int&gt;(7));</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            tornejos.<a class="code" href="class_cjt__tornejos.html#a5afcab41626cbc22d7a4cad33adf8297">finalitzar_torneig</a>(nom,jugadors,categories, participants, punts, estadistiques);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            jugadors.<a class="code" href="class_cjt__jugadors.html#a45f7ccbdbfe93b545fa82a846f1e767d">baixa_jugador</a>(nom);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            tornejos.<a class="code" href="class_cjt__tornejos.html#acd74b9196cc0c9af8cc572e2112d0279">eliminar_jugador</a>(nom);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;baja_torneo&quot;</span> or comanda == <span class="stringliteral">&quot;bt&quot;</span>) {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordtype">string</span> nom;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            cin &gt;&gt; nom;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; nom &lt;&lt; endl;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            tornejos.<a class="code" href="class_cjt__tornejos.html#a77750c86e1c2b57d8781e565bbd22625">baixa_torneig</a>(nom, jugadors);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;iniciar_torneo&quot;</span> or comanda == <span class="stringliteral">&quot;it&quot;</span>) {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordtype">string</span> nom;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            cin &gt;&gt;nom;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; nom &lt;&lt; endl;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            tornejos.<a class="code" href="class_cjt__tornejos.html#ae8c099350f8903c61ca73fddfaeebffa">iniciar_torneig</a>(nom,jugadors);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;finalizar_torneo&quot;</span> or comanda == <span class="stringliteral">&quot;ft&quot;</span>) {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keywordtype">string</span> nom;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            cin &gt;&gt; nom;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; nom &lt;&lt; endl;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            tornejos.<a class="code" href="class_cjt__tornejos.html#aab5eafe1fe6bb194a3a3350723b9c734">finalitzar_torneig</a>(nom,jugadors,categories);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;listar_ranking&quot;</span> or comanda == <span class="stringliteral">&quot;lr&quot;</span>) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            jugadors.<a class="code" href="class_cjt__jugadors.html#a63581fdbdfaba9aeb5f0b3b466160902">imprimir_ranking</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;listar_ranking&quot;</span> or comanda == <span class="stringliteral">&quot;lr&quot;</span>) {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            jugadors.<a class="code" href="class_cjt__jugadors.html#a63581fdbdfaba9aeb5f0b3b466160902">imprimir_ranking</a>();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;listar_jugadores&quot;</span> or comanda == <span class="stringliteral">&quot;lj&quot;</span>) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            jugadors.<a class="code" href="class_cjt__jugadors.html#a9821d65fda187cb5983d98e4e86fc073">imprimir_jugadors</a>();</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;consultar_jugador&quot;</span> or comanda == <span class="stringliteral">&quot;cj&quot;</span>) {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordtype">string</span> nom;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            cin &gt;&gt; nom;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; nom &lt;&lt; endl;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            jugadors.<a class="code" href="class_cjt__jugadors.html#a7f4014b50e2bf91f3b5e7286c2385edc">consultar_jugador</a>(nom);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;listar_torneos&quot;</span> or comanda == <span class="stringliteral">&quot;lt&quot;</span>) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            tornejos.<a class="code" href="class_cjt__tornejos.html#a52b8a773c1e137c268d847a9da81e891">imprimir_tornejos</a>(categories);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;listar_jugadores&quot;</span> or comanda == <span class="stringliteral">&quot;lj&quot;</span>) {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            jugadors.<a class="code" href="class_cjt__jugadors.html#a9821d65fda187cb5983d98e4e86fc073">imprimir_jugadors</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;consultar_jugador&quot;</span> or comanda == <span class="stringliteral">&quot;cj&quot;</span>) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordtype">string</span> nom;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            cin &gt;&gt; nom;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            cout &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; nom &lt;&lt; endl;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            jugadors.<a class="code" href="class_cjt__jugadors.html#a7f4014b50e2bf91f3b5e7286c2385edc">consultar_jugador</a>(nom);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;listar_torneos&quot;</span> or comanda == <span class="stringliteral">&quot;lt&quot;</span>) {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            tornejos.<a class="code" href="class_cjt__tornejos.html#a52b8a773c1e137c268d847a9da81e891">imprimir_tornejos</a>(categories);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;listar_categorias&quot;</span> or comanda == <span class="stringliteral">&quot;lc&quot;</span>) {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            categories.<a class="code" href="class_cjt__categories.html#ad1a67d725173663782d1385ff59f0be6">imprimir_categories</a>();</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        cin &gt;&gt; comanda;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (comanda == <span class="stringliteral">&quot;listar_categorias&quot;</span> or comanda == <span class="stringliteral">&quot;lc&quot;</span>) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            categories.<a class="code" href="class_cjt__categories.html#ad1a67d725173663782d1385ff59f0be6">imprimir_categories</a>();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        cin &gt;&gt; comanda;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">//end = clock();</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">//double time_taken = double(end-start) /double(CLOCKS_PER_SEC);</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//cout &lt;&lt; time_taken &lt;&lt; endl;</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;}</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="comment">//end = clock();</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="comment">//double time_taken = double(end-start) /double(CLOCKS_PER_SEC);</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="comment">//cout &lt;&lt; time_taken &lt;&lt; endl;</span></div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
 <div class="ttc" id="a_cjt__categories_8hh_html"><div class="ttname"><a href="_cjt__categories_8hh.html">Cjt_categories.hh</a></div></div>
 <div class="ttc" id="a_cjt__jugadors_8hh_html"><div class="ttname"><a href="_cjt__jugadors_8hh.html">Cjt_jugadors.hh</a></div></div>
 <div class="ttc" id="a_cjt__tornejos_8hh_html"><div class="ttname"><a href="_cjt__tornejos_8hh.html">Cjt_tornejos.hh</a></div></div>
@@ -184,21 +178,21 @@ $(function() {
 <div class="ttc" id="aclass_cjt__categories_html_a78445bc84e521a95e7314ec4ac2565ad"><div class="ttname"><a href="class_cjt__categories.html#a78445bc84e521a95e7314ec4ac2565ad">Cjt_categories::num_categories</a></div><div class="ttdeci">int num_categories()</div><div class="ttdoc">Retorna el numero de categories del conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categories_8cc_source.html#l00037">Cjt_categories.cc:37</a></div></div>
 <div class="ttc" id="aclass_cjt__categories_html_ad1a67d725173663782d1385ff59f0be6"><div class="ttname"><a href="class_cjt__categories.html#ad1a67d725173663782d1385ff59f0be6">Cjt_categories::imprimir_categories</a></div><div class="ttdeci">void imprimir_categories()</div><div class="ttdoc">Escriu un conjunt de categories.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categories_8cc_source.html#l00025">Cjt_categories.cc:25</a></div></div>
 <div class="ttc" id="aclass_cjt__categories_html_aec7c99f38b0e4a59e804b5bf9ed1a4c8"><div class="ttname"><a href="class_cjt__categories.html#aec7c99f38b0e4a59e804b5bf9ed1a4c8">Cjt_categories::llegir_categories</a></div><div class="ttdeci">void llegir_categories()</div><div class="ttdoc">Llegeix un conjunt de categories.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__categories_8cc_source.html#l00014">Cjt_categories.cc:14</a></div></div>
-<div class="ttc" id="aclass_cjt__jugadors_html"><div class="ttname"><a href="class_cjt__jugadors.html">Cjt_jugadors</a></div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00015">Cjt_jugadors.hh:15</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadors_html"><div class="ttname"><a href="class_cjt__jugadors.html">Cjt_jugadors</a></div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8hh_source.html#l00014">Cjt_jugadors.hh:14</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadors_html_a45f7ccbdbfe93b545fa82a846f1e767d"><div class="ttname"><a href="class_cjt__jugadors.html#a45f7ccbdbfe93b545fa82a846f1e767d">Cjt_jugadors::baixa_jugador</a></div><div class="ttdeci">void baixa_jugador(string nom)</div><div class="ttdoc">Dona de baixa a un jugador del conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8cc_source.html#l00048">Cjt_jugadors.cc:48</a></div></div>
 <div class="ttc" id="aclass_cjt__jugadors_html_a63581fdbdfaba9aeb5f0b3b466160902"><div class="ttname"><a href="class_cjt__jugadors.html#a63581fdbdfaba9aeb5f0b3b466160902">Cjt_jugadors::imprimir_ranking</a></div><div class="ttdeci">void imprimir_ranking()</div><div class="ttdoc">Imprimeix un conjunt de jugadors ordenats per ranking.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8cc_source.html#l00029">Cjt_jugadors.cc:29</a></div></div>
-<div class="ttc" id="aclass_cjt__jugadors_html_a6a47033f41e090850b7d4585ecd64cff"><div class="ttname"><a href="class_cjt__jugadors.html#a6a47033f41e090850b7d4585ecd64cff">Cjt_jugadors::baixa_jugador</a></div><div class="ttdeci">void baixa_jugador(string nom, Cjt_tornejos &amp;tornejos)</div><div class="ttdoc">Dona de baixa a un jugador del conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8cc_source.html#l00048">Cjt_jugadors.cc:48</a></div></div>
-<div class="ttc" id="aclass_cjt__jugadors_html_a7f4014b50e2bf91f3b5e7286c2385edc"><div class="ttname"><a href="class_cjt__jugadors.html#a7f4014b50e2bf91f3b5e7286c2385edc">Cjt_jugadors::consultar_jugador</a></div><div class="ttdeci">void consultar_jugador(string nom)</div><div class="ttdoc">Es consulta un jugador del conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8cc_source.html#l00071">Cjt_jugadors.cc:71</a></div></div>
+<div class="ttc" id="aclass_cjt__jugadors_html_a7f4014b50e2bf91f3b5e7286c2385edc"><div class="ttname"><a href="class_cjt__jugadors.html#a7f4014b50e2bf91f3b5e7286c2385edc">Cjt_jugadors::consultar_jugador</a></div><div class="ttdeci">void consultar_jugador(string nom)</div><div class="ttdoc">Es consulta un jugador del conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8cc_source.html#l00069">Cjt_jugadors.cc:69</a></div></div>
 <div class="ttc" id="aclass_cjt__jugadors_html_a9821d65fda187cb5983d98e4e86fc073"><div class="ttname"><a href="class_cjt__jugadors.html#a9821d65fda187cb5983d98e4e86fc073">Cjt_jugadors::imprimir_jugadors</a></div><div class="ttdeci">void imprimir_jugadors()</div><div class="ttdoc">Imprimeix un conjunt de jugadors ordenats lexicograficament.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8cc_source.html#l00021">Cjt_jugadors.cc:21</a></div></div>
 <div class="ttc" id="aclass_cjt__jugadors_html_ad59d2f11a4bbfd1053c0dba9062595af"><div class="ttname"><a href="class_cjt__jugadors.html#ad59d2f11a4bbfd1053c0dba9062595af">Cjt_jugadors::nou_jugador</a></div><div class="ttdeci">void nou_jugador(string nom, bool first)</div><div class="ttdoc">Afegeix un nou jugador al conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8cc_source.html#l00038">Cjt_jugadors.cc:38</a></div></div>
 <div class="ttc" id="aclass_cjt__jugadors_html_affe03f05c962b8689540de5e1aa97d0a"><div class="ttname"><a href="class_cjt__jugadors.html#affe03f05c962b8689540de5e1aa97d0a">Cjt_jugadors::llegir_jugadors</a></div><div class="ttdeci">void llegir_jugadors()</div><div class="ttdoc">Llegeix un conjunt de jugadors.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__jugadors_8cc_source.html#l00011">Cjt_jugadors.cc:11</a></div></div>
 <div class="ttc" id="aclass_cjt__tornejos_html"><div class="ttname"><a href="class_cjt__tornejos.html">Cjt_tornejos</a></div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8hh_source.html#l00015">Cjt_tornejos.hh:15</a></div></div>
-<div class="ttc" id="aclass_cjt__tornejos_html_a1353b909daa12fb1f542d028f1d79529"><div class="ttname"><a href="class_cjt__tornejos.html#a1353b909daa12fb1f542d028f1d79529">Cjt_tornejos::llegir_tornejos</a></div><div class="ttdeci">void llegir_tornejos(int num_cat)</div><div class="ttdoc">Llegeix un conjunt de tornejos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00016">Cjt_tornejos.cc:16</a></div></div>
-<div class="ttc" id="aclass_cjt__tornejos_html_a52b8a773c1e137c268d847a9da81e891"><div class="ttname"><a href="class_cjt__tornejos.html#a52b8a773c1e137c268d847a9da81e891">Cjt_tornejos::imprimir_tornejos</a></div><div class="ttdeci">void imprimir_tornejos(Cjt_categories &amp;categories)</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00027">Cjt_tornejos.cc:27</a></div></div>
-<div class="ttc" id="aclass_cjt__tornejos_html_a5afcab41626cbc22d7a4cad33adf8297"><div class="ttname"><a href="class_cjt__tornejos.html#a5afcab41626cbc22d7a4cad33adf8297">Cjt_tornejos::finalitzar_torneig</a></div><div class="ttdeci">void finalitzar_torneig(string nom, Cjt_jugadors &amp;jugadors, Cjt_categories &amp;categories, vector&lt; string &gt; &amp;participants, vector&lt; int &gt; &amp;punts, vector&lt; vector&lt; int &gt;&gt; &amp;estadistiques)</div><div class="ttdoc">Finalitza un torneig.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00077">Cjt_tornejos.cc:77</a></div></div>
-<div class="ttc" id="aclass_cjt__tornejos_html_a71e258c45895e7e97bdf201bec99f865"><div class="ttname"><a href="class_cjt__tornejos.html#a71e258c45895e7e97bdf201bec99f865">Cjt_tornejos::nou_torneig</a></div><div class="ttdeci">void nou_torneig(string nom, int cat, int num_categories, bool first)</div><div class="ttdoc">Afegeix un torneig al conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00037">Cjt_tornejos.cc:37</a></div></div>
-<div class="ttc" id="aclass_cjt__tornejos_html_a77750c86e1c2b57d8781e565bbd22625"><div class="ttname"><a href="class_cjt__tornejos.html#a77750c86e1c2b57d8781e565bbd22625">Cjt_tornejos::baixa_torneig</a></div><div class="ttdeci">void baixa_torneig(string nom, Cjt_jugadors &amp;jugadors)</div><div class="ttdoc">Dona de baixa un torneig del conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00051">Cjt_tornejos.cc:51</a></div></div>
-<div class="ttc" id="aclass_cjt__tornejos_html_a8638a74dc5a2677cb3c66be1fc397ea0"><div class="ttname"><a href="class_cjt__tornejos.html#a8638a74dc5a2677cb3c66be1fc397ea0">Cjt_tornejos::consultar_participants</a></div><div class="ttdeci">int consultar_participants(string nom)</div><div class="ttdoc">Imprimeix un conjunt de tornejos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00012">Cjt_tornejos.cc:12</a></div></div>
-<div class="ttc" id="aclass_cjt__tornejos_html_ae8c099350f8903c61ca73fddfaeebffa"><div class="ttname"><a href="class_cjt__tornejos.html#ae8c099350f8903c61ca73fddfaeebffa">Cjt_tornejos::iniciar_torneig</a></div><div class="ttdeci">void iniciar_torneig(string nom, Cjt_jugadors &amp;jugadors)</div><div class="ttdoc">Inicia un torneig.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00072">Cjt_tornejos.cc:72</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html_a1353b909daa12fb1f542d028f1d79529"><div class="ttname"><a href="class_cjt__tornejos.html#a1353b909daa12fb1f542d028f1d79529">Cjt_tornejos::llegir_tornejos</a></div><div class="ttdeci">void llegir_tornejos(int num_cat)</div><div class="ttdoc">Llegeix un conjunt de tornejos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00012">Cjt_tornejos.cc:12</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html_a52b8a773c1e137c268d847a9da81e891"><div class="ttname"><a href="class_cjt__tornejos.html#a52b8a773c1e137c268d847a9da81e891">Cjt_tornejos::imprimir_tornejos</a></div><div class="ttdeci">void imprimir_tornejos(Cjt_categories &amp;categories)</div><div class="ttdoc">Imprimeix un conjunt de tornejos.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00023">Cjt_tornejos.cc:23</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html_a71e258c45895e7e97bdf201bec99f865"><div class="ttname"><a href="class_cjt__tornejos.html#a71e258c45895e7e97bdf201bec99f865">Cjt_tornejos::nou_torneig</a></div><div class="ttdeci">void nou_torneig(string nom, int cat, int num_categories, bool first)</div><div class="ttdoc">Afegeix un torneig al conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00033">Cjt_tornejos.cc:33</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html_a77750c86e1c2b57d8781e565bbd22625"><div class="ttname"><a href="class_cjt__tornejos.html#a77750c86e1c2b57d8781e565bbd22625">Cjt_tornejos::baixa_torneig</a></div><div class="ttdeci">void baixa_torneig(string nom, Cjt_jugadors &amp;jugadors)</div><div class="ttdoc">Dona de baixa un torneig del conjunt.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00047">Cjt_tornejos.cc:47</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html_aab5eafe1fe6bb194a3a3350723b9c734"><div class="ttname"><a href="class_cjt__tornejos.html#aab5eafe1fe6bb194a3a3350723b9c734">Cjt_tornejos::finalitzar_torneig</a></div><div class="ttdeci">void finalitzar_torneig(string nom, Cjt_jugadors &amp;jugadors, Cjt_categories &amp;categories)</div><div class="ttdoc">Finalitza un torneig.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00073">Cjt_tornejos.cc:73</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html_acd74b9196cc0c9af8cc572e2112d0279"><div class="ttname"><a href="class_cjt__tornejos.html#acd74b9196cc0c9af8cc572e2112d0279">Cjt_tornejos::eliminar_jugador</a></div><div class="ttdeci">void eliminar_jugador(string nom)</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00059">Cjt_tornejos.cc:59</a></div></div>
+<div class="ttc" id="aclass_cjt__tornejos_html_ae8c099350f8903c61ca73fddfaeebffa"><div class="ttname"><a href="class_cjt__tornejos.html#ae8c099350f8903c61ca73fddfaeebffa">Cjt_tornejos::iniciar_torneig</a></div><div class="ttdeci">void iniciar_torneig(string nom, Cjt_jugadors &amp;jugadors)</div><div class="ttdoc">Inicia un torneig.</div><div class="ttdef"><b>Definition:</b> <a href="_cjt__tornejos_8cc_source.html#l00068">Cjt_tornejos.cc:68</a></div></div>
 <div class="ttc" id="aprogram_8cc_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="program_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition:</b> <a href="program_8cc_source.html#l00012">program.cc:12</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

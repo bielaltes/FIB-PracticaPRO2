@@ -10,8 +10,6 @@ using namespace std;
 
 
 int main() {
-    //clock_t start,end;
-    //start = clock();
     int C, K;
     cin >> C >> K;
     Cjt_categories categories(C,K);
@@ -70,14 +68,7 @@ int main() {
             string nom;
             cin >> nom;
             cout << " " << nom << endl;
-
-            int num_participants = tornejos.consultar_participants(nom);
-            vector<string> participants(num_participants);
-            vector<int> punts(num_participants);
-            vector<vector<int>> estadistiques(num_participants, vector<int>(7));
-
-            tornejos.finalitzar_torneig(nom,jugadors,categories, participants, punts, estadistiques);
-
+            tornejos.finalitzar_torneig(nom,jugadors,categories);
         }
 
         else if (comanda == "listar_ranking" or comanda == "lr") {
@@ -106,7 +97,21 @@ int main() {
         cin >> comanda;
 
     }
-    //end = clock();
-    //double time_taken = double(end-start) /double(CLOCKS_PER_SEC);
-    //cout << time_taken << endl;
 }
+
+/** @mainpage
+
+    Pràctica de l'alumne Biel Altés Grifoll, amb documentació <b> completa</b>
+    (incloent elements privatsy codi).
+
+    El programa principal es pot trobar en el módul program.cc.
+
+*/
+
+/** @file program.cc
+
+    @brief Programa principal de la pràctica.
+
+    No es comprova que les comandes siguin correctes, així que suposem que sempre
+    s'introduira una comanda entre les opcions disponibles.
+*/

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['monfils_196',['Monfils',['../proves_8cc.html#ad7ec3faf1640e538caf946429203dc4f',1,'proves.cc']]]
+  ['sets_5fguanyat_167',['sets_guanyat',['../class_jugador.html#a396b226c722425d387f36e239fc9855c',1,'Jugador']]],
+  ['sets_5fperdut_168',['sets_perdut',['../class_jugador.html#a7c9fcb3ec52c2c400e7cf8faaf945426',1,'Jugador']]]
 ];

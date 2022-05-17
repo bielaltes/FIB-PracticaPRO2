@@ -1,13 +1,13 @@
+/** @file Torneig.cc
+    @brief Codi de la classe Torneig
+*/
+
 #include "Torneig.hh"
 
 Torneig::Torneig(int cat) {
     categoria = cat;
     participants = vector<string>(0);
     jugat = false;
-}
-
-Torneig::~Torneig() {
-
 }
 
 void Torneig::eliminar_participant(string nom){
@@ -62,12 +62,10 @@ int Torneig::consultar_categoria() {
     return categoria;
 }
 
-int Torneig::consultar_participants() {
-    return participants.size();
-}
-
 void Torneig::restar_punts(Cjt_jugadors& jugadors) {
-    jugadors.actualitzar_ranking(participants,punts,false, true);
+    if (jugat){
+        jugadors.actualitzar_ranking(participants,punts,false, true);
+    }
 }
 
 void Torneig::iniciar_torneig(Cjt_jugadors& jugadors) {
@@ -202,15 +200,16 @@ void Torneig::imprimir_resultats(BinTree<pair<int,string>>& a){
 
 void Torneig::imprimir_punts() {
     for (int i = 0; i < num_participants; ++i) {
-        cout << i+1 << "." << participants[i] << " " << punts[i] << endl;
+        if (punts[i] != 0) {
+            cout << i+1 << "." << participants[i] << " " << punts[i] << endl;
+        }
     }
 }
 
-void Torneig::finalitzar_torneig(Cjt_jugadors& jugadors, Cjt_categories& categories, vector<string>& participants_estadistiques, vector<int>& punts_estadistiques,vector<vector<int>>& estadistiques) {
+void Torneig::finalitzar_torneig(Cjt_jugadors& jugadors, Cjt_categories& categories) {
 
     if(jugat){
-        participants_estadistiques = anteriors_participants;
-       jugadors.actualitzar_ranking(participants_estadistiques, punts, false, false);
+       jugadors.actualitzar_ranking(anteriors_participants, punts, false, false);
     }
 
     jugat = true;
@@ -218,6 +217,7 @@ void Torneig::finalitzar_torneig(Cjt_jugadors& jugadors, Cjt_categories& categor
     llegir_resultats(partits);
 
     punts = vector<int>(num_participants);
+    vector<vector<int>> estadistiques = vector<vector<int>> (num_participants, vector<int>(7));
     calcular_guanyadors(partits, categories, 1, estadistiques);
 
     punts[((partits.value()).first) -1] = categories.consultar_punts(categoria, 0);
@@ -226,9 +226,9 @@ void Torneig::finalitzar_torneig(Cjt_jugadors& jugadors, Cjt_categories& categor
 
     imprimir_punts();
 
-    participants_estadistiques = participants;
-    jugadors.actualitzar_estadistiques(participants_estadistiques, estadistiques);
+    jugadors.actualitzar_estadistiques(participants, estadistiques);
 
-    punts_estadistiques = punts;
-    jugadors.actualitzar_ranking(participants_estadistiques, punts_estadistiques, true, true);
+    jugadors.actualitzar_ranking(participants, punts, true, true);
+
+
 }

@@ -1,3 +1,7 @@
+/** @file Cjt_categories.hh
+    @brief Especificació de la classe Cjt_categories
+*/
+
 #ifndef CONJ_CAT_HH
 #define CONJ_CAT_HH
 
@@ -8,6 +12,10 @@
 #endif
 
 using namespace std;
+
+/** @class Cjt_categories
+    @brief Representa el conjunt de categories disponibles al circuit.
+*/
 
 class Cjt_categories {
 
@@ -25,10 +33,6 @@ public:
 */
     Cjt_categories(int C, int K);
 
-/** @brief esborra automaticament els objectes locals en sortir
-     d'un ambit de visibilitat.
-*/
-    ~Cjt_categories();
 
 /** @brief Llegeix un conjunt de categories
     \pre  estan preparats al canal estandard d'entrada un enter que representa
@@ -49,12 +53,21 @@ public:
 
 /** @brief Retorna el numero de categories del conjunt
     \pre  cert.
-    \post el resultat es el numero de categories del parametre implicit.    .
+    \post el resultat es el numero de categories del parametre implicit.
 */
     int num_categories();
 
+/** @brief Retorna el numero de categories del conjunt
+    \pre  num <= C.
+    \post retorna el nom de la categoria num.
+*/
     string nom_categoria(int num);
 
+/** @brief Retorna el numero de categories del conjunt
+    \pre  categoria <= C i nivell <=K.
+    \post retorna els punts que otorga la categoria en un determinat
+     nivell.
+*/
     int consultar_punts(int categoria, int nivell);
 
 

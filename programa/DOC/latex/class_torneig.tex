@@ -8,34 +8,32 @@
 \mbox{\hyperlink{class_torneig_ab5184085575669dd522e11a25f602943}{$\sim$\+Torneig}} ()
 \begin{DoxyCompactList}\small\item\em esborra automaticament els objectes locals en sortir d\textquotesingle{}un ambit de visibilitat. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{class_torneig_a78a82b011e01b5d07ade6378da916c3c}{consultar\+\_\+categoria}} ()
-\begin{DoxyCompactList}\small\item\em Retorna la categoria d\textquotesingle{}un torneig. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Retorna la categoria del torneig. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneig_abb513cd4c98a86b799736b8118f94c5b}{eliminar\+\_\+participant}} (string nom)
-\item 
-int \mbox{\hyperlink{class_torneig_a8ad3192ce5632004fed6deff727df78c}{consultar\+\_\+participants}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Elimina els punts que ha guanyat un jugador al torneig. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneig_ac8a8318fd1bc940649d12e300906c530}{restar\+\_\+punts}} (\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors)
-\item 
+\begin{DoxyCompactList}\small\item\em Resta els punts que han guanyat els jugadors del torneig. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_torneig_abcc9f0b1127a5fdd57856a59e5034e1f}{iniciar\+\_\+torneig}} (\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors)
 \begin{DoxyCompactList}\small\item\em Confecciona i imprimeix els emparellaments d\textquotesingle{}un torneig. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_torneig_a426f250284ac487531cc5247a2b35154}{llegir\+\_\+resultats}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&a)
-\item 
-void \mbox{\hyperlink{class_torneig_a0ce999e54df0dca139778eb49954d09e}{calcular\+\_\+guanyadors}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&a, \mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&categories, int nivell, vector$<$ vector$<$ int $>$$>$ \&estadistiques)
-\item 
-void \mbox{\hyperlink{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}{imprimir\+\_\+resultats}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&a)
-\item 
-void \mbox{\hyperlink{class_torneig_a2e0eb7f4e3837fd969046f9f221b7fc6}{imprimir\+\_\+punts}} ()
-\item 
-void \mbox{\hyperlink{class_torneig_a7bee65cf6b3f638a6658abcd397cb7c0}{finalitzar\+\_\+torneig}} (\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors, \mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&categories, vector$<$ string $>$ \&participants\+\_\+estadistiques, vector$<$ int $>$ \&punts\+\_\+estadistiques, vector$<$ vector$<$ int $>$$>$ \&estadistiques)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_torneig_a6437f391b759b9488c2683462fb49899}{finalitzar\+\_\+torneig}} (\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors, \mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&categories)
+\begin{DoxyCompactList}\small\item\em Llegeix els resultats d\textquotesingle{}un torneig, en calcula els guanyadors, imprimeix els partits jugats i els punts guanyats per els jugadors. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Mètodes Privats}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_torneig_ac0ec8f0a5c71dd78980c86f3ccc75620}{llegir\+\_\+inscripcio}} (\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&jugadors)
 \begin{DoxyCompactList}\small\item\em Llegeix la inscripcio a un torneig. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{class_torneig_a17f4a939167e6ed018ee46580621abae}{imprimir\+\_\+emparellaments}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&a, bool left, bool pare, int prof)
-\item 
-void \mbox{\hyperlink{class_torneig_ae6722ca037250a8904e52322332fa461}{crear\+\_\+emparellaments}} (\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&a, int m)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_torneig_a17f4a939167e6ed018ee46580621abae}{imprimir\+\_\+emparellaments}} (Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&a, bool left, bool pare, int prof)
+\begin{DoxyCompactList}\small\item\em Imprimeix els emparellaments del torneig. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_ae6722ca037250a8904e52322332fa461}{crear\+\_\+emparellaments}} (Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&a, int m)
+\begin{DoxyCompactList}\small\item\em Crea els emparellaments del torneig. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_a426f250284ac487531cc5247a2b35154}{llegir\+\_\+resultats}} (Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&a)
+\begin{DoxyCompactList}\small\item\em Llegeix els emparellaments del torneig. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_a0ce999e54df0dca139778eb49954d09e}{calcular\+\_\+guanyadors}} (Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&a, \mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&categories, int nivell, vector$<$ vector$<$ int $>$$>$ \&estadistiques)
+\begin{DoxyCompactList}\small\item\em Calcula els guanyadors dels partits i actualitza les estadistiques. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}{imprimir\+\_\+resultats}} (Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&a)
+\begin{DoxyCompactList}\small\item\em Imprimeix els resultats del torneig. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_torneig_a2e0eb7f4e3837fd969046f9f221b7fc6}{imprimir\+\_\+punts}} ()
+\begin{DoxyCompactList}\small\item\em Imprimeix els resultats del torneig. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Atributs Privats}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,7 +45,7 @@ vector$<$ string $>$ \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f38783
 \item 
 vector$<$ int $>$ \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}
 \item 
-\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$ $>$ \mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}}
+Bin\+Tree$<$ pair$<$ int, string $>$ $>$ \mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}}
 \item 
 bool \mbox{\hyperlink{class_torneig_a01d94829488fe4daba0cba870f2bcccf}{jugat}}
 \item 
@@ -155,8 +153,18 @@ Definició a la línia 21 del fitxer Torneig.\+cc.
 \index{Torneig@{Torneig}!imprimir\_emparellaments@{imprimir\_emparellaments}}
 \index{imprimir\_emparellaments@{imprimir\_emparellaments}!Torneig@{Torneig}}
 \doxysubsubsection{\texorpdfstring{imprimir\_emparellaments()}{imprimir\_emparellaments()}}
-{\footnotesize\ttfamily void Torneig\+::imprimir\+\_\+emparellaments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&}]{a,  }\item[{bool}]{left,  }\item[{bool}]{pare,  }\item[{int}]{prof }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Torneig\+::imprimir\+\_\+emparellaments (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&}]{a,  }\item[{bool}]{left,  }\item[{bool}]{pare,  }\item[{int}]{prof }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Imprimeix els emparellaments del torneig. 
+
+\begin{DoxyPrecond}{Precondició}
+a és un Bin\+Tree, left ens diu si a és fill esquerre, pare ens diu si el pare de a és fill esquerre i prof la profunditat a la que ens trobem. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}han imprès els emparellaments tal com s\textquotesingle{}especifica al enunciat de la pràctica. 
+\end{DoxyPostcond}
 
 
 Definició a la línia 43 del fitxer Torneig.\+cc.
@@ -164,12 +172,12 @@ Definició a la línia 43 del fitxer Torneig.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{43                                                                                                  \{}
-\DoxyCodeLine{44     \textcolor{keywordflow}{if} (not a.\mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}()) \{}
-\DoxyCodeLine{45         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> l = a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}();}
-\DoxyCodeLine{46         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> r = a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}();}
-\DoxyCodeLine{47         \textcolor{keywordflow}{if} (not l.\mbox{\hyperlink{class_bin_tree_a74cda259ba5c25b8ee38ed4dc33e4fad}{empty}}()) cout << \textcolor{stringliteral}{"{}("{}};}
+\DoxyCodeLine{44     \textcolor{keywordflow}{if} (not a.empty()) \{}
+\DoxyCodeLine{45         BinTree<pair<int,string>> l = a.left();}
+\DoxyCodeLine{46         BinTree<pair<int,string>> r = a.right();}
+\DoxyCodeLine{47         \textcolor{keywordflow}{if} (not l.empty()) cout << \textcolor{stringliteral}{"{}("{}};}
 \DoxyCodeLine{48         \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{49             cout << (a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[(a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first -\/1];}
+\DoxyCodeLine{49             cout << (a.value()).first << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[(a.value()).first -\/1];}
 \DoxyCodeLine{50             \textcolor{keywordflow}{if} (left) cout << \textcolor{stringliteral}{"{} "{}};}
 \DoxyCodeLine{51         \}}
 \DoxyCodeLine{52         \mbox{\hyperlink{class_torneig_a17f4a939167e6ed018ee46580621abae}{imprimir\_emparellaments}}(l, \textcolor{keyword}{true}, left ,prof+1);}
@@ -186,8 +194,18 @@ Definició a la línia 43 del fitxer Torneig.\+cc.
 \index{Torneig@{Torneig}!crear\_emparellaments@{crear\_emparellaments}}
 \index{crear\_emparellaments@{crear\_emparellaments}!Torneig@{Torneig}}
 \doxysubsubsection{\texorpdfstring{crear\_emparellaments()}{crear\_emparellaments()}}
-{\footnotesize\ttfamily void Torneig\+::crear\+\_\+emparellaments (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&}]{a,  }\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily void Torneig\+::crear\+\_\+emparellaments (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&}]{a,  }\item[{int}]{m }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
 
+
+
+Crea els emparellaments del torneig. 
+
+\begin{DoxyPrecond}{Precondició}
+a és un Bin\+Treei m representa la profunditat a la que ens trobem. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}han creat els emparellaments tal com s\textquotesingle{}especifica al enunciat de la pràctica. 
+\end{DoxyPostcond}
 
 
 Definició a la línia 33 del fitxer Torneig.\+cc.
@@ -195,14 +213,232 @@ Definició a la línia 33 del fitxer Torneig.\+cc.
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{33                                                                       \{}
-\DoxyCodeLine{34     \textcolor{keywordflow}{if} (m+1-\/((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first) <= \mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\_participants}}) \{}
-\DoxyCodeLine{35         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> l(pair<int,string>((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first, \textcolor{stringliteral}{"{} "{}}));}
-\DoxyCodeLine{36         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> r(pair<int,string>((m+1-\/((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first)), \textcolor{stringliteral}{"{} "{}}));}
+\DoxyCodeLine{34     \textcolor{keywordflow}{if} (m+1-\/((a.value()).first) <= \mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\_participants}}) \{}
+\DoxyCodeLine{35         BinTree<pair<int,string>> l(pair<int,string>((a.value()).first, \textcolor{stringliteral}{"{} "{}}));}
+\DoxyCodeLine{36         BinTree<pair<int,string>> r(pair<int,string>((m+1-\/((a.value()).first)), \textcolor{stringliteral}{"{} "{}}));}
 \DoxyCodeLine{37         \mbox{\hyperlink{class_torneig_ae6722ca037250a8904e52322332fa461}{crear\_emparellaments}}(l,2*m);}
 \DoxyCodeLine{38         \mbox{\hyperlink{class_torneig_ae6722ca037250a8904e52322332fa461}{crear\_emparellaments}}(r,2*m);}
-\DoxyCodeLine{39         a = \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}>(pair<int,string>(((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first), \textcolor{stringliteral}{"{}"{}}),l,r);}
+\DoxyCodeLine{39         a = BinTree<pair<int,string>>(pair<int,string>(((a.value()).first), \textcolor{stringliteral}{"{}"{}}),l,r);}
 \DoxyCodeLine{40     \}}
 \DoxyCodeLine{41 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a426f250284ac487531cc5247a2b35154}\label{class_torneig_a426f250284ac487531cc5247a2b35154}} 
+\index{Torneig@{Torneig}!llegir\_resultats@{llegir\_resultats}}
+\index{llegir\_resultats@{llegir\_resultats}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{llegir\_resultats()}{llegir\_resultats()}}
+{\footnotesize\ttfamily void Torneig\+::llegir\+\_\+resultats (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Llegeix els emparellaments del torneig. 
+
+\begin{DoxyPrecond}{Precondició}
+a és un Bin\+Tree i per el canal estàndar d\textquotesingle{}entrada trobem un string que representa el resultat del partit del node en el que ens trobem. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}ha escrit a cada node el resultat pertinent. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 83 del fitxer Torneig.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{83                                                            \{}
+\DoxyCodeLine{84     \textcolor{keywordtype}{string} resultat;}
+\DoxyCodeLine{85     cin >> resultat;}
+\DoxyCodeLine{86     \textcolor{keywordflow}{if} (resultat != \textcolor{stringliteral}{"{}0"{}}) \{}
+\DoxyCodeLine{87         BinTree<pair<int,string>> l = a.left();}
+\DoxyCodeLine{88         BinTree<pair<int,string>> r = a.right();}
+\DoxyCodeLine{89         \mbox{\hyperlink{class_torneig_a426f250284ac487531cc5247a2b35154}{llegir\_resultats}}(l);}
+\DoxyCodeLine{90         \mbox{\hyperlink{class_torneig_a426f250284ac487531cc5247a2b35154}{llegir\_resultats}}(r);}
+\DoxyCodeLine{91         a = BinTree<pair<int,string>>(pair<int,string> ((a.value()).first, resultat), l, r);}
+\DoxyCodeLine{92     \}}
+\DoxyCodeLine{93 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a0ce999e54df0dca139778eb49954d09e}\label{class_torneig_a0ce999e54df0dca139778eb49954d09e}} 
+\index{Torneig@{Torneig}!calcular\_guanyadors@{calcular\_guanyadors}}
+\index{calcular\_guanyadors@{calcular\_guanyadors}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{calcular\_guanyadors()}{calcular\_guanyadors()}}
+{\footnotesize\ttfamily void Torneig\+::calcular\+\_\+guanyadors (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&}]{a,  }\item[{\mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&}]{categories,  }\item[{int}]{nivell,  }\item[{vector$<$ vector$<$ int $>$$>$ \&}]{estadistiques }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Calcula els guanyadors dels partits i actualitza les estadistiques. 
+
+\begin{DoxyPrecond}{Precondició}
+a és un Bin\+Tree amb un enter i una string per node, nivell representa la profunditat a la que ens trobem i la matriu d\textquotesingle{}estadistiques té dimensio Nx7 on N representa el nombre de participants al torneig. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+es calculen el guanyadors de cada node a partir de la string resultat, seguidament s\textquotesingle{}acutualitza l\textquotesingle{}int que representa el guanyador del partit i totes les estadistiques pertinents de cadascun dels participants a la matriu d\textquotesingle{}estadistiques. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 95 del fitxer Torneig.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{95                                                                                                                                           \{}
+\DoxyCodeLine{96     \textcolor{keywordflow}{if} (not (a.right()).empty()) \{}
+\DoxyCodeLine{97         BinTree<pair<int,string>> l = a.left();}
+\DoxyCodeLine{98         BinTree<pair<int,string>> r = a.right();}
+\DoxyCodeLine{99         \mbox{\hyperlink{class_torneig_a0ce999e54df0dca139778eb49954d09e}{calcular\_guanyadors}}(l, categories, nivell +1, estadistiques);}
+\DoxyCodeLine{100         \mbox{\hyperlink{class_torneig_a0ce999e54df0dca139778eb49954d09e}{calcular\_guanyadors}}(r, categories, nivell +1, estadistiques);}
+\DoxyCodeLine{101 }
+\DoxyCodeLine{102         \textcolor{comment}{//GUANYA DRET}}
+\DoxyCodeLine{103         \textcolor{keywordflow}{if} ( ((a.value()).second[((a.value()).second).size() -\/ 1]-\/\textcolor{charliteral}{'0'}) > ((a.value()).second[((a.value()).second).size() -\/ 3]-\/\textcolor{charliteral}{'0'}) ) \{}
+\DoxyCodeLine{104 }
+\DoxyCodeLine{105             a = BinTree<pair<int,string>>(pair<int,string> (((r.value()).first), (a.value()).second), l, r);}
+\DoxyCodeLine{106 }
+\DoxyCodeLine{107             \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[(((a.left()).value()).first)-\/1] = categories.\mbox{\hyperlink{class_cjt__categories_a21bb1f3a366e5e5a59130dc9d65b799c}{consultar\_punts}}(\mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}}, nivell);}
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109             \textcolor{comment}{//partits}}
+\DoxyCodeLine{110             estadistiques[(((a.right()).value()).first) -\/1][1] +=1;}
+\DoxyCodeLine{111             estadistiques[(((a.left()).value()).first) -\/1][2] +=1;}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113             \textcolor{keywordflow}{if} ( (((a.value()).second).size()) == 11 ) \{}
+\DoxyCodeLine{114                 \textcolor{comment}{//sets}}
+\DoxyCodeLine{115                 estadistiques[(((a.right()).value()).first) -\/1][3] +=2;}
+\DoxyCodeLine{116                 estadistiques[((((a.left())).value()).first) -\/1][3] +=1;}
+\DoxyCodeLine{117 }
+\DoxyCodeLine{118                 estadistiques[(((a.right()).value()).first) -\/1][4] +=1;}
+\DoxyCodeLine{119                 estadistiques[((((a.left())).value()).first) -\/1][4] +=2;}
+\DoxyCodeLine{120 }
+\DoxyCodeLine{121                 \textcolor{comment}{//jocs}}
+\DoxyCodeLine{122                 estadistiques[(((a.left()).value()).first) -\/1][5] += (((a.value()).second)[0]-\/\textcolor{charliteral}{'0'})  + (((a.value()).second)[4]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[8]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{123                 estadistiques[((((a.right())).value()).first) -\/1][5] += (((a.value()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[6]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[10]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{124 }
+\DoxyCodeLine{125                 estadistiques[(((a.left()).value()).first) -\/1][6] += (((a.value()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[6]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[10]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{126                 estadistiques[((((a.right())).value()).first) -\/1][6] += (((a.value()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[4]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[8]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128             \}}
+\DoxyCodeLine{129             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( (((a.value()).second).size()) == 7) \{}
+\DoxyCodeLine{130                 \textcolor{comment}{//sets}}
+\DoxyCodeLine{131                 estadistiques[(((a.right()).value()).first) -\/1][3] +=2;}
+\DoxyCodeLine{132                 estadistiques[(((a.left()).value()).first) -\/1][4] +=2;}
+\DoxyCodeLine{133 }
+\DoxyCodeLine{134                 \textcolor{comment}{//jocs}}
+\DoxyCodeLine{135                 estadistiques[(((a.left()).value()).first) -\/1][5] += (((a.value()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[4]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{136                 estadistiques[((((a.right())).value()).first) -\/1][5] += (((a.value()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[6]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{137 }
+\DoxyCodeLine{138                 estadistiques[(((a.left()).value()).first) -\/1][6] += (((a.value()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[6]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{139                 estadistiques[((((a.right())).value()).first) -\/1][6] += (((a.value()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[4]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{140 }
+\DoxyCodeLine{141             \}}
+\DoxyCodeLine{142 }
+\DoxyCodeLine{143         \}}
+\DoxyCodeLine{144         \textcolor{comment}{//GUANYA ESQUERRE}}
+\DoxyCodeLine{145         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (((a.value()).second[((a.value()).second).size() -\/ 1]-\/\textcolor{charliteral}{'0'}) < ((a.value()).second[((a.value()).second).size() -\/ 3]-\/\textcolor{charliteral}{'0'}) )\{}
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147             a = BinTree<pair<int,string>>(pair<int,string> (((l.value()).first), (a.value()).second), l, r);}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{149             \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[(((a.right()).value()).first)-\/1] = categories.\mbox{\hyperlink{class_cjt__categories_a21bb1f3a366e5e5a59130dc9d65b799c}{consultar\_punts}}(\mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}}, nivell);}
+\DoxyCodeLine{150 }
+\DoxyCodeLine{151             \textcolor{comment}{//partits}}
+\DoxyCodeLine{152             estadistiques[(((a.right()).value()).first) -\/1][2] +=1;}
+\DoxyCodeLine{153             estadistiques[(((a.left()).value()).first) -\/1][1] +=1;}
+\DoxyCodeLine{154 }
+\DoxyCodeLine{155             \textcolor{keywordflow}{if} ( (((a.value()).second).size()) == 11 ) \{}
+\DoxyCodeLine{156                 \textcolor{comment}{//sets}}
+\DoxyCodeLine{157                 estadistiques[(((a.right()).value()).first) -\/1][3] +=1;}
+\DoxyCodeLine{158                 estadistiques[(((a.left()).value()).first) -\/1][3] +=2;}
+\DoxyCodeLine{159 }
+\DoxyCodeLine{160                 estadistiques[(((a.right()).value()).first) -\/1][4] +=2;}
+\DoxyCodeLine{161                 estadistiques[(((a.left()).value()).first) -\/1][4] +=1;}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163                 \textcolor{comment}{//jocs}}
+\DoxyCodeLine{164                 estadistiques[(((a.left()).value()).first) -\/1][5] += (((a.value()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[4]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[8]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{165                 estadistiques[(((a.right()).value()).first) -\/1][5] += (((a.value()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[6]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[10]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167                 estadistiques[(((a.left()).value()).first) -\/1][6] += (((a.value()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[6]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[10]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{168                 estadistiques[(((a.right()).value()).first) -\/1][6] += (((a.value()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[4]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[8]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{169 }
+\DoxyCodeLine{170             \}}
+\DoxyCodeLine{171             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( (((a.value()).second).size()) == 7) \{}
+\DoxyCodeLine{172                 \textcolor{comment}{//sets}}
+\DoxyCodeLine{173                 estadistiques[(((a.right()).value()).first) -\/1][4] +=2;}
+\DoxyCodeLine{174                 estadistiques[(((a.left()).value()).first) -\/1][3] +=2;}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176                 \textcolor{comment}{//jocs}}
+\DoxyCodeLine{177                 estadistiques[(((a.left()).value()).first) -\/1][5] += (((a.value()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[4]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{178                 estadistiques[(((a.right()).value()).first) -\/1][5] += (((a.value()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[6]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{179 }
+\DoxyCodeLine{180                 estadistiques[(((a.left()).value()).first) -\/1][6] += (((a.value()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[6]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{181                 estadistiques[(((a.right()).value()).first) -\/1][6] += (((a.value()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.value()).second)[4]-\/\textcolor{charliteral}{'0'});}
+\DoxyCodeLine{182             \}}
+\DoxyCodeLine{183         \}}
+\DoxyCodeLine{184         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error"{}} << endl;}
+\DoxyCodeLine{185 }
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187     \}}
+\DoxyCodeLine{188 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}\label{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}} 
+\index{Torneig@{Torneig}!imprimir\_resultats@{imprimir\_resultats}}
+\index{imprimir\_resultats@{imprimir\_resultats}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{imprimir\_resultats()}{imprimir\_resultats()}}
+{\footnotesize\ttfamily void Torneig\+::imprimir\+\_\+resultats (\begin{DoxyParamCaption}\item[{Bin\+Tree$<$ pair$<$ int, string $>$$>$ \&}]{a }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Imprimeix els resultats del torneig. 
+
+\begin{DoxyPrecond}{Precondició}
+a és un Bin\+Tree que representa el torneig. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}imprimeixen els resultats dels partits tal com es mostra a l\textquotesingle{}enunciat de la practica. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 190 del fitxer Torneig.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{190                                                             \{}
+\DoxyCodeLine{191     \textcolor{keywordflow}{if} (not (a.left()).empty()) \{}
+\DoxyCodeLine{192         cout << \textcolor{stringliteral}{"{}("{}} << ((a.left()).value()).first << \textcolor{stringliteral}{"{}."{}}<< \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[((a.left()).value()).first-\/1]<< \textcolor{stringliteral}{"{} vs "{}}<< ((a.right()).value()).first << \textcolor{stringliteral}{"{}."{}} <<\mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[((a.right()).value()).first-\/1]<<\textcolor{stringliteral}{"{} "{}} << (a.value()).second;}
+\DoxyCodeLine{193         BinTree<pair<int,string>> l = a.left();}
+\DoxyCodeLine{194         BinTree<pair<int,string>> r = a.right();}
+\DoxyCodeLine{195         \mbox{\hyperlink{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}{imprimir\_resultats}}(l);}
+\DoxyCodeLine{196         \mbox{\hyperlink{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}{imprimir\_resultats}}(r);}
+\DoxyCodeLine{197         cout << \textcolor{stringliteral}{"{})"{}};}
+\DoxyCodeLine{198     \}}
+\DoxyCodeLine{199 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{class_torneig_a2e0eb7f4e3837fd969046f9f221b7fc6}\label{class_torneig_a2e0eb7f4e3837fd969046f9f221b7fc6}} 
+\index{Torneig@{Torneig}!imprimir\_punts@{imprimir\_punts}}
+\index{imprimir\_punts@{imprimir\_punts}!Torneig@{Torneig}}
+\doxysubsubsection{\texorpdfstring{imprimir\_punts()}{imprimir\_punts()}}
+{\footnotesize\ttfamily void Torneig\+::imprimir\+\_\+punts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Imprimeix els resultats del torneig. 
+
+\begin{DoxyPrecond}{Precondició}
+cert 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+s\textquotesingle{}imprimeix el contingut del vector participants juntament amb els punts que ha guanyat cada jugador en cas de que n\textquotesingle{}hagi guanyat. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 201 del fitxer Torneig.\+cc.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{201                              \{}
+\DoxyCodeLine{202     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\_participants}}; ++i) \{}
+\DoxyCodeLine{203         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[i] != 0) \{}
+\DoxyCodeLine{204             cout << i+1 << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[i] << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[i] << endl;}
+\DoxyCodeLine{205         \}}
+\DoxyCodeLine{206     \}}
+\DoxyCodeLine{207 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_torneig_a78a82b011e01b5d07ade6378da916c3c}\label{class_torneig_a78a82b011e01b5d07ade6378da916c3c}} 
@@ -213,7 +449,7 @@ Definició a la línia 33 del fitxer Torneig.\+cc.
 
 
 
-Retorna la categoria d\textquotesingle{}un torneig. 
+Retorna la categoria del torneig. 
 
 \begin{DoxyPrecond}{Precondició}
 cert. 
@@ -240,34 +476,27 @@ Definició a la línia 61 del fitxer Torneig.\+cc.
 
 
 
+Elimina els punts que ha guanyat un jugador al torneig. 
+
+\begin{DoxyPrecond}{Precondició}
+nom representa el identificador d\textquotesingle{}un jugador. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+si nom es un jugador del vector participants posa el punts que ha guanyat aquell jugador a 0. 
+\end{DoxyPostcond}
+
+
 Definició a la línia 13 del fitxer Torneig.\+cc.
 
 
 \begin{DoxyCode}{0}
 \DoxyCodeLine{13                                             \{}
 \DoxyCodeLine{14     \textcolor{keywordtype}{int} size = \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}.size();}
-\DoxyCodeLine{15     trobat = \textcolor{keyword}{false};}
+\DoxyCodeLine{15     \textcolor{keywordtype}{bool} trobat = \textcolor{keyword}{false};}
 \DoxyCodeLine{16     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < size and not trobat; ++i)\{}
-\DoxyCodeLine{17         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[i] = nom) \{\mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[i] = 0; trobat = \textcolor{keyword}{true};\}}
+\DoxyCodeLine{17         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[i] == nom) \{\mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[i] = 0; trobat = \textcolor{keyword}{true};\}}
 \DoxyCodeLine{18     \}}
 \DoxyCodeLine{19 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneig_a8ad3192ce5632004fed6deff727df78c}\label{class_torneig_a8ad3192ce5632004fed6deff727df78c}} 
-\index{Torneig@{Torneig}!consultar\_participants@{consultar\_participants}}
-\index{consultar\_participants@{consultar\_participants}!Torneig@{Torneig}}
-\doxysubsubsection{\texorpdfstring{consultar\_participants()}{consultar\_participants()}}
-{\footnotesize\ttfamily int Torneig\+::consultar\+\_\+participants (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definició a la línia 65 del fitxer Torneig.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{65                                     \{}
-\DoxyCodeLine{66     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}.size();}
-\DoxyCodeLine{67 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_torneig_ac8a8318fd1bc940649d12e300906c530}\label{class_torneig_ac8a8318fd1bc940649d12e300906c530}} 
@@ -278,13 +507,25 @@ Definició a la línia 65 del fitxer Torneig.\+cc.
 
 
 
-Definició a la línia 69 del fitxer Torneig.\+cc.
+Resta els punts que han guanyat els jugadors del torneig. 
+
+\begin{DoxyPrecond}{Precondició}
+cert. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+si el torneig s\textquotesingle{}ha jugat mai, agafa el vector participants i resta els punts del jugadors que hi apareixen. 
+\end{DoxyPostcond}
+
+
+Definició a la línia 65 del fitxer Torneig.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{69                                                  \{}
-\DoxyCodeLine{70     jugadors.\mbox{\hyperlink{class_cjt__jugadors_a4c63be8c65b87d98ceb08af52a810fc5}{actualitzar\_ranking}}(\mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}},\mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}},\textcolor{keyword}{false}, \textcolor{keyword}{true});}
-\DoxyCodeLine{71 \}}
+\DoxyCodeLine{65                                                  \{}
+\DoxyCodeLine{66     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneig_a01d94829488fe4daba0cba870f2bcccf}{jugat}})\{}
+\DoxyCodeLine{67         jugadors.\mbox{\hyperlink{class_cjt__jugadors_ac4ce870bdd4c33796ca7ae81a0453407}{actualitzar\_ranking}}(\mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}},\mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}},\textcolor{keyword}{false}, \textcolor{keyword}{true});}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{class_torneig_abcc9f0b1127a5fdd57856a59e5034e1f}\label{class_torneig_abcc9f0b1127a5fdd57856a59e5034e1f}} 
@@ -305,234 +546,68 @@ imprimeix el quadre d\textquotesingle{}emparellaments del torneig.
 \end{DoxyPostcond}
 
 
-Definició a la línia 73 del fitxer Torneig.\+cc.
+Definició a la línia 71 del fitxer Torneig.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{73                                                     \{}
-\DoxyCodeLine{74     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneig_a01d94829488fe4daba0cba870f2bcccf}{jugat}}) \mbox{\hyperlink{class_torneig_a5ce5110cbb6fc8a30ec94bdeb5c837cb}{anteriors\_participants}} = \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}};}
-\DoxyCodeLine{75     \mbox{\hyperlink{class_torneig_ac0ec8f0a5c71dd78980c86f3ccc75620}{llegir\_inscripcio}}(jugadors);}
-\DoxyCodeLine{76 }
-\DoxyCodeLine{77     \mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}} = \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}>(pair<int,string>(1, \textcolor{stringliteral}{"{} "{}}));}
-\DoxyCodeLine{78     \mbox{\hyperlink{class_torneig_ae6722ca037250a8904e52322332fa461}{crear\_emparellaments}}(\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}},2);}
-\DoxyCodeLine{79     \mbox{\hyperlink{class_torneig_a17f4a939167e6ed018ee46580621abae}{imprimir\_emparellaments}}(\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}}, \textcolor{keyword}{true}, \textcolor{keyword}{true}, 1);}
-\DoxyCodeLine{80     cout << endl;}
-\DoxyCodeLine{81 \}}
+\DoxyCodeLine{71                                                     \{}
+\DoxyCodeLine{72     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_torneig_a01d94829488fe4daba0cba870f2bcccf}{jugat}}) \mbox{\hyperlink{class_torneig_a5ce5110cbb6fc8a30ec94bdeb5c837cb}{anteriors\_participants}} = \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}};}
+\DoxyCodeLine{73     \mbox{\hyperlink{class_torneig_ac0ec8f0a5c71dd78980c86f3ccc75620}{llegir\_inscripcio}}(jugadors);}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75     \mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}} = BinTree<pair<int,string>>(pair<int,string>(1, \textcolor{stringliteral}{"{} "{}}));}
+\DoxyCodeLine{76     \mbox{\hyperlink{class_torneig_ae6722ca037250a8904e52322332fa461}{crear\_emparellaments}}(\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}},2);}
+\DoxyCodeLine{77     \mbox{\hyperlink{class_torneig_a17f4a939167e6ed018ee46580621abae}{imprimir\_emparellaments}}(\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}}, \textcolor{keyword}{true}, \textcolor{keyword}{true}, 1);}
+\DoxyCodeLine{78     cout << endl;}
+\DoxyCodeLine{79 \}}
 
 \end{DoxyCode}
-\mbox{\Hypertarget{class_torneig_a426f250284ac487531cc5247a2b35154}\label{class_torneig_a426f250284ac487531cc5247a2b35154}} 
-\index{Torneig@{Torneig}!llegir\_resultats@{llegir\_resultats}}
-\index{llegir\_resultats@{llegir\_resultats}!Torneig@{Torneig}}
-\doxysubsubsection{\texorpdfstring{llegir\_resultats()}{llegir\_resultats()}}
-{\footnotesize\ttfamily void Torneig\+::llegir\+\_\+resultats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&}]{a }\end{DoxyParamCaption})}
-
-
-
-Definició a la línia 85 del fitxer Torneig.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{85                                                            \{}
-\DoxyCodeLine{86     \textcolor{keywordtype}{string} resultat;}
-\DoxyCodeLine{87     cin >> resultat;}
-\DoxyCodeLine{88     \textcolor{keywordflow}{if} (resultat != \textcolor{stringliteral}{"{}0"{}}) \{}
-\DoxyCodeLine{89         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> l = a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}();}
-\DoxyCodeLine{90         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> r = a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}();}
-\DoxyCodeLine{91         \mbox{\hyperlink{class_torneig_a426f250284ac487531cc5247a2b35154}{llegir\_resultats}}(l);}
-\DoxyCodeLine{92         \mbox{\hyperlink{class_torneig_a426f250284ac487531cc5247a2b35154}{llegir\_resultats}}(r);}
-\DoxyCodeLine{93         a = \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}>(pair<int,string> ((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first, resultat), l, r);}
-\DoxyCodeLine{94     \}}
-\DoxyCodeLine{95 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneig_a0ce999e54df0dca139778eb49954d09e}\label{class_torneig_a0ce999e54df0dca139778eb49954d09e}} 
-\index{Torneig@{Torneig}!calcular\_guanyadors@{calcular\_guanyadors}}
-\index{calcular\_guanyadors@{calcular\_guanyadors}!Torneig@{Torneig}}
-\doxysubsubsection{\texorpdfstring{calcular\_guanyadors()}{calcular\_guanyadors()}}
-{\footnotesize\ttfamily void Torneig\+::calcular\+\_\+guanyadors (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&}]{a,  }\item[{\mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&}]{categories,  }\item[{int}]{nivell,  }\item[{vector$<$ vector$<$ int $>$$>$ \&}]{estadistiques }\end{DoxyParamCaption})}
-
-
-
-Definició a la línia 97 del fitxer Torneig.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{97                                                                                                                                           \{}
-\DoxyCodeLine{98     \textcolor{keywordflow}{if} (not (a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).empty()) \{}
-\DoxyCodeLine{99         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> l = a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}();}
-\DoxyCodeLine{100         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> r = a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}();}
-\DoxyCodeLine{101         \mbox{\hyperlink{class_torneig_a0ce999e54df0dca139778eb49954d09e}{calcular\_guanyadors}}(l, categories, nivell +1, estadistiques);}
-\DoxyCodeLine{102         \mbox{\hyperlink{class_torneig_a0ce999e54df0dca139778eb49954d09e}{calcular\_guanyadors}}(r, categories, nivell +1, estadistiques);}
-\DoxyCodeLine{103 }
-\DoxyCodeLine{104         \textcolor{comment}{//GUANYA DRET}}
-\DoxyCodeLine{105         \textcolor{keywordflow}{if} ( ((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second[((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second).size() -\/ 1]-\/\textcolor{charliteral}{'0'}) > ((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second[((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second).size() -\/ 3]-\/\textcolor{charliteral}{'0'}) ) \{}
-\DoxyCodeLine{106 }
-\DoxyCodeLine{107             a = \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}>(pair<int,string> (((r.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first), (a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second), l, r);}
-\DoxyCodeLine{108 }
-\DoxyCodeLine{109             \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first)-\/1] = categories.\mbox{\hyperlink{class_cjt__categories_a21bb1f3a366e5e5a59130dc9d65b799c}{consultar\_punts}}(\mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}}, nivell);}
-\DoxyCodeLine{110 }
-\DoxyCodeLine{111             \textcolor{comment}{//partits}}
-\DoxyCodeLine{112             estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][1] +=1;}
-\DoxyCodeLine{113             estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][2] +=1;}
-\DoxyCodeLine{114 }
-\DoxyCodeLine{115             \textcolor{keywordflow}{if} ( (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second).size()) == 11 ) \{}
-\DoxyCodeLine{116                 \textcolor{comment}{//sets}}
-\DoxyCodeLine{117                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][3] +=2;}
-\DoxyCodeLine{118                 estadistiques[((((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}())).value()).first) -\/1][3] +=1;}
-\DoxyCodeLine{119 }
-\DoxyCodeLine{120                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][4] +=1;}
-\DoxyCodeLine{121                 estadistiques[((((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}())).value()).first) -\/1][4] +=2;}
-\DoxyCodeLine{122 }
-\DoxyCodeLine{123                 \textcolor{comment}{//jocs}}
-\DoxyCodeLine{124                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][5] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[0]-\/\textcolor{charliteral}{'0'})  + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[4]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[8]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{125                 estadistiques[((((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}())).value()).first) -\/1][5] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[6]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[10]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{126 }
-\DoxyCodeLine{127                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][6] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[6]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[10]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{128                 estadistiques[((((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}())).value()).first) -\/1][6] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[4]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[8]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{129 }
-\DoxyCodeLine{130             \}}
-\DoxyCodeLine{131             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second).size()) == 7) \{}
-\DoxyCodeLine{132                 \textcolor{comment}{//sets}}
-\DoxyCodeLine{133                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][3] +=2;}
-\DoxyCodeLine{134                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][4] +=2;}
-\DoxyCodeLine{135 }
-\DoxyCodeLine{136                 \textcolor{comment}{//jocs}}
-\DoxyCodeLine{137                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][5] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[4]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{138                 estadistiques[((((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}())).value()).first) -\/1][5] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[6]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{139 }
-\DoxyCodeLine{140                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][6] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[6]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{141                 estadistiques[((((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}())).value()).first) -\/1][6] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[4]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{142 }
-\DoxyCodeLine{143             \}}
-\DoxyCodeLine{144 }
-\DoxyCodeLine{145         \}}
-\DoxyCodeLine{146         \textcolor{comment}{//GUANYA ESQUERRE}}
-\DoxyCodeLine{147         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second[((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second).size() -\/ 1]-\/\textcolor{charliteral}{'0'}) < ((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second[((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second).size() -\/ 3]-\/\textcolor{charliteral}{'0'}) )\{}
-\DoxyCodeLine{148 }
-\DoxyCodeLine{149             a = \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}>(pair<int,string> (((l.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first), (a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second), l, r);}
-\DoxyCodeLine{150 }
-\DoxyCodeLine{151             \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first)-\/1] = categories.\mbox{\hyperlink{class_cjt__categories_a21bb1f3a366e5e5a59130dc9d65b799c}{consultar\_punts}}(\mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}}, nivell);}
-\DoxyCodeLine{152 }
-\DoxyCodeLine{153             \textcolor{comment}{//partits}}
-\DoxyCodeLine{154             estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][2] +=1;}
-\DoxyCodeLine{155             estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][1] +=1;}
-\DoxyCodeLine{156 }
-\DoxyCodeLine{157             \textcolor{keywordflow}{if} ( (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second).size()) == 11 ) \{}
-\DoxyCodeLine{158                 \textcolor{comment}{//sets}}
-\DoxyCodeLine{159                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][3] +=1;}
-\DoxyCodeLine{160                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][3] +=2;}
-\DoxyCodeLine{161 }
-\DoxyCodeLine{162                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][4] +=2;}
-\DoxyCodeLine{163                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][4] +=1;}
-\DoxyCodeLine{164 }
-\DoxyCodeLine{165                 \textcolor{comment}{//jocs}}
-\DoxyCodeLine{166                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][5] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[4]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[8]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{167                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][5] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[6]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[10]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{168 }
-\DoxyCodeLine{169                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][6] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[6]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[10]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{170                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][6] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[4]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[8]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{171 }
-\DoxyCodeLine{172             \}}
-\DoxyCodeLine{173             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} ( (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second).size()) == 7) \{}
-\DoxyCodeLine{174                 \textcolor{comment}{//sets}}
-\DoxyCodeLine{175                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][4] +=2;}
-\DoxyCodeLine{176                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][3] +=2;}
-\DoxyCodeLine{177 }
-\DoxyCodeLine{178                 \textcolor{comment}{//jocs}}
-\DoxyCodeLine{179                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][5] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[4]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{180                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][5] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[6]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{181 }
-\DoxyCodeLine{182                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first) -\/1][6] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[2]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[6]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{183                 estadistiques[(((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first) -\/1][6] += (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[0]-\/\textcolor{charliteral}{'0'}) + (((a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second)[4]-\/\textcolor{charliteral}{'0'});}
-\DoxyCodeLine{184             \}}
-\DoxyCodeLine{185         \}}
-\DoxyCodeLine{186         \textcolor{keywordflow}{else} cout << \textcolor{stringliteral}{"{}error"{}} << endl;}
-\DoxyCodeLine{187 }
-\DoxyCodeLine{188 }
-\DoxyCodeLine{189     \}}
-\DoxyCodeLine{190 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}\label{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}} 
-\index{Torneig@{Torneig}!imprimir\_resultats@{imprimir\_resultats}}
-\index{imprimir\_resultats@{imprimir\_resultats}!Torneig@{Torneig}}
-\doxysubsubsection{\texorpdfstring{imprimir\_resultats()}{imprimir\_resultats()}}
-{\footnotesize\ttfamily void Torneig\+::imprimir\+\_\+resultats (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$ pair$<$ int, string $>$$>$ \&}]{a }\end{DoxyParamCaption})}
-
-
-
-Definició a la línia 192 del fitxer Torneig.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{192                                                             \{}
-\DoxyCodeLine{193     \textcolor{keywordflow}{if} (not (a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).empty()) \{}
-\DoxyCodeLine{194         cout << \textcolor{stringliteral}{"{}("{}} << ((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first << \textcolor{stringliteral}{"{}."{}}<< \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[((a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}()).value()).first-\/1]<< \textcolor{stringliteral}{"{} vs "{}}<< ((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first << \textcolor{stringliteral}{"{}."{}} <<\mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[((a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}()).value()).first-\/1]<<\textcolor{stringliteral}{"{} "{}} << (a.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).second;}
-\DoxyCodeLine{195         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> l = a.\mbox{\hyperlink{class_bin_tree_a82108db4c1b08d1f111027788c196d4e}{left}}();}
-\DoxyCodeLine{196         \mbox{\hyperlink{class_bin_tree}{BinTree<pair<int,string>}}> r = a.\mbox{\hyperlink{class_bin_tree_aff8e96651b27284c329667b5ad3e4d0b}{right}}();}
-\DoxyCodeLine{197         \mbox{\hyperlink{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}{imprimir\_resultats}}(l);}
-\DoxyCodeLine{198         \mbox{\hyperlink{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}{imprimir\_resultats}}(r);}
-\DoxyCodeLine{199         cout << \textcolor{stringliteral}{"{})"{}};}
-\DoxyCodeLine{200     \}}
-\DoxyCodeLine{201 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneig_a2e0eb7f4e3837fd969046f9f221b7fc6}\label{class_torneig_a2e0eb7f4e3837fd969046f9f221b7fc6}} 
-\index{Torneig@{Torneig}!imprimir\_punts@{imprimir\_punts}}
-\index{imprimir\_punts@{imprimir\_punts}!Torneig@{Torneig}}
-\doxysubsubsection{\texorpdfstring{imprimir\_punts()}{imprimir\_punts()}}
-{\footnotesize\ttfamily void Torneig\+::imprimir\+\_\+punts (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
-
-
-
-Definició a la línia 203 del fitxer Torneig.\+cc.
-
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{203                              \{}
-\DoxyCodeLine{204     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\_participants}}; ++i) \{}
-\DoxyCodeLine{205         cout << i+1 << \textcolor{stringliteral}{"{}."{}} << \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}[i] << \textcolor{stringliteral}{"{} "{}} << \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[i] << endl;}
-\DoxyCodeLine{206     \}}
-\DoxyCodeLine{207 \}}
-
-\end{DoxyCode}
-\mbox{\Hypertarget{class_torneig_a7bee65cf6b3f638a6658abcd397cb7c0}\label{class_torneig_a7bee65cf6b3f638a6658abcd397cb7c0}} 
+\mbox{\Hypertarget{class_torneig_a6437f391b759b9488c2683462fb49899}\label{class_torneig_a6437f391b759b9488c2683462fb49899}} 
 \index{Torneig@{Torneig}!finalitzar\_torneig@{finalitzar\_torneig}}
 \index{finalitzar\_torneig@{finalitzar\_torneig}!Torneig@{Torneig}}
 \doxysubsubsection{\texorpdfstring{finalitzar\_torneig()}{finalitzar\_torneig()}}
-{\footnotesize\ttfamily void Torneig\+::finalitzar\+\_\+torneig (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&}]{jugadors,  }\item[{\mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&}]{categories,  }\item[{vector$<$ string $>$ \&}]{participants\+\_\+estadistiques,  }\item[{vector$<$ int $>$ \&}]{punts\+\_\+estadistiques,  }\item[{vector$<$ vector$<$ int $>$$>$ \&}]{estadistiques }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily void Torneig\+::finalitzar\+\_\+torneig (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_cjt__jugadors}{Cjt\+\_\+jugadors}} \&}]{jugadors,  }\item[{\mbox{\hyperlink{class_cjt__categories}{Cjt\+\_\+categories}} \&}]{categories }\end{DoxyParamCaption})}
 
+
+
+Llegeix els resultats d\textquotesingle{}un torneig, en calcula els guanyadors, imprimeix els partits jugats i els punts guanyats per els jugadors. 
+
+\begin{DoxyPrecond}{Precondició}
+Al canal habitual d\textquotesingle{}entrada hi trobem una sequencia de strings que representa els resultats dels partits del torneig en preordre. 
+\end{DoxyPrecond}
+\begin{DoxyPostcond}{Postcondició}
+es calculen els guanyadors, s\textquotesingle{}imprimeixen els partits i els punts guanyats per cada participants. 
+\end{DoxyPostcond}
 
 
 Definició a la línia 209 del fitxer Torneig.\+cc.
 
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{209                                                                                                                                                                                                     \{}
+\DoxyCodeLine{209                                                                                    \{}
 \DoxyCodeLine{210 }
 \DoxyCodeLine{211     \textcolor{keywordflow}{if}(\mbox{\hyperlink{class_torneig_a01d94829488fe4daba0cba870f2bcccf}{jugat}})\{}
-\DoxyCodeLine{212         participants\_estadistiques = \mbox{\hyperlink{class_torneig_a5ce5110cbb6fc8a30ec94bdeb5c837cb}{anteriors\_participants}};}
-\DoxyCodeLine{213        jugadors.\mbox{\hyperlink{class_cjt__jugadors_a4c63be8c65b87d98ceb08af52a810fc5}{actualitzar\_ranking}}(participants\_estadistiques, \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}, \textcolor{keyword}{false}, \textcolor{keyword}{false});}
-\DoxyCodeLine{214     \}}
-\DoxyCodeLine{215 }
-\DoxyCodeLine{216     \mbox{\hyperlink{class_torneig_a01d94829488fe4daba0cba870f2bcccf}{jugat}} = \textcolor{keyword}{true};}
-\DoxyCodeLine{217 }
-\DoxyCodeLine{218     \mbox{\hyperlink{class_torneig_a426f250284ac487531cc5247a2b35154}{llegir\_resultats}}(\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}});}
-\DoxyCodeLine{219 }
-\DoxyCodeLine{220     \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}} = vector<int>(\mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\_participants}});}
+\DoxyCodeLine{212        jugadors.\mbox{\hyperlink{class_cjt__jugadors_ac4ce870bdd4c33796ca7ae81a0453407}{actualitzar\_ranking}}(\mbox{\hyperlink{class_torneig_a5ce5110cbb6fc8a30ec94bdeb5c837cb}{anteriors\_participants}}, \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}, \textcolor{keyword}{false}, \textcolor{keyword}{false});}
+\DoxyCodeLine{213     \}}
+\DoxyCodeLine{214 }
+\DoxyCodeLine{215     \mbox{\hyperlink{class_torneig_a01d94829488fe4daba0cba870f2bcccf}{jugat}} = \textcolor{keyword}{true};}
+\DoxyCodeLine{216 }
+\DoxyCodeLine{217     \mbox{\hyperlink{class_torneig_a426f250284ac487531cc5247a2b35154}{llegir\_resultats}}(\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}});}
+\DoxyCodeLine{218 }
+\DoxyCodeLine{219     \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}} = vector<int>(\mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\_participants}});}
+\DoxyCodeLine{220     vector<vector<int>> estadistiques = vector<vector<int>> (\mbox{\hyperlink{class_torneig_aef9f0b6e93895593e4527cdd3e4e31ea}{num\_participants}}, vector<int>(7));}
 \DoxyCodeLine{221     \mbox{\hyperlink{class_torneig_a0ce999e54df0dca139778eb49954d09e}{calcular\_guanyadors}}(\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}}, categories, 1, estadistiques);}
 \DoxyCodeLine{222 }
-\DoxyCodeLine{223     \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[((\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}}.\mbox{\hyperlink{class_bin_tree_a734e785b089c87b49187ee7c58edf5f3}{value}}()).first) -\/1] = categories.\mbox{\hyperlink{class_cjt__categories_a21bb1f3a366e5e5a59130dc9d65b799c}{consultar\_punts}}(\mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}}, 0);}
+\DoxyCodeLine{223     \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}[((\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}}.value()).first) -\/1] = categories.\mbox{\hyperlink{class_cjt__categories_a21bb1f3a366e5e5a59130dc9d65b799c}{consultar\_punts}}(\mbox{\hyperlink{class_torneig_a8a80ab41ebab7d88a2569247c6ec4c81}{categoria}}, 0);}
 \DoxyCodeLine{224     \mbox{\hyperlink{class_torneig_a14dcde3f1ecc6e7c86a1c1dd925d029f}{imprimir\_resultats}}(\mbox{\hyperlink{class_torneig_ac9844e83152867de56e418b1115c2d52}{partits}});}
 \DoxyCodeLine{225     cout << endl;}
 \DoxyCodeLine{226 }
 \DoxyCodeLine{227     \mbox{\hyperlink{class_torneig_a2e0eb7f4e3837fd969046f9f221b7fc6}{imprimir\_punts}}();}
 \DoxyCodeLine{228 }
-\DoxyCodeLine{229     participants\_estadistiques = \mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}};}
-\DoxyCodeLine{230     jugadors.\mbox{\hyperlink{class_cjt__jugadors_a3dbb9da444951739e8d07fdc80c68d82}{actualitzar\_estadistiques}}(participants\_estadistiques, estadistiques);}
-\DoxyCodeLine{231 }
-\DoxyCodeLine{232     punts\_estadistiques = \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}};}
-\DoxyCodeLine{233     jugadors.\mbox{\hyperlink{class_cjt__jugadors_a4c63be8c65b87d98ceb08af52a810fc5}{actualitzar\_ranking}}(participants\_estadistiques, punts\_estadistiques, \textcolor{keyword}{true}, \textcolor{keyword}{true});}
+\DoxyCodeLine{229     jugadors.\mbox{\hyperlink{class_cjt__jugadors_aa0e9faac43740de11fda44d07d97c60c}{actualitzar\_estadistiques}}(\mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}, estadistiques);}
+\DoxyCodeLine{230 }
+\DoxyCodeLine{231     jugadors.\mbox{\hyperlink{class_cjt__jugadors_ac4ce870bdd4c33796ca7ae81a0453407}{actualitzar\_ranking}}(\mbox{\hyperlink{class_torneig_a87196328ace3bbbae6f17f387835b3a6}{participants}}, \mbox{\hyperlink{class_torneig_a7b13a5ef959a87ee7de85f4f5b225c02}{punts}}, \textcolor{keyword}{true}, \textcolor{keyword}{true});}
+\DoxyCodeLine{232 }
+\DoxyCodeLine{233 }
 \DoxyCodeLine{234 \}}
 
 \end{DoxyCode}
@@ -583,11 +658,11 @@ Definició a la línia 23 del fitxer Torneig.\+hh.
 \index{Torneig@{Torneig}!partits@{partits}}
 \index{partits@{partits}!Torneig@{Torneig}}
 \doxysubsubsection{\texorpdfstring{partits}{partits}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_bin_tree}{Bin\+Tree}}$<$pair$<$int, string$>$ $>$ Torneig\+::partits\hspace{0.3cm}{\ttfamily [private]}}
+{\footnotesize\ttfamily Bin\+Tree$<$pair$<$int, string$>$ $>$ Torneig\+::partits\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
-Definició a la línia 24 del fitxer Torneig.\+hh.
+Definició a la línia 25 del fitxer Torneig.\+hh.
 
 \mbox{\Hypertarget{class_torneig_a01d94829488fe4daba0cba870f2bcccf}\label{class_torneig_a01d94829488fe4daba0cba870f2bcccf}} 
 \index{Torneig@{Torneig}!jugat@{jugat}}
@@ -597,7 +672,7 @@ Definició a la línia 24 del fitxer Torneig.\+hh.
 
 
 
-Definició a la línia 25 del fitxer Torneig.\+hh.
+Definició a la línia 26 del fitxer Torneig.\+hh.
 
 \mbox{\Hypertarget{class_torneig_a5ce5110cbb6fc8a30ec94bdeb5c837cb}\label{class_torneig_a5ce5110cbb6fc8a30ec94bdeb5c837cb}} 
 \index{Torneig@{Torneig}!anteriors\_participants@{anteriors\_participants}}
@@ -607,7 +682,7 @@ Definició a la línia 25 del fitxer Torneig.\+hh.
 
 
 
-Definició a la línia 26 del fitxer Torneig.\+hh.
+Definició a la línia 27 del fitxer Torneig.\+hh.
 
 
 

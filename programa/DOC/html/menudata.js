@@ -43,8 +43,6 @@ var menudata={children:[
 {text:"r",url:"functions.html#index_r"},
 {text:"s",url:"functions.html#index_s"},
 {text:"t",url:"functions.html#index_t"},
-{text:"v",url:"functions.html#index_v"},
-{text:"x",url:"functions.html#index_x"},
 {text:"~",url:"functions.html#index__7E"}]},
 {text:"Funcions",url:"functions_func.html",children:[
 {text:"a",url:"functions_func.html#index_a"},
@@ -60,12 +58,10 @@ var menudata={children:[
 {text:"r",url:"functions_func.html#index_r"},
 {text:"s",url:"functions_func.html#index_s"},
 {text:"t",url:"functions_func.html#index_t"},
-{text:"v",url:"functions_func.html#index_v"},
 {text:"~",url:"functions_func.html#index__7E"}]},
 {text:"Variables",url:"functions_vars.html"}]}]},
 {text:"Fitxers",url:"files.html",children:[
 {text:"Llista dels Fitxers",url:"files.html"},
 {text:"Membres de Fitxers",url:"globals.html",children:[
 {text:"Tot",url:"globals.html"},
-{text:"Funcions",url:"globals_func.html"},
-{text:"Variables",url:"globals_vars.html"}]}]}]}
+{text:"Funcions",url:"globals_func.html"}]}]}]}

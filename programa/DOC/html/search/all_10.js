@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_97',['value',['../class_bin_tree.html#a734e785b089c87b49187ee7c58edf5f3',1,'BinTree']]]
+  ['x_87',['x',['../struct_bin_tree_1_1_node.html#a9c268d4af01559e8237dbeb5bd19af91',1,'BinTree::Node']]]
 ];

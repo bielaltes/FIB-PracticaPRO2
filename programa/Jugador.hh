@@ -1,3 +1,7 @@
+/** @file Jugador.hh
+    @brief Especificació de la classe Jugador
+*/
+
 #ifndef JUGADOR_HH
 #define JUGADOR_HH
 
@@ -7,6 +11,10 @@
 #endif
 
 using namespace std;
+
+/** @class Jugador
+    @brief Representa un jugador del circuit amb tots els seus atributs.
+*/
 
 class Jugador {
 
@@ -31,10 +39,6 @@ public:
 */
     Jugador(string n, int ultima_pos);
 
-/** @brief esborra automaticament els objectes locals en sortir
-     d'un ambit de visibilitat.
-*/
-    ~Jugador();
 
 /** @brief Escriu un jugador
     \pre  cert.

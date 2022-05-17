@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['left_195',['left',['../struct_bin_tree_1_1_node.html#a265a6367635a38838e6a6366564be78d',1,'BinTree::Node']]]
+  ['ranking_166',['ranking',['../class_cjt__jugadors.html#af9f7e71820fb657bf489ce72a31e8034',1,'Cjt_jugadors']]]
 ];
