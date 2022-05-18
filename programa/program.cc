@@ -102,7 +102,7 @@ int main() {
 /** @mainpage
 
     Pràctica de l'alumne Biel Altés Grifoll, amb documentació <b> completa</b>
-    (incloent elements privatsy codi).
+    (incloent elements privats i codi).
 
     El programa principal es pot trobar en el módul program.cc.
 
